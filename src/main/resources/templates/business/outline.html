@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta property="og:image" content="http://gdicland.com/assets/img/m1_1_planning_img1.jpg">
+	<title>김해대동첨단산업단지㈜</title>
+	<link rel="stylesheet" th:href="@{/assets/css/gdic_style_v1.1.css}">
+	<script th:src="@{/assets/js/jquery.min.js}"></script>
+	<script th:src="@{/assets/js/slick.min.js}"></script>
+	<script th:src="@{/assets/js/gdic_v1.1.js}"></script>
+	<script>
+		$(function(){
+			$('#gdic_header').html(gdic_header);
+			$('#gdic_footer').html(gdic_footer);
+			footer_slide_on();
+			$('.main_popup').addClass('show');
+		})
+	</script>
+	</head>
+
+	
+	<body id="gdic_main">
+		<header id="gdic_header">
+			
+		</header>
+		
+		<section id="gdic_body">
+			<div class="sub_top">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="m_p1">
+				<div class="container">
+					<div class="row mb_50">
+						<div class="col">
+							<ul class="sub_nav_list f_s0">
+								<li>홈</li>
+								<li>사업안내</li>
+								<li>사업개요</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="row mb_50">
+						<div class="col">
+							<div class="sub_pagetitle">
+								<h2 class="ft_s5">사업개요</h2>
+								<p class="f_c_g2">김해대동첨단산업단지㈜ 사업개요를 보실 수 있습니다.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row mb_30">
+						<div class="col">
+							<h3 class="gdic_h3 ft_s3 fw_psb mb_20">김해대동첨단산업단지 입지도</h3>
+
+							<div><img th:src="@{/assets/img/m1_1_planning_img1_v2.jpg}" class="w-100" /></div>
+						</div>
+					</div>
+
+					<div class="row mb_30">
+						<div class="col">
+							<h3 class="gdic_h3 ft_s3 fw_psb mb_20">사업개요</h3>
+
+							<div class="mb_20"><img th:src="@{/assets/img/m1_1_planning_img2_v2.jpg}" class="w-100" /></div>
+
+							<table class="gdic_table_style1 w-100 f_s3 f_c_g2">
+								<colgroup>
+									<col width="14%">
+									<col width="36%">
+									<col width="14%">
+									<col width="36%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>
+											<div class="gdic_table_title1">
+												<p>명</p>
+												<p>칭</p>
+											</div>
+										</th>
+										<td colspan="3">김해대동첨단산업단지</td>
+									</tr>
+									<tr>
+										<th>
+											<div class="gdic_table_title1">
+												<p>위</p>
+												<p>치</p>
+											</div>
+										</th>
+										<td>경남 김해시 대동면 월촌리 500번지 일원</td>
+										<th>
+											<div class="gdic_table_title1">
+												<p>공</p>
+												<p>공</p>
+												<p>출</p>
+												<p>자</p>
+											</div>
+										</th>
+										<td><img th:src="@{/assets/img/m1_1_planning_img2.jpg}"></td>
+									</tr>
+									<tr>
+										<th>
+											<div class="gdic_table_title1">
+												<p>면</p>
+												<p>적</p>
+											</div>
+										</th>
+										<td>2,903,858㎡</td>
+										<th>
+											<div class="gdic_table_title1">
+												<p>자</p>
+												<p>금</p>
+												<p>관</p>
+												<p>리</p>
+											</div>
+										</th>
+										<td><img th:src="@{/assets/img/m1_1_planning_img3.jpg}"></td>
+									</tr>
+									<tr>
+										<th>
+											<div class="gdic_table_title1">
+												<p>사</p>
+												<p>업</p>
+												<p>비</p>
+											</div>
+										</th>
+										<td>약 15,382억원</td>
+										<th>
+											<div class="gdic_table_title1">
+												<p>책</p>
+												<p>임</p>
+												<p>준</p>
+												<p>공</p>
+											</div>
+										</th>
+										<td><img th:src="@{/assets/img/m1_1_planning_img4.jpg}"></td>
+									</tr>
+									<tr>
+										<th>
+											<div class="gdic_table_title1">
+												<p>추</p>
+												<p>진</p>
+												<p>방</p>
+												<p>식</p>
+											</div>
+										</th>
+										<td>제3섹터방식 (공공기관 지분 51%이상 특수목적법인)</td>
+										<th>
+											<div class="gdic_table_title1">
+												<p>공</p>
+												<p>급</p>
+												<p>대</p>
+												<p>행</p>
+											</div>
+										</th>
+										<td><img th:src="@{/assets/img/m1_1_planning_img5.jpg}"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+<!--
+					<div class="row mb_80">
+						<div class="col">
+							<h3 class="gdic_h3 ft_s3 fw_psb mb_20">개발여건</h3>
+
+							<table class="gdic_table_style1 w-100 f_s3 f_c_g2">
+								<colgroup>
+									<col width="14%">
+									<col width="36%">
+									<col width="14%">
+									<col width="36%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>
+											<div class="gdic_table_title1">
+												<p>사</p>
+												<p>업</p>
+												<p>기</p>
+												<p>간</p>
+											</div>
+										</th>
+										<td colspan="3">2014년 ~ 2021년</td>
+									</tr>
+									<tr>
+										<th>
+											<div class="gdic_table_title1">
+												<p>착</p>
+												<p>공</p>
+												<p>및</p>
+												<p>준</p>
+												<p>공</p>
+											</div>
+										</th>
+										<td>경남 김해시 대동면 월촌리 500번지 일원</td>
+										<th>
+											<div class="gdic_table_title1">
+												<p>토</p>
+												<p>지</p>
+												<p>사</p>
+												<p>용</p>
+												<p>시</p>
+												<p>기</p>
+											</div>
+										</th>
+										<td>2021년 상반기 ~ 2022년 하반기</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				
+					<div class="row mb_50">
+						<div class="col">
+							<div class="sub_pagetitle">
+								<h2 class="ft_s5">추진현황</h2>
+								<p class="f_c_g2">김해대동첨단산업단지㈜ 지금까지의 추진현황을 보실 수 있습니다.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row mb_80">
+						<div class="col">
+							<img th:src="@{/assets/img/m1_1_planning_img6.jpg}" class="w-100">
+						</div>
+					</div>
+-->
+					<div class="row mb_50">
+						<div class="col">
+							<div class="sub_pagetitle">
+								<h2 class="ft_s5">안정적 사업구도</h2>
+								<p class="f_c_g2">공공기관의 사업참여(제 3섹터방식)</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<ul class="gdic_sub_list1 tab3 f_s4">
+								<li>
+									<div>공공부문</div>
+									<div><img th:src="@{/assets/img/m1_1_planning_img7.jpg}"></div>
+								</li>
+								<li>
+									<div>책임준공</div>
+									<div><img th:src="@{/assets/img/m1_1_planning_img8.jpg}"></div>
+								</li>
+								<li>
+									<div>자금관리</div>
+									<div><img th:src="@{/assets/img/m1_1_planning_img9.jpg}"></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="gdic_footer">
+			
+		</footer>
+	</body>
+</html>

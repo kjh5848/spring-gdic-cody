@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>김해대동첨단산업단지 | 어드민</title>
+		<link rel="stylesheet" th:href="@{/assets/css/gdic_admin_style_v1.0.css}">
+		<script th:src="@{/assets/js/jquery.min.js}"></script>
+		<script th:src="@{/assets/js/jquery.cookie.min.js}"></script>
+		<script th:src="@{/assets/js/jquery-ui.js}"></script>
+		<script th:src="@{/assets/js/gdic_admin_v1.0.js}"></script>
+		<script>
+			$(function(){
+				$('.kors_admin_header').html(gdic_admin_header);
+				$('.nav_list3 a').addClass('active');
+			})
+		</script>
+		<style>
+			.board_con1 {display: flex; justify-content: center; align-items: center;}
+			.board_con1 a li {padding:4px 10px; background-color:rgb(228, 234, 236); margin:0 1px; cursor: pointer;}
+			.board_con1 a li.active {background-color:#333;color:#fff;}
+		</style>
+	</head>		
+	
+	<body class="admin_body">	
+		<div id="admin_ui" class="d-flex">
+			<header class="kors_admin_header">
+
+			</header>
+
+			<section class="kors_admin_content">
+				<div class="container-fluid mb_80">
+					<div class="row">
+						<div class="col">
+							<h2>공급공고</h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="row mb_50">
+						<div class="col">
+							
+							<div class="d-flex justify-content-end mb_20">
+								<a href="/admin/supply/add">
+									<button class="una_btn1">공급공고 등록</button>
+								</a>
+							</div>
+							
+							<div class="table_box1">
+								<table class="w-100">
+									<colgroup>
+										<col width="10%">
+										<col width="50%">
+										<col width="20%">
+										<col width="10%">
+									</colgroup>
+									<thead>
+										<tr>											
+											<th>NO</th>
+											<th>제목</th>
+											<th>등록일</th>
+											<th>비고</th>
+										</tr>
+									</thead>
+
+									<tbody class="notice_tbody">
+									<tr th:each="supply : ${page.getContent()}">
+										<td th:text="${supply.id}"></td>
+										<td th:text="${supply.title}"></td>
+										<td th:text="${#temporals.format(supply.createdDate, 'yyyy-MM-dd')}"></td>
+										<td>
+											<div>
+												<form th:action="@{/admin/supply-delete/{id}(id=${supply.id})}" method="post">
+													<a th:href="@{/admin/supply/{id}/edit(id=${supply.id})}" onclick="" class="kors_btn2 mr_10">수정</a>
+													<button type="submit" class="kors_btn2 type2" onclick="">삭제</button>
+												</form>
+											</div>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div>
+				<ul class="board_con1 f_s0 fw_pl">
+
+					<a th:if ="${!page.isFirst()}" th:href="@{/admin/supply(page=0,size=${page.getPageable().getPageSize()})}">
+						<li><<</li>
+					</a>
+
+					<a th:if ="${prev}" th:href="@{/admin/supply(page=${((page.getPageable().getPageNumber() / basePage) - 1) * basePage},size=${page.getPageable().getPageSize()})}">
+						<li><</li>
+					</a>
+
+					<a th:each="pageNum : ${#numbers.sequence(startPage, endPage)}"  th:href="@{/admin/supply(page=${pageNum}-1,size=${page.getPageable().getPageSize()})}">
+						<li  th:class="${pageNum} == ${page.getPageable().getPageNumber() + 1} ? 'active' : ''" th:text="${pageNum}" />
+					</a>
+
+					<a th:if ="${next}" th:href="@{/admin/supply(page=${((page.getPageable().getPageNumber() / basePage) + 1) * basePage},size=${page.getPageable().getPageSize()})}">
+						<li>></li>
+					</a>
+
+					<a th:if ="${!page.isLast()}" th:href="@{/admin/supply(page=${page.getTotalPages() -1},size=${page.getPageable().getPageSize()})}">
+						<li>>></li>
+					</a>
+				</ul>
+			</div>
+			</section>
+		</div>
+	</body>
+</html>

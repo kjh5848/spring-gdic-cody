@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>김해대동첨단산업단지 | 어드민</title>
+		<link rel="stylesheet" th:href="@{/assets/css/gdic_admin_style_v1.0.css}">
+		<script th:src="@{/assets/js/jquery.min.js}"></script>
+		<script th:src="@{/assets/js/jquery.cookie.min.js}"></script>
+		<script th:src="@{/assets/js/jquery-ui.js}"></script>
+		<script th:src="@{/assets/js/gdic_admin_v1.0.js}"></script>
+		<script>
+			$(function(){
+				$('.kors_admin_header').html(gdic_admin_header);
+				$('.nav_list1 a').addClass('active');
+			})
+		</script>
+
+		<style>
+			.board_con1 {display: flex; justify-content: center; align-items: center;}
+			.board_con1 a li {padding:4px 10px; background-color:rgb(228, 234, 236); margin:0 1px; cursor: pointer;}
+			.board_con1 a li.active {background-color:#333;color:#fff;}
+		</style>
+	</head>
+	
+	<body class="admin_body">
+		<div id="admin_ui" class="d-flex">
+			<header class="kors_admin_header">
+				
+			</header>
+
+			<section class="kors_admin_content">
+				<div class="container-fluid mb_80">
+					<div class="row">
+						<div class="col">
+							<h2>관심고객조회</h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="row mb_50">
+						<div class="col">
+							<div class="table_box1">
+								<table class="w-100">
+									<colgroup>
+										<col width="10%">
+										<col width="10%">
+										<col width="10%">
+										<col width="20%">
+										<col width="50%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>회사명</th>
+											<th>담당자명</th>
+											<th>휴대전화</th>
+											<th>주소</th>
+											<th>문의내용</th>
+										</tr>
+									</thead>
+									
+									<tbody class="interested_tbody">
+										<tr th:each="customer : ${customerPage.getContent()}">
+											<td th:text="${customer.enterpriseName}" id="enterpriseName"></td>
+											<td th:text="${customer.managerName}" id="managerName"></td>
+											<td th:text="${customer.tel}" id="tel"></td>
+											<td th:text="${customer.address}" id="address"></td>
+											<td th:text="${customer.inquiry}" id="inquiry"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<ul class="board_con1 f_s0 fw_pl">
+
+						<a th:if ="${!customerPage.isFirst()}" th:href="@{/admin/(page=0,size=${customerPage.getPageable().getPageSize()})}">
+							<li><<</li>
+						</a>
+
+						<a th:if ="${prev}" th:href="@{/admin/(page=${((customerPage.getPageable().getPageNumber() / basePage) - 1) * basePage},size=${customerPage.getPageable().getPageSize()})}">
+							<li><</li>
+						</a>
+
+						<a th:each="pageNum : ${#numbers.sequence(startPage, endPage)}"  th:href="@{/admin/(page=${pageNum}-1,size=${customerPage.getPageable().getPageSize()})}">
+							<li  th:class="${pageNum} == ${customerPage.getPageable().getPageNumber() + 1} ? 'active' : ''" th:text="${pageNum}" />
+						</a>
+
+						<a th:if ="${next}" th:href="@{/admin/(page=${((customerPage.getPageable().getPageNumber() / basePage) + 1) * basePage},size=${customerPage.getPageable().getPageSize()})}">
+							<li>></li>
+						</a>
+
+						<a th:if ="${!customerPage.isLast()}" th:href="@{/admin/(page=${customerPage.getTotalPages() -1},size=${customerPage.getPageable().getPageSize()})}">
+							<li>>></li>
+						</a>
+					</ul>
+				</div>
+			</section>
+		</div>
+	</body>
+	<script>
+		// $(function(){
+		// 	interested_show()
+		// });
+
+		// function gdic_logo_out(){
+		// 	location = '../index.html';
+		// }
+		
+		// function interested_show(){
+		// 	$.ajax({
+		// 		method: "POST",
+		// 		url: "/admin/interested_data.php",
+		// 		data: { name: "John", location: "Boston" }
+		// 	})
+		// 	.done(function (msg) {
+		// 		if(msg != false){
+		// 			interested_data = JSON.parse(msg);
+		//
+		// 			console.log(interested_data.length)
+		//
+		// 			for (var i = 0; i < interested_data.length ; i++)
+		// 			{
+		// 				$(".interested_tbody").append(`
+		// 					<tr>
+		// 						<td>${interested_data[i].company_name}</td>
+		// 						<td>${interested_data[i].user_name}</td>
+		// 						<td>${interested_data[i].tell}</td>
+		// 						<td>${interested_data[i].address}</td>
+		// 						<td>${interested_data[i].content}</td>
+		// 					</tr>
+		// 				`)
+		// 			}
+		// 		}else{
+		// 			$(".interested_tbody").append(`
+		// 				<tr>
+		// 					<td colspan="5">등록된 데이터가 없습니다.</td>
+		// 				</tr>
+		// 			`)
+		// 		}
+		//
+		// 	});
+		// }
+	</script>
+</html>

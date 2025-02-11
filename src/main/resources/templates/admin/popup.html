@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>김해대동첨단산업단지 | 어드민</title>
+		<link rel="stylesheet" th:href="@{/assets/css/gdic_admin_style_v1.0.css}">
+		<script th:src="@{/assets/js/jquery.min.js}"></script>
+		<script th:src="@{/assets/js/jquery.cookie.min.js}"></script>
+		<script th:src="@{/assets/js/jquery-ui.js}"></script>
+		<script th:src="@{/assets/js/gdic_admin_v1.0.js}"></script>
+		<script th:src="@{/assets/js/main.js}"></script>
+		<script th:src="@{/assets/js/popup.js}"></script>
+		<script>
+			$(function(){
+				$('.kors_admin_header').html(gdic_admin_header);
+				$('.nav_list4 a').addClass('active');
+			})
+		</script>
+	</head>		
+	
+	<body class="admin_body">	
+		<div id="admin_ui" class="d-flex">
+			<header class="kors_admin_header">
+				
+			</header>
+
+			<section class="kors_admin_content">
+				<div class="container-fluid mb_80">
+					<div class="row">
+						<div class="col">
+							<h2>팝업관리</h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">	
+					<div class="row mb_50">
+						<div class="col">
+							<div class="d-flex">
+								<div style="width:70%; padding-right:20px;">
+									<p class="text-center mb_10 ft_s2">팝업 미리보기</p>
+									<div class="popup_thumbnail mb_30">
+											<img th:src="'data:image/jpeg;base64,'+${popupFile.getFileContent()}" id="preview">
+									</div>
+								</div>
+
+								<div style="width:30%;">
+									<form action="/admin/popup" method="post" enctype="multipart/form-data">
+									<p class="mb_10 ft_s2">팝업 이미지</p>
+									<div class="mb_20">
+										<input type="file" class="w-100" id="popup_img_file" name="file">
+									</div>
+
+									<p class="mb_10 ft_s2">팝업 창 여부</p>
+									<div class="mb_20">
+										<select name="showYn">
+											<option value="Y" th:selected="${popupFile.getShowYn() == 'Y'}">띄우기</option>
+											<option value="N" th:selected="${popupFile.getShowYn() == 'N'}">숨기기</option>
+										</select>
+									</div>
+
+									<p class="mb_10 ft_s2">팝업 링크</p>
+									<div class="mb_20">
+										<input type="text" class="w-100" name="link" id="link" th:value="${popupFile.getLink()}">
+									</div>
+									<div>
+										<button class="una_btn1 w-100" name="save" type="submit">저장하기</button>
+									</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+	<script>
+		$(function(){
+			$("#popup_img_file").on("change", function(event) {
+
+				var file = event.target.files[0];
+
+				if(isImageFile(file)){
+					var reader = new FileReader(); 
+					reader.onload = function(e) {
+
+						$("#preview").attr("src", e.target.result);
+					}
+
+					reader.readAsDataURL(file);
+				}else{
+					alert('이미지 파일만 업로드 가능합니다.')
+				}				
+			});
+		})
+
+		function isImageFile(file) {
+
+			var ext = file.name.split(".").pop().toLowerCase(); // 파일명에서 확장자를 가져온다. 
+
+			return ($.inArray(ext, ["jpg", "jpeg", "gif", "png"]) === -1) ? false : true;
+		}
+	</script>
+
+	<script>
+		function hideMainPopup() {
+			hidePopup();
+
+		}
+
+		function hidePopup() {
+			$('.main_popup').hide();
+
+		}
+
+	</script>
+		</html>

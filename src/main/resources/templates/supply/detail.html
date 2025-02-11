@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:image" content="http://gdicland.com/assets/img/m1_1_planning_img1.jpg">
+    <title>김해대동첨단산업단지㈜</title>
+    <link rel="stylesheet" th:href="@{/assets/css/gdic_style_v1.1.css}">
+    <script th:src="@{/assets/js/jquery.min.js}"></script>
+    <script th:src="@{/assets/js/slick.min.js}"></script>
+    <script th:src="@{/assets/js/gdic_v1.1.js}"></script>
+    <script>
+        $(function(){
+            $('#gdic_header').html(gdic_header);
+            $('#gdic_footer').html(gdic_footer);
+            footer_slide_on();
+            // $('.main_popup').addClass('show');
+            $('.border_more_box').html(gdic_board)
+            $('.nav_list1').addClass('active');
+        })
+    </script>
+    </head>
+
+    <body id="gdic_main">
+        <header id="gdic_header">
+
+        </header>
+
+        <section id="gdic_body">
+            <div class="sub_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="m_p1">
+                <div class="container">
+                    <div class="row mb_50">
+                        <div class="col">
+                            <ul class="sub_nav_list f_s0">
+                                <li>홈</li>
+                                <li>공급정보</li>
+                                <li>공급공고</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row mb_50">
+                        <div class="col">
+                            <div class="sub_pagetitle">
+                                <h2 class="ft_s5">공급공고</h2>
+                                <p class="f_c_g2">김해대동첨단산업단지㈜ 공급공고를 보실 수 있습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_top1 border-bottom f_s0 f_c_g2" th:text="${supply.title}">
+                        <p>2023년 04월 공사진행 현황 알림</p>
+                    </div>
+                    <div class="board_top1 mb_10 f_s0 f_c_g2">
+<!--                                                <p><span class="mr_10" th:text="${'작성자 : ' + supply.getUser().getUsername()}"></span>-->
+                        <p><span class="mr_10" >작성자: 관리자</span>
+                        <span class="mr_10" th:text="${supply.createdDateFormat}"></span>
+                        <span class="mr_10" th:text="${'조회수 : ' + supply.viewCount+'회'}"></span>
+                        <span class="mr_10" th:text="${'댓글 : ' + supply.replyCount +'건'}"></span></p>
+                    </div>
+
+
+
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="board_btn1 f_s1" th:onclick="supply_next()">다음글</button>
+
+                        <button class="board_btn1 f_s1" th:onclick="supply_previous()">이전글</button>
+                    </div>
+
+                    <div class="border_con_box">
+                        <span th:utext="${supply.content}"></span>
+                    </div>
+
+                    <div id="existingFiles">
+                        <div th:each="file : ${fileList}">
+                        <ul class="more_dow_box">
+                            <li>
+                                <dl>
+                                    <dt>첨부파일</dt>
+                                    <dd>
+                                        <a th:href="@{/supply/download/{fileId}(fileId=${file.id})}" th:text="${file.fileName}"></a>
+                                        <a th:href="@{/supply/download/{fileId}(fileId=${file.id})}" th:text="${file.fileName}">다운로드</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex justify-content-end align-items-center">
+                        <button class="board_btn1 f_s1" onclick="supply_hide()">목록으로</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer id="gdic_footer">
+
+        </footer>
+    </body>
+
+<script>
+    function supply_next() {
+        const id = [[${supply.id}]];
+        const page = [[${supplyPage.getPageable().getPageNumber()}]]
+        location.href = "/supply/notice/" + (id + 1) + "?page=" + page + "&size=15";
+    }
+
+    function supply_previous() {
+        const id = [[${supply.id}]];
+        const page = [[${supplyPage.getPageable().getPageNumber()}]]
+        location.href = "/supply/notice/" + (id - 1) + "?page=" + page + "&size=15";
+    }
+
+    function supply_hide() {
+        location.href = "/supply/notice" + "?page=" + [[${supplyPage.getPageable().getPageNumber()}]] + "&size=15";
+    }
+
+</script>
+</html>

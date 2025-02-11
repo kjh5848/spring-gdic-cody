@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://gdicland.com//assets/img/m1_1_planning_img1.jpg">
+		<title>김해대동첨단산업단지㈜</title>
+		<link rel="stylesheet" th:href="@{/assets/css/gdic_style_v1.1.css}">
+		<script th:src="@{/assets/js/jquery.min.js}"></script>
+		<script th:src="@{/assets/js/slick.min.js}"></script>
+		<script th:src="@{/assets/js/gdic_v1.1.js}"></script>
+		<script th:src="@{/assets/js/main.js}"></script>
+		<script>
+			$(function(){
+				$('#gdic_header').html(gdic_header);
+				$('#gdic_footer').html(gdic_footer);
+				footer_slide_on();
+				$('.main_popup').addClass('show');
+
+				$('#main_slide').slick({
+					slide: 'div', //슬라이드 되어야 할 태그 ex) div, li
+					infinite : true,  //무한 반복 옵션
+					slidesToShow : 1, // 한 화면에 보여질 컨텐츠 개수
+					speed : 350,  // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+					arrows : true,  // 옆으로 이동하는 화살표 표시 여부
+					dots : false,  // 스크롤바 아래 점으로 페이지네이션 여부
+					autoplay : true, // 자동 스크롤 사용 여부
+					autoplaySpeed : 5000,  // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+					pauseOnHover : false, // 슬라이드 이동 시 마우스 호버하면 슬라이더 멈추게 설정
+					draggable : true,  //드래그 가능 여부
+				})
+			})
+		</script>
+	</head>
+
+	<style>
+
+	</style>
+	<body id="gdic_main">
+		<header id="gdic_header">
+
+		</header>
+
+		<section class="main_bg1" id="gdic_body">
+
+			<div id="main_slide" style="overflow-x: hidden;">
+				<div class="gdic_main_banner1">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="f_c_w ft_s5 fw_pb text_box fw_nb">
+									<h2>지금은 창의력 있는 융합인재가 필요한 시대!</h2>
+									<p >소프트웨어 중심 융합교육을 통한 창의적 인재육성</p>
+									<p >(사)한국융합인재교육협회가 구심점 역할을 하겠습니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gdic_main_banner1 type2">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="f_c_w ft_s5 fw_pb text_box fw_nb">
+									<p>4차 산업혁명시대의 IT융합(STEAM)인력 양성을</p>
+									<p>위하여 산업체, 교육기관, IT전문가가 모였습니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gdic_main_banner1 type3">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="f_c_w ft_s5 fw_pb text_box fw_nb">
+									<p>(사)한국융합인재교육협회는</p>
+									<p class="ft_s3">산학협력연구/개발한 IT융합교육 프로그램을 통한</p>
+									<p class="ft_s3">인재육성과 4차 산업혁명을 선도하는 우리산업의 경쟁력 강화를 지원합니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row m_p1">
+					<div class="col">
+						<ul class="gdic_main_list2">
+							<li>
+								<div class="icon_box"><a th:href="@{/business/outline}"><img th:src="@{/assets/img/main_list_icon1.png}" /></a></div>
+								<div class="text_box">
+									<p class="top f_s5">IT융합 교육프로그램 / 응용기술 개발</p>
+									<p class="bottom f_s1 f_c_g2">김해대동첨단산업단지(주)의 전반적인 사업내용을 열람하실 수 있습니다.</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon_box"><a th:href="@{/locationCondition/investmentValue}"><img th:src="@{/assets/img/main_list_icon2.png}" /></a></div>
+								<div class="text_box">
+									<p class="top f_s5">입지조건</p>
+									<p class="bottom f_s1 f_c_g2">김해대동첨단산업단지(주)만의 입지의 대한 정보를 보실 수 있습니다.</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon_box"><a th:href="@{/supply/informationByPaper}"> <img th:src="@{/assets/img/main_list_icon3.png}" /></a></div>
+								<div class="text_box">
+									<p class="top f_s5">공급정보</p>
+									<p class="bottom f_s1 f_c_g2">김해대동첨단산업단지(주)의 공급정보를 보실 수 있습니다.</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon_box"><a th:href="@{/supply/notice}" ><img th:src="@{/assets/img/main_list_icon4.png}" /></a></div>
+								<div class="text_box">
+									<p class="top f_s5">공급가능부지</p>
+									<p class="bottom f_s1 f_c_g2">김해대동첨단산업단지(주)의 공급이 가능한 부지를 확인 하실 수 있습니다.</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon_box"><a th:href="@{/board/notice}" ><img th:src="@{/assets/img/main_list_icon5.png}" /></a></div>
+								<div class="text_box">
+									<p class="top f_s5">주요공지</p>
+									<p class="bottom f_s1 f_c_g2">김해대동첨단산업단지(주)의 알아야 할 공지사항을 보실 수 있습니다.</p>
+								</div>
+							</li>
+							<li>
+							<div class="icon_box"><a th:href="@{/gdic/introduction}" ><img th:src="@{/assets/img/main_list_icon6.png}" /></a></div>
+								<div class="text_box">
+									<p class="top f_s5">회사소개</p>
+									<p class="bottom f_s1 f_c_g2">김해대동첨단산업단지(주)의 대한 회사 정보를 확인 하실 수 있습니다.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="main_banner2">
+				<div class="container">
+					<div class="row m_p1">
+						<div class="col">
+							<div class="text-center">
+								<p class="ft_s5 f_c_active2 mb_30">대한민국에 없던 첨단산업도시의 시작!</p>
+								<p class="f_s2">경남 슈퍼클래스! 성공의 판을 키우다!<br />
+									경남의 비즈니스를 완성하는 김해대동첨단산업단지를 만나십시오.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="main_banner4">
+<!--		<div class="main_popup">-->
+			<div class="container">
+				<div class="row m_p1">
+					<div class="col">
+						<div class="main_banner4_box">
+							<p class="ft_s5 mb_30 text-center">오시는 길</p>
+							<div class="mb_10 img_box">
+								<img th:src="@{/assets/img/오시는길.svg}" class="w-100">
+							</div>
+
+							<div class="d-flex align-items-center justify-content-between">
+								<p>경상남도 김해시 대동면 조눌리 185-2</p>
+
+								<p class="f_s5 fw_pb">1577-9333</p>
+							</div>
+						</div>
+						<a th:href="@{/board/registerCustomer} "  class="image-wrapper" ><img th:src="@{/assets/img/관심고객-수정.svg}" width="600" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!--		ShowYn-->
+		<div th:if="${popupFile.getShowYn() == 'Y'}">
+			<div class="main_popup">
+				<div class="popup_box">
+					<a th:href="${popupFile.getLink()}" target="_blank">
+						<img th:src="'data:image/jpeg;base64,'+${popupFile.getFileContent()}">
+					</a>
+					<button class="close_btn"><img th:src="@{/assets/img/xclose_w.png}" width="40px" onclick="hidePopup()"></button>
+				</div>
+			</div>
+		</div>
+		<div th:unless="${popupFile.getShowYn() == 'N'}">
+
+		</div>
+
+		<footer id="gdic_footer"></footer>
+	</body>
+
+	<style>
+		.image-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
+
+</html>
