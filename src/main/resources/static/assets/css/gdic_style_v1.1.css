@@ -5,6 +5,7 @@
 @import url(slick-theme.css);
 @import url(animate.css);
 @import url(base_style.css);
+@import url(kseta_card.css);
 
 html {min-width:1100px !important;}
 .container {width:1100px !important; max-width:1100px !important;}
@@ -113,10 +114,13 @@ html {min-width:1100px !important;}
 .popup_img_list li {padding:0 35px;}
 .popup_img_list a {display:block; width:170px;  border-radius:20px; padding:10px 20px; margin:0 auto; background:#fff url(../img/blank_icon.png) right 20px center no-repeat; background-size:15px;}
 
-. {background:url(../img/main_banner1.png) center no-repeat; background-size: cover; display:flex; align-items: center;}
+.gdic_main_banner1 {background:url(../img/main_banner1.png) center no-repeat; background-size: cover; display:flex; align-items: center;}
 .gdic_main_banner1.type2 {background-image:url(../img/main_banner2.png);}
 .gdic_main_banner1.type3 {background-image:url(../img/main_banner3.png);}
 .gdic_main_banner1 .col {height:calc(100vh - 79px); display: flex; align-items: center;}
+
+
+
 
 .gdic_main_list2 {display: flex; justify-content: space-between; text-align: center; padding:70px 0;}
 .gdic_main_list2 li {position:relative; padding:20px;}
