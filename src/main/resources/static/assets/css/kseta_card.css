@@ -18,7 +18,7 @@
 }
 
 .kseta-card:hover .kseta-card__gradient {
-    transform: rotate(2deg);
+    transform: rotate(5deg);
 }
 
 .kseta-card__content {
@@ -29,7 +29,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .kseta-card__icon {
@@ -58,7 +58,7 @@
     color: #333;
     font-family: 'Pretendard_b';
     margin-bottom: 0.5rem;
-    font-size: 2.25rem;
+    font-size: 1.25rem;
 }
 
 .kseta-card__subtitle {
@@ -81,7 +81,7 @@
     margin-bottom: 0.75rem;
     color: #666;
     font-family: 'Pretendard_r';
-    font-size: 1.2rem;
+    font-size: 0.8em;
     line-height: 1.5;
 }
 
@@ -94,4 +94,45 @@
     height: 4px;
     background-color: #382f83;
     border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .kseta-card__title {
+        font-size: 2.25rem;
+    }
+
+    .kseta-card__list-item {
+        font-size: 1.4rem;
+    }
+
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .kseta-card__title {
+        font-size: 2.25rem;
+    }
+
+    .kseta-card__subtitle {
+        font-size: 1.5rem;
+    }
+
+
+    .kseta-card__list-item {
+        font-size: 1.8rem;
+    }
+
+    .kseta-card__title {
+        margin-left: 4.5rem;
+    }
+
+    .kseta-card__subtitle {
+        margin-left: 4.5rem;
+    }
+
+    .kseta-card__list {
+        margin-left: 4.5rem;
+    }
+
 }

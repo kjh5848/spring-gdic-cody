@@ -1,307 +1,385 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta property="og:image" content="http://gdicland.com//assets/img/m1_1_planning_img1.jpg">
-		<title>김해대동첨단산업단지㈜</title>
-		<link rel="stylesheet" th:href="@{/assets/css/gdic_style_v1.1.css}">
-		<script th:src="@{/assets/js/jquery.min.js}"></script>
-		<script th:src="@{/assets/js/slick.min.js}"></script>
-		<script th:src="@{/assets/js/gdic_v1.1.js}"></script>
-		<script th:src="@{/assets/js/main.js}"></script>
-		<script>
-			$(function(){
-				$('#gdic_header').html(gdic_header);
-				$('#gdic_footer').html(gdic_footer);
-				footer_slide_on();
-				$('.main_popup').addClass('show');
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="http://gdicland.com//assets/img/m1_1_planning_img1.jpg" property="og:image">
+    <title>김해대동첨단산업단지㈜</title>
+    <link rel="stylesheet" th:href="@{/assets/css/gdic_style_v1.1.css}">
+    <script th:src="@{/assets/js/jquery.min.js}"></script>
+    <script th:src="@{/assets/js/slick.min.js}"></script>
+    <script th:src="@{/assets/js/gdic_v1.1.js}"></script>
+    <script th:src="@{/assets/js/main.js}"></script>
+    <script>
+        $(function () {
+            $('#gdic_header').html(gdic_header);
+            $('#gdic_footer').html(gdic_footer);
+            footer_slide_on();
+            $('.main_popup').addClass('show');
 
-				$('#main_slide').slick({
-					slide: 'div', //슬라이드 되어야 할 태그 ex) div, li
-					infinite : true,  //무한 반복 옵션
-					slidesToShow : 1, // 한 화면에 보여질 컨텐츠 개수
-					speed : 350,  // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
-					arrows : true,  // 옆으로 이동하는 화살표 표시 여부
-					dots : false,  // 스크롤바 아래 점으로 페이지네이션 여부
-					autoplay : true, // 자동 스크롤 사용 여부
-					autoplaySpeed : 5000,  // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-					pauseOnHover : false, // 슬라이드 이동 시 마우스 호버하면 슬라이더 멈추게 설정
-					draggable : true,  //드래그 가능 여부
-				})
-			})
-		</script>
-	</head>
+            $('#main_slide').slick({
+                slide: 'div', //슬라이드 되어야 할 태그 ex) div, li
+                infinite: true,  //무한 반복 옵션
+                slidesToShow: 1, // 한 화면에 보여질 컨텐츠 개수
+                speed: 350,  // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+                arrows: true,  // 옆으로 이동하는 화살표 표시 여부
+                dots: false,  // 스크롤바 아래 점으로 페이지네이션 여부
+                autoplay: true, // 자동 스크롤 사용 여부
+                autoplaySpeed: 5000,  // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+                pauseOnHover: false, // 슬라이드 이동 시 마우스 호버하면 슬라이더 멈추게 설정
+                draggable: true,  //드래그 가능 여부
+            })
+        })
+    </script>
+</head>
 
-	<style>
+<style>
 
-	</style>
-	<body id="gdic_main">
-		<header id="gdic_header">
+</style>
+<body id="gdic_main">
+<header id="gdic_header">
 
-		</header>
+</header>
 
-		<section class="main_bg1" id="gdic_body">
+<!--슬라이드 배너 시작-->
+<div class="main_bg1" id="gdic_body">
+    <div id="main_slide" style="overflow-x: hidden;">
+        <div class="gdic_main_banner1">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="f_c_w ft_s5 fw_pb text_box fw_nb">
+                            <h2>지금은 창의력 있는 융합인재가 필요한 시대!</h2>
+                            <p>소프트웨어 중심 융합교육을 통한 창의적 인재육성</p>
+                            <p>(사)한국융합인재교육협회가 구심점 역할을 하겠습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gdic_main_banner1 type2">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="f_c_w ft_s5 fw_pb text_box fw_nb">
+                            <p>4차 산업혁명시대의 IT융합(STEAM)인력 양성을</p>
+                            <p>위하여 산업체, 교육기관, IT전문가가 모였습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			<div id="main_slide" style="overflow-x: hidden;">
-				<div class="gdic_main_banner1">
-					<div class="container">
-						<div class="row">
-							<div class="col">
-								<div class="f_c_w ft_s5 fw_pb text_box fw_nb">
-									<h2>지금은 창의력 있는 융합인재가 필요한 시대!</h2>
-									<p >소프트웨어 중심 융합교육을 통한 창의적 인재육성</p>
-									<p >(사)한국융합인재교육협회가 구심점 역할을 하겠습니다.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="gdic_main_banner1 type2">
-					<div class="container">
-						<div class="row">
-							<div class="col">
-								<div class="f_c_w ft_s5 fw_pb text_box fw_nb">
-									<p>4차 산업혁명시대의 IT융합(STEAM)인력 양성을</p>
-									<p>위하여 산업체, 교육기관, IT전문가가 모였습니다.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+        <div class="gdic_main_banner1 type3">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="f_c_w ft_s5 fw_pb text_box fw_nb">
+                            <p>(사)한국융합인재교육협회는</p>
+                            <p class="ft_s3">산학협력연구/개발한 IT융합교육 프로그램을 통한</p>
+                            <p class="ft_s3">인재육성과 4차 산업혁명을 선도하는 우리산업의 경쟁력 강화를 지원합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--슬라이드 배너 종료-->
 
-				<div class="gdic_main_banner1 type3">
-					<div class="container">
-						<div class="row">
-							<div class="col">
-								<div class="f_c_w ft_s5 fw_pb text_box fw_nb">
-									<p>(사)한국융합인재교육협회는</p>
-									<p class="ft_s3">산학협력연구/개발한 IT융합교육 프로그램을 통한</p>
-									<p class="ft_s3">인재육성과 4차 산업혁명을 선도하는 우리산업의 경쟁력 강화를 지원합니다.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+<!---협회소개 시작-->
+<div class="kseta_intro-container">
+    <div class="kseta_intro-title">
+        <h2 class="kseta_intro-title__main">협회소개</h2>
+    </div>
 
-			<div class="kseta-cards">
-				<div class="container">
-					<div class="row">
-						<!-- 카드 1 -->
-						<div class="col-md-6">
-							<div class="kseta-card">
-								<div class="kseta-card__gradient"></div>
-								<div class="kseta-card__content">
-									<div class="kseta-card__icon">
-										<svg class="kseta-card__icon-image" viewBox="0 0 24 24" fill="none"
-											 stroke="currentColor" stroke-width="2">
-											<path
-													d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" />
-										</svg>
-									</div>
-									<h3 class="kseta-card__title">IT 장비 및 자원프로그램</h3>
-									<p class="kseta-card__subtitle">솔루션기술 개발</p>
-									<ul class="kseta-card__list">
-										<li class="kseta-card__list-item">IT 솔루션 및 소프트웨어 관리/개발/서비스</li>
-										<li class="kseta-card__list-item">시스템 및 업무솔루션 개발과 유지/관리</li>
-										<li class="kseta-card__list-item">디지털 인프라 기반 구축관리 및 운영지원</li>
-										<li class="kseta-card__list-item">시스템 및 업무 소프트웨어 관리/시스템지원</li>
-									</ul>
-								</div>
-							</div>
-						</div>
+    <div class="kseta_intro-content">
+        <!-- 설립목적 -->
+        <section class="kseta_intro-card">
+            <div class="kseta_intro-card__header">
+                <h2 class="kseta_intro-card__title">설립목적</h2>
+            </div>
+            <div class="kseta_intro-card__body">
+                <p>해당 기관은 국가 경제 발전과 사회적 책임을 수행하기 위해 설립되었으며, 주요 목표는 지속 가능한 성장을 도모하고, 연구 및 기술 혁신을 촉진하며, 관련 산업 발전을 지원하는
+                    것입니다. 또한, 공공의 이익을 위해 전문적인 서비스를 제공하고, 협력을 강화하여 글로벌 경쟁력을 확보하는 데 중점을 둡니다.</p>
+            </div>
+        </section>
+
+        <!-- 사업목적 -->
+        <section class="kseta_intro-card">
+            <div class="kseta_intro-card__header">
+                <h2 class="kseta_intro-card__title">사업목적</h2>
+            </div>
+            <div class="kseta_intro-card__body">
+                <ul class="kseta_intro-objectives">
+                    <li class="kseta_intro-objectives__item">
+                        <div class="kseta_intro-objectives__number">01</div>
+                        <div class="kseta_intro-objectives__content">
+                            <p class="kseta_intro-objectives__text">급격한 기술변화 및 교육 인프라 디지털 전환에 대응</p>
+                            <p class="kseta_intro-objectives__text">산업현장 수요 맞춤형 IT융합 인재육성을 추구</p>
+                        </div>
+                    </li>
+                    <li class="kseta_intro-objectives__item">
+                        <div class="kseta_intro-objectives__number">02</div>
+                        <div class="kseta_intro-objectives__content">
+                            <p class="kseta_intro-objectives__text">IoT, AI, Big Data 등의 신기술 융합인재(STEAM) 양성</p>
+                            <p class="kseta_intro-objectives__text">NCS 기반 산학협력 교육 프로그램/교재 연구개발</p>
+                        </div>
+                    </li>
+                    <li class="kseta_intro-objectives__item">
+                        <div class="kseta_intro-objectives__number">03</div>
+                        <div class="kseta_intro-objectives__content">
+                            <p class="kseta_intro-objectives__text">온/오프라인 융합학습 환경에 보급/전파</p>
+                            <p class="kseta_intro-objectives__text">소프트웨어 산업의 발전과 신기술 전파 목적</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+<!--협회소개 종료-->
+
+<!--주요사업 시작-->
+<section class="kseta-cards">
+    <div class="kseta_intro-title">
+        <h2 class="kseta_intro-title__main">주요 사업</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- 카드 1 -->
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="kseta-card">
+                    <div class="kseta-card__gradient"></div>
+                    <div class="kseta-card__content">
+                        <div class="kseta-card__icon">
+                            <svg class="kseta-card__icon-image" fill="none" stroke="currentColor"
+                                 stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                        d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="kseta-card__title">IT 장비 및 자원프로그램</h3>
+                        <p class="kseta-card__subtitle">솔루션기술 개발</p>
+                        <ul class="kseta-card__list">
+                            <li class="kseta-card__list-item">IT 솔루션 및 소프트웨어 관리/개발/서비스</li>
+                            <li class="kseta-card__list-item">시스템 및 업무솔루션 개발과 유지/관리</li>
+                            <li class="kseta-card__list-item">디지털 인프라 기반 구축관리 및 운영지원</li>
+                            <li class="kseta-card__list-item">시스템 및 업무 소프트웨어 관리/시스템지원</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
 
+            <!-- 카드 2 -->
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="kseta-card">
+                    <div class="kseta-card__gradient"></div>
+                    <div class="kseta-card__content">
+                        <div class="kseta-card__icon">
+                            <svg class="kseta-card__icon-image" fill="none" stroke="currentColor"
+                                 stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                        d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/>
+                            </svg>
+                        </div>
+                        <h3 class="kseta-card__title">IT 솔루션과 업무</h3>
+                        <p class="kseta-card__subtitle">컨설팅 서비스</p>
+                        <ul class="kseta-card__list">
+                            <li class="kseta-card__list-item">현장수요맞춤형 컨설팅/분석 서비스</li>
+                            <li class="kseta-card__list-item">구체화 컨설팅과 계획과 관리개선</li>
+                            <li class="kseta-card__list-item">IT솔루션 현장 실무적응과 서비스</li>
+                            <li class="kseta-card__list-item">디지털서비스제품 솔루션/시스템지원/기타</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-						<!-- 카드 2 -->
-						<div class="col-md-6">
-							<div class="kseta-card">
-								<div class="kseta-card__gradient"></div>
-								<div class="kseta-card__content">
-									<div class="kseta-card__icon">
-										<svg class="kseta-card__icon-image" viewBox="0 0 24 24" fill="none"
-											 stroke="currentColor" stroke-width="2">
-											<path
-													d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
-										</svg>
-									</div>
-									<h3 class="kseta-card__title">IT 솔루션과 업무</h3>
-									<p class="kseta-card__subtitle">컨설팅 서비스</p>
-									<ul class="kseta-card__list">
-										<li class="kseta-card__list-item">현장수요맞춤형 컨설팅/분석 서비스</li>
-										<li class="kseta-card__list-item">구체화 컨설팅과 계획과 관리개선</li>
-										<li class="kseta-card__list-item">IT솔루션 현장 실무적응과 서비스</li>
-										<li class="kseta-card__list-item">디지털서비스제품 솔루션/시스템지원/기타</li>
-									</ul>
-								</div>
-							</div>
-						</div>
+            <!-- 카드 3 -->
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="kseta-card">
+                    <div class="kseta-card__gradient"></div>
+                    <div class="kseta-card__content">
+                        <div class="kseta-card__icon">
+                            <svg class="kseta-card__icon-image" fill="none" stroke="currentColor"
+                                 stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                        d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+                            </svg>
+                        </div>
+                        <h3 class="kseta-card__title">IT 정책 현황</h3>
+                        <p class="kseta-card__subtitle">취약점 진단</p>
+                        <ul class="kseta-card__list">
+                            <li class="kseta-card__list-item">정책, 법규, 지도에비 따른 관리운영과 분석</li>
+                            <li class="kseta-card__list-item">솔루션과 관리시스템 검진/취약지점</li>
+                            <li class="kseta-card__list-item">절차와, 정책진단과, 시스템의 운영과정별 시책분석/취약지원</li>
+                            <li class="kseta-card__list-item">솔루션과 분석시스템 및 운영 시책진행,개선과 기타</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-						<!-- 카드 3 -->
-						<div class="col-md-6">
-							<div class="kseta-card">
-								<div class="kseta-card__gradient"></div>
-								<div class="kseta-card__content">
-									<div class="kseta-card__icon">
-										<svg class="kseta-card__icon-image" viewBox="0 0 24 24" fill="none"
-											 stroke="currentColor" stroke-width="2">
-											<path
-													d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-										</svg>
-									</div>
-									<h3 class="kseta-card__title">IT 정책 현황</h3>
-									<p class="kseta-card__subtitle">취약점 진단</p>
-									<ul class="kseta-card__list">
-										<li class="kseta-card__list-item">정책, 법규, 지도에비 따른 관리운영과 분석</li>
-										<li class="kseta-card__list-item">솔루션과 관리시스템 검진/취약지점</li>
-										<li class="kseta-card__list-item">절차와, 정책진단과, 시스템의 운영과정별 시책분석/취약지원</li>
-										<li class="kseta-card__list-item">솔루션과 분석시스템 및 운영 시책진행,개선과 기타</li>
-									</ul>
-								</div>
-							</div>
-						</div>
+            <!-- 카드 4 -->
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="kseta-card">
+                    <div class="kseta-card__gradient"></div>
+                    <div class="kseta-card__content">
+                        <div class="kseta-card__icon">
+                            <svg class="kseta-card__icon-image" fill="none" stroke="currentColor"
+                                 stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                        d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="kseta-card__title">신뢰관련 네트워크</h3>
+                        <p class="kseta-card__subtitle">시스템 현황</p>
+                        <ul class="kseta-card__list">
+                            <li class="kseta-card__list-item">기본/현재 등장/주요 이슈현황과 과제</li>
+                            <li class="kseta-card__list-item">관련시스템과 현황검증/주요진단/관리</li>
+                            <li class="kseta-card__list-item">취약문제/개선지원/운영체제와 관련 현황 구성</li>
+                            <li class="kseta-card__list-item">시책지원과 현재 인프라시스템과 결과의 환류</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--주요사업 종료-->
 
-						<!-- 카드 4 -->
-						<div class="col-md-6">
-							<div class="kseta-card">
-								<div class="kseta-card__gradient"></div>
-								<div class="kseta-card__content">
-									<div class="kseta-card__icon">
-										<svg class="kseta-card__icon-image" viewBox="0 0 24 24" fill="none"
-											 stroke="currentColor" stroke-width="2">
-											<path
-													d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
-										</svg>
-									</div>
-									<h3 class="kseta-card__title">신뢰관련 네트워크</h3>
-									<p class="kseta-card__subtitle">시스템 현황</p>
-									<ul class="kseta-card__list">
-										<li class="kseta-card__list-item">기본/현재 등장/주요 이슈현황과 과제</li>
-										<li class="kseta-card__list-item">관련시스템과 현황검증/주요진단/관리</li>
-										<li class="kseta-card__list-item">취약문제/개선지원/운영체제와 관련 현황 구성</li>
-										<li class="kseta-card__list-item">시책지원과 현재 인프라시스템과 결과의 환류</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
-<!--			<div class="container">-->
-<!--				<div class="row m_p1">-->
-<!--					<div class="col">-->
-<!--						<ul class="gdic_main_list2">-->
-<!--							<li>-->
-<!--								<div class="icon_box"><a th:href="@{/business/outline}"><img th:src="@{/assets/img/main_list_icon1.png}" /></a></div>-->
-<!--								<div class="text_box">-->
-<!--									<p class="top f_s5">IT융합 교육프로그램 / 응용기술 개발</p>-->
-<!--									<p class="bottom f_s1 f_c_g2">김해대동첨단산업단지(주)의 전반적인 사업내용을 열람하실 수 있습니다.</p>-->
-<!--								</div>-->
-<!--							</li>-->
-<!--							<li>-->
-<!--								<div class="icon_box"><a th:href="@{/locationCondition/investmentValue}"><img th:src="@{/assets/img/main_list_icon2.png}" /></a></div>-->
-<!--								<div class="text_box">-->
-<!--									<p class="top f_s5">입지조건</p>-->
-<!--									<p class="bottom f_s1 f_c_g2">김해대동첨단산업단지(주)만의 입지의 대한 정보를 보실 수 있습니다.</p>-->
-<!--								</div>-->
-<!--							</li>-->
-<!--							<li>-->
-<!--								<div class="icon_box"><a th:href="@{/supply/informationByPaper}"> <img th:src="@{/assets/img/main_list_icon3.png}" /></a></div>-->
-<!--								<div class="text_box">-->
-<!--									<p class="top f_s5">공급정보</p>-->
-<!--									<p class="bottom f_s1 f_c_g2">김해대동첨단산업단지(주)의 공급정보를 보실 수 있습니다.</p>-->
-<!--								</div>-->
-<!--							</li>-->
-<!--							<li>-->
-<!--								<div class="icon_box"><a th:href="@{/supply/notice}" ><img th:src="@{/assets/img/main_list_icon4.png}" /></a></div>-->
-<!--								<div class="text_box">-->
-<!--									<p class="top f_s5">공급가능부지</p>-->
-<!--									<p class="bottom f_s1 f_c_g2">김해대동첨단산업단지(주)의 공급이 가능한 부지를 확인 하실 수 있습니다.</p>-->
-<!--								</div>-->
-<!--							</li>-->
-<!--							<li>-->
-<!--								<div class="icon_box"><a th:href="@{/board/notice}" ><img th:src="@{/assets/img/main_list_icon5.png}" /></a></div>-->
-<!--								<div class="text_box">-->
-<!--									<p class="top f_s5">주요공지</p>-->
-<!--									<p class="bottom f_s1 f_c_g2">김해대동첨단산업단지(주)의 알아야 할 공지사항을 보실 수 있습니다.</p>-->
-<!--								</div>-->
-<!--							</li>-->
-<!--							<li>-->
-<!--							<div class="icon_box"><a th:href="@{/gdic/introduction}" ><img th:src="@{/assets/img/main_list_icon6.png}" /></a></div>-->
-<!--								<div class="text_box">-->
-<!--									<p class="top f_s5">회사소개</p>-->
-<!--									<p class="bottom f_s1 f_c_g2">김해대동첨단산업단지(주)의 대한 회사 정보를 확인 하실 수 있습니다.</p>-->
-<!--								</div>-->
-<!--							</li>-->
-<!--						</ul>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--			</div>-->
+<!--KSETA 기대효과 시작-->
+<section class="kseta-expect">
+    <div class="kseta_intro-title">
+        <h2 class="kseta_intro-title__main">KSETA 기대효과</h2>
+    </div>
+    <!--    <h2 class="kseta-expect__title"></h2>-->
+    <div class="kseta-expect__container">
+        <article class="kseta-expect__section" style="--delay:1">
+            <div class="kseta-expect__number">01</div>
+            <h3 class="kseta-expect__title-text">변화하는 신기술에 대한 교육프로그램 개발기술</h3>
+            <p class="kseta-expect__description">
+                산업현장의 수요에 맞는 산업역량[IT융합] 인재양성을 위한 혁신적인 접근
+            </p>
+        </article>
 
-			<div class="main_banner2">
-				<div class="container">
-					<div class="row m_p1">
-						<div class="col">
-							<div class="text-center">
-								<p class="ft_s5 f_c_active2 mb_30">대한민국에 없던 첨단산업도시의 시작!</p>
-								<p class="f_s2">경남 슈퍼클래스! 성공의 판을 키우다!<br />
-									경남의 비즈니스를 완성하는 김해대동첨단산업단지를 만나십시오.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<div class="main_banner4">
-<!--		<div class="main_popup">-->
-			<div class="container">
-				<div class="row m_p1">
-					<div class="col">
-						<div class="main_banner4_box">
-							<p class="ft_s5 mb_30 text-center">오시는 길</p>
-							<div class="mb_10 img_box">
-								<img th:src="@{/assets/img/오시는길.svg}" class="w-100">
-							</div>
+        <article class="kseta-expect__section" style="--delay:2">
+            <div class="kseta-expect__number">02</div>
+            <h3 class="kseta-expect__title-text">NCS 기반 STEAM 소프트웨어 교육 커스터마이징</h3>
+            <p class="kseta-expect__description">
+                맞춤형 교육 프로그램/교재 개발을 통한 초중고 대학・직업훈련 기관 보급
+            </p>
+        </article>
 
-							<div class="d-flex align-items-center justify-content-between">
-								<p>경상남도 김해시 대동면 조눌리 185-2</p>
+        <article class="kseta-expect__section" style="--delay:3">
+            <div class="kseta-expect__number">03</div>
+            <h3 class="kseta-expect__title-text">산업현장 맞춤형 교육 프로그램 보급</h3>
+            <p class="kseta-expect__description">
+                교육 프로그램의 전략적 보급을 통한 [IT융합] 인재 재제작 도모
+            </p>
+        </article>
+    </div>
+</section>
+<!--KSETA 기대효과 종료-->
 
-								<p class="f_s5 fw_pb">1577-9333</p>
-							</div>
-						</div>
-						<a th:href="@{/board/registerCustomer} "  class="image-wrapper" ><img th:src="@{/assets/img/관심고객-수정.svg}" width="600" /></a>
-					</div>
-				</div>
-			</div>
-		</div>
+<section class="kseta-org-sec">
+    <div class="kseta_intro-title">
+        <h1 class="kseta_intro-title__main">조직도</h1>
+    </div>
+    <div class="kseta-org-sec__container">
+        <!-- 조직도 SVG -->
+        <div class="kseta-org-sec__chart">
+            <img src="/assets/img/kseta_org.webp"></div>
+    </div>
+</section>
 
-<!--		ShowYn-->
-		<div th:if="${popupFile.getShowYn() == 'Y'}">
-			<div class="main_popup">
-				<div class="popup_box">
-					<a th:href="${popupFile.getLink()}" target="_blank">
-						<img th:src="'data:image/jpeg;base64,'+${popupFile.getFileContent()}">
-					</a>
-					<button class="close_btn"><img th:src="@{/assets/img/xclose_w.png}" width="40px" onclick="hidePopup()"></button>
-				</div>
-			</div>
-		</div>
-		<div th:unless="${popupFile.getShowYn() == 'N'}">
 
-		</div>
+<!--오시는 길 시작-->
+<section class="kseta-loca-sec">
+    <div class="kseta_intro-title">
+        <h1 class="kseta_intro-title__main">오시는 길</h1>
+    </div>
+    <div class="kseta-loca-sec__container">
+        <div class="kseta-loca-sec__map">
+            <iframe
+                    allowfullscreen=""
+                    class="kseta-loca-sec__map-iframe"
+                    height="450"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.318554787274!2d129.01105851159815!3d35.14867537265028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568ea41531427f1%3A0x5781d7491d90739e!2z64yA7ZWc66-86rWtIOu2gOyCsOq0keyXreyLnCDsgqzsg4Hqtawg7KO866GA66GcMjfrsojquLggMzQ!5e0!3m2!1sko!2sus!4v1739415269581!5m2!1sko!2sus"
+                    style="border:0;"
+                    width="600"
+            ></iframe>
+        </div>
+        <div class="kseta-loca-sec__info">
+            <div class="kseta-loca-sec__info-item">
+                <h3 class="kseta-loca-sec__info-title">주소</h3>
+                <p class="kseta-loca-sec__info-detail">
+                    부산광역시 사상구 주례로 27번길 34 K-테크밸리
+                </p>
+            </div>
+            <div class="kseta-loca-sec__info-item">
+                <h3 class="kseta-loca-sec__info-title">대중교통</h3>
+                <p class="kseta-loca-sec__info-detail">
+                    ✅ 지하철: 부산 지하철 2호선 주례역 7번 출구로 나와 약 10분 정도 도보로 이동하시면 됩니다.
+                </p>
+                <br>
+                <p class="kseta-loca-sec__info-detail">
+                    ✅ 버스: 주례역 또는 인근 버스 정류장에서 하차하신 후 도보로 이동
+                </p>
+                <div class="kseta-loca-sec__info-item">
+                    <h3 class="kseta-loca-sec__info-title">연락처</h3>
+                    <div class="kseta-loca-sec__contact">
+                        <span class="kseta-loca-sec__contact-icon">📞</span>
+                        <span class="kseta-loca-sec__info-detail">070-7701-7735</span>
+                    </div>
+                    <div class="kseta-loca-sec__contact">
+                        <span class="kseta-loca-sec__contact-icon">✉️</span>
+                        <span class="kseta-loca-sec__info-detail">kseta@kseta.or.kr</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--오시는 길 종료-->
 
-		<footer id="gdic_footer"></footer>
-	</body>
 
-	<style>
-		.image-wrapper {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-	</style>
+<footer id="gdic_footer"></footer>
+
+
+</body>
+<style>
+    .image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<script>
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('kseta-expect__section--visible');
+            } else {
+                entry.target.classList.remove('kseta-expect__section--visible');
+            }
+        });
+    }, observerOptions);
+
+    const sections = document.querySelectorAll('.kseta-expect__section');
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
 
 </html>

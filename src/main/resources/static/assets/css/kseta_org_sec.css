@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600&display=swap');
+
+/* 조직도 섹션 */
+.kseta-org-sec {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    background-color: #f9fafb;
+    text-align: center;
+}
+
+/* 섹션 제목 */
+.kseta-org-sec__title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.kseta-org-sec__title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #3498db;
+}
+
+/* 조직도 및 카드 컨테이너 */
+.kseta-org-sec__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* 조직도 SVG */
+.kseta-org-sec__chart img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 조직 카드 섹션 */
+.kseta-org-sec__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 개별 카드 */
+.kseta-org-sec__card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.kseta-org-sec__card:hover {
+    transform: scale(1.05);
+}
+
+/* 카드 제목 */
+.kseta-org-sec__card-title {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+/* 카드 이름 */
+.kseta-org-sec__card-name {
+    font-size: 1rem;
+    color: #34495e;
+}
+
+/* 반응형 (태블릿 이하에서 컬럼 배치 변경) */
+@media (max-width: 992px) {
+    .kseta-org-sec__container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .kseta-org-sec__chart img {
+        max-width: 90%;
+    }
+
+    .kseta-org-sec__cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .kseta-org-sec__card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .kseta-org-sec__cards {
+        flex-direction: column;
+    }
+
+    .kseta-org-sec__card {
+        width: 100%;
+    }
+}

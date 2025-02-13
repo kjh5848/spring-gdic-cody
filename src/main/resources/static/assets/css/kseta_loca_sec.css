@@ -1,0 +1,89 @@
+/* KSETA Location Section - BEM Methodology */
+.kseta-loca-sec {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    background-color: #f9fafb;
+}
+
+.kseta-loca-sec__title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    position: relative;
+}
+
+.kseta-loca-sec__title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #3498db;
+}
+
+.kseta-loca-sec__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.kseta-loca-sec__map {
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.kseta-loca-sec__map-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.kseta-loca-sec__info {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.kseta-loca-sec__info-item {
+    margin-bottom: 20px;
+}
+
+.kseta-loca-sec__info-title {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.kseta-loca-sec__info-detail {
+    color: #34495e;
+}
+
+.kseta-loca-sec__contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.kseta-loca-sec__contact-icon {
+    margin-right: 15px;
+    color: #3498db;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 992px) {
+    .kseta-loca-sec__container {
+        grid-template-columns: 1fr;
+    }
+
+    .kseta-loca-sec__map {
+        height: 400px;
+    }
+}

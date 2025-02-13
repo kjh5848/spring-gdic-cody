@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600&display=swap');
+
+/* 기본 푸터 스타일 */
+.kseta-footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 20px;
+    font-family: 'Pretendard', sans-serif;
+}
+
+/* 푸터 내부 컨테이너 */
+.kseta-footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 푸터 각 섹션 */
+.kseta-footer__section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+/* 푸터 제목 스타일 */
+.kseta-footer__title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #1abc9c;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* 링크 리스트 스타일 */
+.kseta-footer__list {
+    list-style: none;
+    padding: 0;
+}
+
+.kseta-footer__list li {
+    margin: 5px 0;
+}
+
+.kseta-footer__list a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+.kseta-footer__list a:hover {
+    text-decoration: underline;
+}
+
+/* 연락처 링크 */
+.kseta-footer__contact a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+.kseta-footer__contact a:hover {
+    text-decoration: underline;
+}
+
+/* 하단 바 */
+.kseta-footer__bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #3a4b5c;
+    font-size: 0.9rem;
+}
