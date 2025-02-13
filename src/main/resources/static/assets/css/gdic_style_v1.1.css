@@ -13,6 +13,7 @@
 @import url(kseta_footer.css);
 @import url(footer.css);
 @import url(kseta_org_sec.css);
+@import url(kseta_breadcrumb.css);
 
 html {
     min-width: 1100px !important;
@@ -250,7 +251,7 @@ html {
 
 .sub_top {
     height: 200px;
-    background: url(../img/sub_top_visual1.jpg) center no-repeat;
+    background: url(../img/sub_top_visual1.png) center no-repeat;
     background-size: cover;
 }
 
@@ -1024,17 +1025,4 @@ html {
 
 .border_more_area {
     display: none;
-}
-
-#gdic_footer {
-    /*padding-bottom: 40px;*/
-    /*border-top: 1px solid rgba(0, 0, 0, .18);*/
-}
-
-.footer_slide {
-    position: relative;
-    top: -40px;
-    height: 78px;
-    border: 1px solid rgba(0, 0, 0, .18);
-    background-color: #fff;
 }

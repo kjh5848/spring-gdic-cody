@@ -9,28 +9,39 @@ var gdic_header = `
                         <a href="m1_1_planning.html" class="main_link">협회소개</a>
                         <ul class="sub_menu f_s1">
                             <li><a href="m1_1_planning.html">인사말</a></li>
+                            <li><a href="m1_1_planning.html">조직도</a></li>
+                            <li><a href="m1_1_planning.html">오시는 길</a></li>
                         </ul>
                     </li>
                     <li class="nav_list2">
                         <a href="m2_1_vision.html" class="main_link">융합교육</a>
                         <ul class="sub_menu f_s1">
-                            <li><a href="m2_1_vision.html">위치 및 투자가치</a></li>
-                            <li><a href="m2_2_benefit.html">세제혜택</a></li>
+                            <li><a href="m2_1_vision.html">사업목표</a></li>
+                            <li><a href="m2_2_benefit.html">추진사업</a></li>
                         </ul>
                     </li>
                     <li class="nav_list3">
                         <a href="m3_1_sale01.html" class="main_link">자격검정</a>
                         <ul class="sub_menu f_s1">
-                            <li><a href="m3_1_sale01.html">토지이용계획</a></li>
-                            <li><a href="m3_2_sale02.html">공급 정보</a></li>
-                            <li><a href="m3_3_sale03.html">공급공고</a></li>
+                            <li><a href="m3_1_sale01.html">빅데이터 전문가</a></li>
+                            <li><a href="m3_1_sale01.html">인공지능 마스터</a></li>                            
+                            <li><a href="m3_1_sale01.html">자격증 발급</a></li>                
+                            <li><a href="m3_1_sale01.html">시험접수</a></li>           
                         </ul>
                     </li>
                     <li class="nav_list4">
                         <a href="m4_1_notice.html" class="main_link">기타사업</a>
                         <ul class="sub_menu f_s1">
+                            <li><a href="m4_1_notice.html">취업지원</a></li>
+                            <li><a href="m4_1_notice.html">IT융합교육</a></li>
+                            <li><a href="m4_1_notice.html">학술연구</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav_list4">
+                        <a href="m4_1_notice.html" class="main_link">고객센터</a>
+                        <ul class="sub_menu f_s1">
                             <li><a href="m4_1_notice.html">공지사항</a></li>
-                            <li><a href="m4_4_guest2.html">관심고객등록</a></li>
+                            <li><a href="m4_1_notice.html">1:1문의</a></li>
                         </ul>
                     </li>
                 </ul>                
