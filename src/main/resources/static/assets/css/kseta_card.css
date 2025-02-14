@@ -1,3 +1,4 @@
+/* 기본 모바일 스타일 */
 .kseta-cards {
     padding: 60px 0;
 }
@@ -5,7 +6,7 @@
 .kseta-card {
     position: relative;
     margin-bottom: 30px;
-    height: 500px; /* 카드 높이 고정 */
+    height: 500px;
 }
 
 .kseta-card__gradient {
@@ -56,14 +57,12 @@
 
 .kseta-card__title {
     color: #333;
-    font-family: 'Pretendard_b';
     margin-bottom: 0.5rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem; /* 모바일 기본 크기 */
 }
 
 .kseta-card__subtitle {
     color: #382f83;
-    font-family: 'Pretendard_m';
     margin-bottom: 1rem;
     font-size: 1rem;
 }
@@ -73,6 +72,7 @@
     padding: 0;
     margin: 0;
     flex-grow: 1;
+
 }
 
 .kseta-card__list-item {
@@ -80,8 +80,7 @@
     padding-left: 1rem;
     margin-bottom: 0.75rem;
     color: #666;
-    font-family: 'Pretendard_r';
-    font-size: 0.8em;
+    font-size: 1rem; /* 모바일 기본 크기 */
     line-height: 1.5;
 }
 
@@ -96,8 +95,24 @@
     border-radius: 50%;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* 480px 이상 - 작은 태블릿 */
+@media screen and (min-width: 480px) {
+
+    .kseta-card__title {
+        font-size: 1.5rem;
+    }
+
+    .kseta-card__subtitle {
+        font-size: 1rem;
+    }
+
+    .kseta-card__list-item {
+        font-size: 1rem;
+    }
+}
+
+/* 768px 이상 - 태블릿 */
+@media screen and (min-width: 768px) {
     .kseta-card__title {
         font-size: 2.25rem;
     }
@@ -105,34 +120,4 @@
     .kseta-card__list-item {
         font-size: 1.4rem;
     }
-
-}
-
-/* Responsive Design */
-@media (max-width: 480px) {
-    .kseta-card__title {
-        font-size: 2.25rem;
-    }
-
-    .kseta-card__subtitle {
-        font-size: 1.5rem;
-    }
-
-
-    .kseta-card__list-item {
-        font-size: 1.8rem;
-    }
-
-    .kseta-card__title {
-        margin-left: 4.5rem;
-    }
-
-    .kseta-card__subtitle {
-        margin-left: 4.5rem;
-    }
-
-    .kseta-card__list {
-        margin-left: 4.5rem;
-    }
-
 }

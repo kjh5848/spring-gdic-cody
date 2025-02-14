@@ -1,96 +1,98 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta property="og:image" content="http://gdicland.com/assets/img/m1_1_planning_img1.jpg">
-	<title>김해대동첨단산업단지㈜</title>
-	<link rel="stylesheet" th:href="@{/assets/css/gdic_style_v1.1.css}">
-	<script th:src="@{/assets/js/jquery.min.js}"></script>
-	<script th:src="@{/assets/js/slick.min.js}"></script>
-	<script th:src="@{/assets/js/gdic_v1.1.js}"></script>
-	<script>
-		$(function(){
-			$('#gdic_header').html(gdic_header);
-			$('#gdic_footer').html(gdic_footer);
-			footer_slide_on();
-			$('.main_popup').addClass('show');
-		})
-	</script>
-	</head>	
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="http://gdicland.com/assets/img/m1_1_planning_img1.jpg" property="og:image">
+    <title>김해대동첨단산업단지㈜</title>
+    <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+    <script th:src="@{/assets/js/jquery.min.js}"></script>
+    <script th:src="@{/assets/js/slick.min.js}"></script>
+    <script th:src="@{/assets/js/gdic_v1.1.js}"></script>
+    <script>
+        $(function () {
+            $('#kseta_header').html(kseta_header);
+            $('#kseta_footer').html(kseta_footer);
+            footer_slide_on();
+            $('.main_popup').addClass('show');
+        })
+    </script>
+</head>
 
-	
-	<body id="gdic_main">
-		<header id="gdic_header">
-			
-		</header>
-		
-		<section id="gdic_body">
-			<div class="subsubmit_top">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							
-						</div>
-					</div>
-				</div>
-			</div>
-z
-			<div class="m_p1">
-				<div class="container">
-					<div class="row mb_50">
-						<div class="col">
-							<ul class="sub_nav_list f_s0">
-								<li>홈</li>
-								<li>사업안내</li>
-								<li>관심고객등록</li>
-							</ul>
-						</div>
-					</div>
 
-					<div class="row mb_50">
-						<div class="col">
-							<div class="sub_pagetitle">
-								<h2 class="ft_s5">관심고객등록</h2>
-								<p class="f_c_g2">관심고객등록을 하시면 정보를 쉽게 얻으실 수 있습니다.</p>
-							</div>
-						</div>
-					</div>
+<body id="gdic_main">
+<header id="kseta_header">
 
-					<div class="row page1">
-						<div class="col">
-							<table class="gdic_table_style2 w-100 f_s0 f_c_g1 mb_30">
-								<colgroup>
-									<col width="10%">
-									<col width="90%">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th>회사명</th>
-										<td><input type="text" class="gdic_input1 size1" id="gdic_cname" name="enterpriseName" autofocus></td>
-									</tr>
-									<tr>
-										<th>담당자명</th>
-										<td><input type="text" class="gdic_input1 size1" id="gdic_uname" name="userName"></td>
-									</tr>
-									<tr>
-										<th>휴대전화</th>
-										<td><input type="text" class="gdic_input1 size1" id="gdic_tell" name="tell"></td>
-									</tr>
-									<tr>
-										<th>주소</th>
-										<td><input type="text" class="gdic_input1 size1" id="gdic_address" name="address"></td>
-									</tr>
-									<tr>
-										<th>문의내용</th>
-										<td><textarea class="gdic_input1 w-100" height="200px"  id="gdic_content" name="content"></textarea></td>
-									</tr>
-								</tbody>
-							</table>
+</header>
 
-							<p class="ft_s2 mb_10">개인정보수집동의</p>
-							<pre class="w-100 mb_20 gidc_pre1" style="height:100px;">
+<section id="gdic_body">
+    <div class="subsubmit_top">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    z
+    <div class="m_p1">
+        <div class="container">
+            <div class="row mb_50">
+                <div class="col">
+                    <ul class="sub_nav_list f_s0">
+                        <li>홈</li>
+                        <li>사업안내</li>
+                        <li>관심고객등록</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mb_50">
+                <div class="col">
+                    <div class="sub_pagetitle">
+                        <h2 class="ft_s5">관심고객등록</h2>
+                        <p class="f_c_g2">관심고객등록을 하시면 정보를 쉽게 얻으실 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row page1">
+                <div class="col">
+                    <table class="gdic_table_style2 w-100 f_s0 f_c_g1 mb_30">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="90%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>회사명</th>
+                            <td><input autofocus class="gdic_input1 size1" id="gdic_cname" name="enterpriseName"
+                                       type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>담당자명</th>
+                            <td><input class="gdic_input1 size1" id="gdic_uname" name="userName" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>휴대전화</th>
+                            <td><input class="gdic_input1 size1" id="gdic_tell" name="tell" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>주소</th>
+                            <td><input class="gdic_input1 size1" id="gdic_address" name="address" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>문의내용</th>
+                            <td><textarea class="gdic_input1 w-100" height="200px" id="gdic_content"
+                                          name="content"></textarea></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="ft_s2 mb_10">개인정보수집동의</p>
+                    <pre class="w-100 mb_20 gidc_pre1" style="height:100px;">
 개인정보 수집 및 이용목적
 
 1. 수집하는 개인정보 항목
@@ -107,85 +109,91 @@ z
 회사는 개인정보수집 및 이용목적이 달성된 후에는 예외 없이 해당정보를 지체없이 파기합니다.
 							</pre>
 
-							<p class="mb_5">개인정보 수집 및 이용목적에 동의하십니까? (필수)</p>
-							<div class="mb_40">
-								<input type="radio" name="m_4_4_radio" id="m_4_4_radio_1" value="1">
-								<label class="mr_15" for="m_4_4_radio_1">동의</label>
+                    <p class="mb_5">개인정보 수집 및 이용목적에 동의하십니까? (필수)</p>
+                    <div class="mb_40">
+                        <input id="m_4_4_radio_1" name="m_4_4_radio" type="radio" value="1">
+                        <label class="mr_15" for="m_4_4_radio_1">동의</label>
 
-								<input type="radio" name="m_4_4_radio" id="m_4_4_radio_2" value="2">
-								<label for="m_4_4_radio_2">동의하지 않음</label>
-							</div>
+                        <input id="m_4_4_radio_2" name="m_4_4_radio" type="radio" value="2">
+                        <label for="m_4_4_radio_2">동의하지 않음</label>
+                    </div>
 
-							<div class="text-center">
-								<button class="gdic_btn1 size1" name="saveButton" onclick="guest_add()">등록하기</button>
-								<button class="gdic_btn1 size1">취소</button>
-							</div>
-						</div>
-					</div>
+                    <div class="text-center">
+                        <button class="gdic_btn1 size1" name="saveButton" onclick="guest_add()">등록하기</button>
+                        <button class="gdic_btn1 size1">취소</button>
+                    </div>
+                </div>
+            </div>
 
-					<div class="row hide page2">
-						<div class="col">
-							<div class="m_p1">
-								<p class="ft_s5 text-center mb_30">관심고객이 정상적으로 등록되었습니다.</p>
+            <div class="row hide page2">
+                <div class="col">
+                    <div class="m_p1">
+                        <p class="ft_s5 text-center mb_30">관심고객이 정상적으로 등록되었습니다.</p>
 
-								<div class="text-center">
-									<button class="gdic_btn1 size1" onclick="location.reload(true);">다시 문의하기</button>
-									<button class="gdic_btn1 size1" onclick="location = 'index.html'">메인으로</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+                        <div class="text-center">
+                            <button class="gdic_btn1 size1" onclick="location.reload(true);">다시 문의하기</button>
+                            <button class="gdic_btn1 size1" onclick="location = 'index.html'">메인으로</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-		<footer id="gdic_footer">
-			
-		</footer>
-	</body>
-	<script>
-		function guest_add(){
-			if(gdic_uname.value == ''){
-				alert('담당자명을 입력해주세요.')
-			}else if(gdic_tell.value == ''){
-				alert('전화번호를 입력해주세요.')
-			}else if(gdic_address.value == ''){
-				alert('주소를 입력해주세요.')
-			// }else if(gdic_content.value == ''){
-			// 	alert('문의내용을 입력해주세요.')
-			}else if($('input[name="m_4_4_radio"]:checked').val() != '1'){
-				alert('개인정보 수집 및 이용목적에 동의 후 등록가능합니다.')
-			}else{
-				$.ajax({
-					method: "POST",
-					contentType: 'application/json; charset=utf-8',
-					url: "/customer/register",
-					data: JSON.stringify({ enterpriseName: gdic_cname.value, managerName: gdic_uname.value, tel: gdic_tell.value, inquiry: gdic_content.value, address: gdic_address.value })
-				})
-				.fail(function (error) {
-					const status = error.status;
-					const defaultMsg = '잠시 후 다시 시도해주세요.';
-					if (status === 400 ) {
-						const msg = error.responseText;
-						if (msg === '' || msg === 'undefined' || msg === 'null' || msg == null) {
-							alert(defaultMsg)
-						} else {
-							alert(msg);
-						}
-					} else if(status === 500)  {
-						alert("일시적인 서버 오류입니다. \n" + defaultMsg);
-					} else {
-						alert(defaultMsg)
-					}
-				})
-				.done(function (msg) {
-					if(msg == 'success'){
-						$('.page1').hide();
-						$('.page2').show();
-					}
-				});
+<footer id="kseta_footer">
 
-			}
-		}
-	</script>
+</footer>
+</body>
+<script>
+    function guest_add() {
+        if (gdic_uname.value == '') {
+            alert('담당자명을 입력해주세요.')
+        } else if (gdic_tell.value == '') {
+            alert('전화번호를 입력해주세요.')
+        } else if (gdic_address.value == '') {
+            alert('주소를 입력해주세요.')
+            // }else if(gdic_content.value == ''){
+            // 	alert('문의내용을 입력해주세요.')
+        } else if ($('input[name="m_4_4_radio"]:checked').val() != '1') {
+            alert('개인정보 수집 및 이용목적에 동의 후 등록가능합니다.')
+        } else {
+            $.ajax({
+                method: "POST",
+                contentType: 'application/json; charset=utf-8',
+                url: "/customer/register",
+                data: JSON.stringify({
+                    enterpriseName: gdic_cname.value,
+                    managerName: gdic_uname.value,
+                    tel: gdic_tell.value,
+                    inquiry: gdic_content.value,
+                    address: gdic_address.value
+                })
+            })
+                .fail(function (error) {
+                    const status = error.status;
+                    const defaultMsg = '잠시 후 다시 시도해주세요.';
+                    if (status === 400) {
+                        const msg = error.responseText;
+                        if (msg === '' || msg === 'undefined' || msg === 'null' || msg == null) {
+                            alert(defaultMsg)
+                        } else {
+                            alert(msg);
+                        }
+                    } else if (status === 500) {
+                        alert("일시적인 서버 오류입니다. \n" + defaultMsg);
+                    } else {
+                        alert(defaultMsg)
+                    }
+                })
+                .done(function (msg) {
+                    if (msg == 'success') {
+                        $('.page1').hide();
+                        $('.page2').show();
+                    }
+                });
+
+        }
+    }
+</script>
 </html>

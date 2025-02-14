@@ -50,6 +50,8 @@
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    word-break: keep-all; /* 단어 단위로 줄바꿈 */
 }
 
 .kseta-loca-sec__info-item {
@@ -62,7 +64,7 @@
     margin-bottom: 10px;
 }
 
-.kseta-loca-sec__info-detail {
+. kseta-loca-sec__info-detail {
     color: #34495e;
 }
 

@@ -1,442 +1,442 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta property="og:image" content="http://gdicland.com/assets/img/m1_1_planning_img1.jpg">
-	<title>김해대동첨단산업단지㈜</title>
-	<link rel="stylesheet" th:href="@{/assets/css/gdic_style_v1.1.css}">
-	<script th:src="@{/assets/js/jquery.min.js}"></script>
-	<script th:src="@{/assets/js/slick.min.js}"></script>
-	<script th:src="@{/assets/js/gdic_v1.1.js}"></script>
-	<script>
-		$(function(){
-			$('#gdic_header').html(gdic_header);
-			$('#gdic_footer').html(gdic_footer);
-			footer_slide_on();
-			$('.main_popup').addClass('show');
-		})
-	</script>
-	</head>	
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="http://gdicland.com/assets/img/m1_1_planning_img1.jpg" property="og:image">
+    <title>김해대동첨단산업단지㈜</title>
+    <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+    <script th:src="@{/assets/js/jquery.min.js}"></script>
+    <script th:src="@{/assets/js/slick.min.js}"></script>
+    <script th:src="@{/assets/js/gdic_v1.1.js}"></script>
+    <script>
+        $(function () {
+            $('#gdic_header').html(gdic_header);
+            $('#gdic_footer').html(gdic_footer);
+            footer_slide_on();
+            $('.main_popup').addClass('show');
+        })
+    </script>
+</head>
 
-	
-	<body id="gdic_main">
-		<header id="gdic_header">
-			
-		</header>
-		
-		<section id="gdic_body">
-			<div class="sub_top">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							
-						</div>
-					</div>
-				</div>
-			</div>
 
-			<div class="m_p1">
-				<div class="container">
-					<div class="row mb_50">
-						<div class="col">
-							<ul class="sub_nav_list f_s0">
-								<li>홈</li>
-								<li>사업안내</li>
-								<li>토지이용계획</li>
-							</ul>
-						</div>
-					</div>
+<body id="gdic_main">
+<header id="gdic_header">
 
-					<div class="row mb_50">
-						<div class="col">
-							<div class="sub_pagetitle">
-								<h2 class="ft_s5">토지이용계획</h2>
-								<p class="f_c_g2">김해대동첨단산업단지㈜ 토지이용계획를 보실 수 있습니다.</p>
-							</div>
-						</div>
-					</div>
+</header>
 
-					<script>
-						function m3_1_img(num){
-							$('.gdic_sub_tab li').removeClass('active');
-							$('.gdic_sub_tab li.list'+num).addClass('active');
+<section id="gdic_body">
+    <div class="sub_top">
+        <div class="container">
+            <div class="row">
+                <div class="col">
 
-							$('.m_3_1_img_box').hide();
-							$('.m_3_1_img_box.img'+num).show();
-						}
-					</script>
-					<div class="row mb_50">
-						<div class="col">
-							<ul class="gdic_sub_tab tab3">
-								<li class="active list1" onclick="m3_1_img(1)"><a href="javaScript:;">근린생활시설용지</a></li>
-								<li class="list2" onclick="m3_1_img(2)"><a href="javaScript:;">지원시설용지</a></li>
-								<li class="list3" onclick="m3_1_img(3)"><a href="javaScript:;">단독주택용지</a></li>
-							</ul>
-						</div>
-					</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-					<div class="row mb_50 m_3_1_img_box img1">
-						<div class="col">
-							<div><img th:src="@{/assets/img/m3_1_sale01_img2_v2.jpg}" class="w-100" /></div>
-						</div>
-					</div>
+    <div class="m_p1">
+        <div class="container">
+            <div class="row mb_50">
+                <div class="col">
+                    <ul class="sub_nav_list f_s0">
+                        <li>홈</li>
+                        <li>사업안내</li>
+                        <li>토지이용계획</li>
+                    </ul>
+                </div>
+            </div>
 
-					<div class="row mb_50 m_3_1_img_box img2" style="display: none;">
-						<div class="col">
-							<div><img th:src="@{/assets/img/m3_1_sale01_img1_v2.jpg}" class="w-100" /></div>
-						</div>
-					</div>
+            <div class="row mb_50">
+                <div class="col">
+                    <div class="sub_pagetitle">
+                        <h2 class="ft_s5">토지이용계획</h2>
+                        <p class="f_c_g2">김해대동첨단산업단지㈜ 토지이용계획를 보실 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
 
-					<div class="row mb_50 m_3_1_img_box img3" style="display: none;">
-						<div class="col">
-							<div><img th:src="@{/assets/img/m3_1_sale01_img3_v2.jpg}" class="w-100" /></div>
-						</div>
-					</div>
+            <script>
+                function m3_1_img(num) {
+                    $('.gdic_sub_tab li').removeClass('active');
+                    $('.gdic_sub_tab li.list' + num).addClass('active');
 
-					<!--
-					<script>
-						function m3_1_show(num){
-							$('.m3_1_style1 .img_box img').removeClass('show')
+                    $('.m_3_1_img_box').hide();
+                    $('.m_3_1_img_box.img' + num).show();
+                }
+            </script>
+            <div class="row mb_50">
+                <div class="col">
+                    <ul class="gdic_sub_tab tab3">
+                        <li class="active list1" onclick="m3_1_img(1)"><a href="javaScript:">근린생활시설용지</a></li>
+                        <li class="list2" onclick="m3_1_img(2)"><a href="javaScript:">지원시설용지</a></li>
+                        <li class="list3" onclick="m3_1_img(3)"><a href="javaScript:">단독주택용지</a></li>
+                    </ul>
+                </div>
+            </div>
 
-							$('.m3_1_style1 .img_box img.sel'+num).addClass('show')
-						}
+            <div class="row mb_50 m_3_1_img_box img1">
+                <div class="col">
+                    <div><img class="w-100" th:src="@{/assets/img/m3_1_sale01_img2_v2.jpg}"/></div>
+                </div>
+            </div>
 
-						function m3_1_more_show(){
-							$('.m3_1_text1 .more_img').show();
-						}
+            <div class="row mb_50 m_3_1_img_box img2" style="display: none;">
+                <div class="col">
+                    <div><img class="w-100" th:src="@{/assets/img/m3_1_sale01_img1_v2.jpg}"/></div>
+                </div>
+            </div>
 
-						function m3_1_more_hide(){
-							$('.m3_1_text1 .more_img').hide();
-						}
-					</script>
-					<div class="row mb_50">
-						<div class="col">
-							<div class="m3_1_style1">
-								<div class="img_box text-right">
-									<img src="assets/img/sale01-2-impact00.png" class="rel_img sel0 show">
-									
-									<img src="assets/img/sale01-2-impact01.png" class="pos_img sel1">
-									<img src="assets/img/sale01-2-impact02.png" class="pos_img sel2">
-									<img src="assets/img/sale01-2-impact03.png" class="pos_img sel3">
-									<img src="assets/img/sale01-2-impact04.png" class="pos_img sel4">
-									<img src="assets/img/sale01-2-impact05.png" class="pos_img sel5">
-								</div>
-								<ul class="m3_1_list1 fw_psb f_s5">
-									<li onclick="m3_1_show(0)">전체용지</li>
-									<li onclick="m3_1_show(1)">산업시설용지</li>
-									<li onclick="m3_1_show(2)">복합시설용지</li>
-									<li onclick="m3_1_show(3)">공공시설용지</li>
-									<li onclick="m3_1_show(4)">주거용지</li>
-									<li onclick="m3_1_show(5)">지원시설용지</li>
-								</ul>
-								<div class="m3_1_text1">
-									<p class="ft_s1 fw_psb text-center f_c_active2" onclick="m3_1_more_show()">
-										범<br />
-										<br />
-										례
-									</p>
-									<div class="more_img">
-										<img src="assets/img/slae01_bt2.png">
-										<button class="close_btn" onclick="m3_1_more_hide()"><img src="assets/img/xclose.svg"></button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+            <div class="row mb_50 m_3_1_img_box img3" style="display: none;">
+                <div class="col">
+                    <div><img class="w-100" th:src="@{/assets/img/m3_1_sale01_img3_v2.jpg}"/></div>
+                </div>
+            </div>
 
-					<div class="row mb_50 ">
-						<div class="col">
-							<div class="m3_1_style2">
-								<img src="assets/img/m3_1_sale01_img1.jpg" class="w-100">
-								<ul class="graph_box">
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-								</ul>
-								<ul class="text_box f_c_g2 text-center">
-									<li>
-										<p class="f_s5">산업시설용지</p>
-										<p>(38.4%)</p>
-									</li>
-									<li>
-										<p class="f_s5">복합시설용지</p>
-										<p>(5.2%)</p>
-									</li>
-									<li>
-										<p class="f_s5">공공시설용지</p>
-										<p>(27.4%)</p>
-									</li>
-									<li>
-										<p class="f_s5">지원시설용지</p>
-										<p>(1.4%)</p>
-									</li>
-									<li>
-										<p class="f_s5">주거용지</p>
-										<p>(4.8%)</p>
-									</li>
-									<li>
-										<p class="f_s5">공원, 녹지</p>
-										<p>(22.8%)</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+            <!--
+            <script>
+                function m3_1_show(num){
+                    $('.m3_1_style1 .img_box img').removeClass('show')
 
-					<div class="row row-cols-2 m3_1_style3">
-						<div class="col">
-							<table class="gdic_table_style1 w-100 f_s1 f_c_g1 mb_30 line text-center">
-								<colgroup>
-									<col width="20%">
-									<col width="40%">
-									<col width="40%">
-								</colgroup>
-								<thead>
-									<tr class="fw_pl">
-										<th class="type2">구분</th>
-										<th class="type2">면적(m²)</th>
-										<th class="type2">구성비(%)</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="fw_pl">
-										<th>산업시설용지</th>
-										<th>1,075,627</th>
-										<th>38.4</th>
-									</tr>
-									<tr>
-										<td>산업시설</td>
-										<td>1,059,854</td>
-										<td>37.8</td>
-									</tr>
-									<tr>
-										<td>연구시설</td>
-										<td>15,773</td>
-										<td>0.6</td>
-									</tr>
-								</tbody>
-							</table>
+                    $('.m3_1_style1 .img_box img.sel'+num).addClass('show')
+                }
 
-							<table class="gdic_table_style1 w-100 f_s1 f_c_g1 mb_30 line text-center">
-								<colgroup>
-									<col width="20%">
-									<col width="40%">
-									<col width="40%">
-								</colgroup>
-								<thead>
-									<tr class="fw_pl">
-										<th class="type2">구분</th>
-										<th class="type2">면적(m²)</th>
-										<th class="type2">구성비(%)</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="fw_pl">
-										<th>주거용지</th>
-										<th>133,481</th>
-										<th>4.8</th>
-									</tr>
-									<tr>
-										<td>근린생활시설</td>
-										<td>25,278</td>
-										<td>0.9</td>
-									</tr>
-									<tr>
-										<td>공동주택</td>
-										<td>66,194</td>
-										<td>2.4</td>
-									</tr>
-									<tr>
-										<td>단독주택</td>
-										<td>42,009</td>
-										<td>1.5</td>
-									</tr>
-								</tbody>
-							</table>
+                function m3_1_more_show(){
+                    $('.m3_1_text1 .more_img').show();
+                }
 
-							<table class="gdic_table_style1 w-100 f_s1 f_c_g1 mb_30 line text-center">
-								<colgroup>
-									<col width="20%">
-									<col width="40%">
-									<col width="40%">
-								</colgroup>
-								<thead>
-									<tr class="fw_pl">
-										<th class="type2">구분</th>
-										<th class="type2">면적(m²)</th>
-										<th class="type2">구성비(%)</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="fw_pl">
-										<th>지원시설용지</th>
-										<th>38,591</th>
-										<th>1.4</th>
-									</tr>
-									<tr>
-										<td>지원시설</td>
-										<td>38,591</td>
-										<td>1.4</td>
-									</tr>
-									<tr>
-										<td>주유소</td>
-										<td>-</td>
-										<td>-</td>
-									</tr>
-								</tbody>
-							</table>
+                function m3_1_more_hide(){
+                    $('.m3_1_text1 .more_img').hide();
+                }
+            </script>
+            <div class="row mb_50">
+                <div class="col">
+                    <div class="m3_1_style1">
+                        <div class="img_box text-right">
+                            <img src="assets/img/sale01-2-impact00.png" class="rel_img sel0 show">
 
-							<table class="gdic_table_style1 w-100 f_s1 f_c_g1 line text-center">
-								<colgroup>
-									<col width="20%">
-									<col width="40%">
-									<col width="40%">
-								</colgroup>
-								<thead>
-									<tr class="fw_pl">
-										<th class="type2">구분</th>
-										<th class="type2">면적(m²)</th>
-										<th class="type2">구성비(%)</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="fw_pl">
-										<th>공원ㆍ녹지</th>
-										<th>638,917</th>
-										<th>22.8</th>
-									</tr>
-									<tr>
-										<td>공원</td>
-										<td>289,436</td>
-										<td>10.4</td>
-									</tr>
-									<tr>
-										<td>녹지</td>
-										<td>250,269</td>
-										<td>8.9</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+                            <img src="assets/img/sale01-2-impact01.png" class="pos_img sel1">
+                            <img src="assets/img/sale01-2-impact02.png" class="pos_img sel2">
+                            <img src="assets/img/sale01-2-impact03.png" class="pos_img sel3">
+                            <img src="assets/img/sale01-2-impact04.png" class="pos_img sel4">
+                            <img src="assets/img/sale01-2-impact05.png" class="pos_img sel5">
+                        </div>
+                        <ul class="m3_1_list1 fw_psb f_s5">
+                            <li onclick="m3_1_show(0)">전체용지</li>
+                            <li onclick="m3_1_show(1)">산업시설용지</li>
+                            <li onclick="m3_1_show(2)">복합시설용지</li>
+                            <li onclick="m3_1_show(3)">공공시설용지</li>
+                            <li onclick="m3_1_show(4)">주거용지</li>
+                            <li onclick="m3_1_show(5)">지원시설용지</li>
+                        </ul>
+                        <div class="m3_1_text1">
+                            <p class="ft_s1 fw_psb text-center f_c_active2" onclick="m3_1_more_show()">
+                                범<br />
+                                <br />
+                                례
+                            </p>
+                            <div class="more_img">
+                                <img src="assets/img/slae01_bt2.png">
+                                <button class="close_btn" onclick="m3_1_more_hide()"><img src="assets/img/xclose.svg"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-						<div class="col">
-							<table class="gdic_table_style1 w-100 f_s1 f_c_g1 mb_30 line text-center">
-								<colgroup>
-									<col width="20%">
-									<col width="40%">
-									<col width="40%">
-								</colgroup>
-								<thead>
-									<tr class="fw_pl">
-										<th class="type2">구분</th>
-										<th class="type2">면적(m²)</th>
-										<th class="type2">구성비(%)</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="fw_pl">
-										<th>복합시설용지</th>
-										<th>145,987</th>
-										<th>5.2</th>
-									</tr>
-								</tbody>
-							</table>
+            <div class="row mb_50 ">
+                <div class="col">
+                    <div class="m3_1_style2">
+                        <img src="assets/img/m3_1_sale01_img1.jpg" class="w-100">
+                        <ul class="graph_box">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul class="text_box f_c_g2 text-center">
+                            <li>
+                                <p class="f_s5">산업시설용지</p>
+                                <p>(38.4%)</p>
+                            </li>
+                            <li>
+                                <p class="f_s5">복합시설용지</p>
+                                <p>(5.2%)</p>
+                            </li>
+                            <li>
+                                <p class="f_s5">공공시설용지</p>
+                                <p>(27.4%)</p>
+                            </li>
+                            <li>
+                                <p class="f_s5">지원시설용지</p>
+                                <p>(1.4%)</p>
+                            </li>
+                            <li>
+                                <p class="f_s5">주거용지</p>
+                                <p>(4.8%)</p>
+                            </li>
+                            <li>
+                                <p class="f_s5">공원, 녹지</p>
+                                <p>(22.8%)</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-							<table class="gdic_table_style1 w-100 f_s1 f_c_g1 mb_30 line text-center">
-								<colgroup>
-									<col width="20%">
-									<col width="40%">
-									<col width="40%">
-								</colgroup>
-								<thead>
-									<tr class="fw_pl">
-										<th class="type2">구분</th>
-										<th class="type2">면적(m²)</th>
-										<th class="type2">구성비(%)</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="fw_pl">
-										<th>공공시설용지</th>
-										<th>771,255</th>
-										<th>27.4</th>
-									</tr>
-									<tr>
-										<td>도로</td>
-										<td>574,690</td>
-										<td>20.5</td>
-									</tr>
-									<tr>
-										<td>주차장</td>
-										<td>59,253</td>
-										<td>2.1</td>
-									</tr>
-									<tr>
-										<td>공공공지</td>
-										<td>933</td>
-										<td>-</td>
-									</tr>
-									<tr>
-										<td>변전소</td>
-										<td>3,500</td>
-										<td>0.1</td>
-									</tr>
-									<tr>
-										<td>학교</td>
-										<td>12,620</td>
-										<td>0.5</td>
-									</tr>
-									<tr>
-										<td>공공청사</td>
-										<td>6,048</td>
-										<td>0.2</td>
-									</tr>
-									<tr>
-										<td>종합문화복지센터</td>
-										<td>6,167</td>
-										<td>0.2</td>
-									</tr>
-									<tr>
-										<td>컨벤션/기업지원센터</td>
-										<td>20,090</td>
-										<td>0.7</td>
-									</tr>
-									<tr>
-										<td>구거</td>
-										<td>6,397</td>
-										<td>0.2</td>
-									</tr>
-									<tr>
-										<td>유수지</td>
-										<td>34,597</td>
-										<td>1.2</td>
-									</tr>
-									<tr>
-										<td>폐기물처리시설</td>
-										<td>25,290</td>
-										<td>0.9</td>
-									</tr>
-									<tr>
-										<td>수질오염방지시설</td>
-										<td>21,670</td>
-										<td>0.8</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				-->
-				</div>
-			</div>
-		</section>
+            <div class="row row-cols-2 m3_1_style3">
+                <div class="col">
+                    <table class="gdic_table_style1 w-100 f_s1 f_c_g1 mb_30 line text-center">
+                        <colgroup>
+                            <col width="20%">
+                            <col width="40%">
+                            <col width="40%">
+                        </colgroup>
+                        <thead>
+                            <tr class="fw_pl">
+                                <th class="type2">구분</th>
+                                <th class="type2">면적(m²)</th>
+                                <th class="type2">구성비(%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw_pl">
+                                <th>산업시설용지</th>
+                                <th>1,075,627</th>
+                                <th>38.4</th>
+                            </tr>
+                            <tr>
+                                <td>산업시설</td>
+                                <td>1,059,854</td>
+                                <td>37.8</td>
+                            </tr>
+                            <tr>
+                                <td>연구시설</td>
+                                <td>15,773</td>
+                                <td>0.6</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-		<footer id="gdic_footer">
-			
-		</footer>
-	</body>
+                    <table class="gdic_table_style1 w-100 f_s1 f_c_g1 mb_30 line text-center">
+                        <colgroup>
+                            <col width="20%">
+                            <col width="40%">
+                            <col width="40%">
+                        </colgroup>
+                        <thead>
+                            <tr class="fw_pl">
+                                <th class="type2">구분</th>
+                                <th class="type2">면적(m²)</th>
+                                <th class="type2">구성비(%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw_pl">
+                                <th>주거용지</th>
+                                <th>133,481</th>
+                                <th>4.8</th>
+                            </tr>
+                            <tr>
+                                <td>근린생활시설</td>
+                                <td>25,278</td>
+                                <td>0.9</td>
+                            </tr>
+                            <tr>
+                                <td>공동주택</td>
+                                <td>66,194</td>
+                                <td>2.4</td>
+                            </tr>
+                            <tr>
+                                <td>단독주택</td>
+                                <td>42,009</td>
+                                <td>1.5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="gdic_table_style1 w-100 f_s1 f_c_g1 mb_30 line text-center">
+                        <colgroup>
+                            <col width="20%">
+                            <col width="40%">
+                            <col width="40%">
+                        </colgroup>
+                        <thead>
+                            <tr class="fw_pl">
+                                <th class="type2">구분</th>
+                                <th class="type2">면적(m²)</th>
+                                <th class="type2">구성비(%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw_pl">
+                                <th>지원시설용지</th>
+                                <th>38,591</th>
+                                <th>1.4</th>
+                            </tr>
+                            <tr>
+                                <td>지원시설</td>
+                                <td>38,591</td>
+                                <td>1.4</td>
+                            </tr>
+                            <tr>
+                                <td>주유소</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="gdic_table_style1 w-100 f_s1 f_c_g1 line text-center">
+                        <colgroup>
+                            <col width="20%">
+                            <col width="40%">
+                            <col width="40%">
+                        </colgroup>
+                        <thead>
+                            <tr class="fw_pl">
+                                <th class="type2">구분</th>
+                                <th class="type2">면적(m²)</th>
+                                <th class="type2">구성비(%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw_pl">
+                                <th>공원ㆍ녹지</th>
+                                <th>638,917</th>
+                                <th>22.8</th>
+                            </tr>
+                            <tr>
+                                <td>공원</td>
+                                <td>289,436</td>
+                                <td>10.4</td>
+                            </tr>
+                            <tr>
+                                <td>녹지</td>
+                                <td>250,269</td>
+                                <td>8.9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col">
+                    <table class="gdic_table_style1 w-100 f_s1 f_c_g1 mb_30 line text-center">
+                        <colgroup>
+                            <col width="20%">
+                            <col width="40%">
+                            <col width="40%">
+                        </colgroup>
+                        <thead>
+                            <tr class="fw_pl">
+                                <th class="type2">구분</th>
+                                <th class="type2">면적(m²)</th>
+                                <th class="type2">구성비(%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw_pl">
+                                <th>복합시설용지</th>
+                                <th>145,987</th>
+                                <th>5.2</th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="gdic_table_style1 w-100 f_s1 f_c_g1 mb_30 line text-center">
+                        <colgroup>
+                            <col width="20%">
+                            <col width="40%">
+                            <col width="40%">
+                        </colgroup>
+                        <thead>
+                            <tr class="fw_pl">
+                                <th class="type2">구분</th>
+                                <th class="type2">면적(m²)</th>
+                                <th class="type2">구성비(%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw_pl">
+                                <th>공공시설용지</th>
+                                <th>771,255</th>
+                                <th>27.4</th>
+                            </tr>
+                            <tr>
+                                <td>도로</td>
+                                <td>574,690</td>
+                                <td>20.5</td>
+                            </tr>
+                            <tr>
+                                <td>주차장</td>
+                                <td>59,253</td>
+                                <td>2.1</td>
+                            </tr>
+                            <tr>
+                                <td>공공공지</td>
+                                <td>933</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>변전소</td>
+                                <td>3,500</td>
+                                <td>0.1</td>
+                            </tr>
+                            <tr>
+                                <td>학교</td>
+                                <td>12,620</td>
+                                <td>0.5</td>
+                            </tr>
+                            <tr>
+                                <td>공공청사</td>
+                                <td>6,048</td>
+                                <td>0.2</td>
+                            </tr>
+                            <tr>
+                                <td>종합문화복지센터</td>
+                                <td>6,167</td>
+                                <td>0.2</td>
+                            </tr>
+                            <tr>
+                                <td>컨벤션/기업지원센터</td>
+                                <td>20,090</td>
+                                <td>0.7</td>
+                            </tr>
+                            <tr>
+                                <td>구거</td>
+                                <td>6,397</td>
+                                <td>0.2</td>
+                            </tr>
+                            <tr>
+                                <td>유수지</td>
+                                <td>34,597</td>
+                                <td>1.2</td>
+                            </tr>
+                            <tr>
+                                <td>폐기물처리시설</td>
+                                <td>25,290</td>
+                                <td>0.9</td>
+                            </tr>
+                            <tr>
+                                <td>수질오염방지시설</td>
+                                <td>21,670</td>
+                                <td>0.8</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        -->
+        </div>
+    </div>
+</section>
+
+<footer id="gdic_footer">
+
+</footer>
+</body>
 </html>

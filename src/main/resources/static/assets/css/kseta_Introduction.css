@@ -63,6 +63,8 @@
 
 .kseta_intro-card__body {
     padding: 1.5rem;
+    word-wrap: break-word;
+    word-break: keep-all; /* 단어 단위로 줄바꿈 */
 }
 
 /* Objectives Block */
@@ -142,7 +144,7 @@
     }
 
     .kseta_intro-objectives__text {
-        font-size: 2rem;
+        font-size: 1.1rem;
     }
 
     .kseta_intro-card__header {
@@ -151,7 +153,8 @@
 
     .kseta_intro-card__body {
         padding: 1rem;
-        font-size: 2rem;
+        font-size: 1.2rem;
+
     }
 
     .kseta_intro-objectives__item {

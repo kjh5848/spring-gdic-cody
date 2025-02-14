@@ -1,0 +1,144 @@
+
+.kseta-slide {
+    /*max-width: 1000px;*/
+    margin: 50px 20px;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.kseta-slide__container {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.kseta-slide__item {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.kseta-slide__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kseta-slide__controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.kseta-slide__button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.kseta-slide__button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.kseta-slide__indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 1;
+}
+
+.kseta-slide__indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.kseta-slide__indicator--active {
+    background-color: white;
+}
+
+.kseta-slide__autoplay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    z-index: 1;
+}
+
+.kseta-slide__autoplay:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* CSS 추가 부분 */
+.kseta-slide__content {
+    position: absolute;
+    left: 40%;
+    bottom: 120px;
+    transform: translateX(-50%);
+    width: auto; /* 필요하면 조정 */
+    max-width: 80%; /* 너무 넓어지지 않도록 */
+    padding: 10px;
+    /*background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));*/
+    color: white;
+    z-index: 1;
+    /*text-align: center; !* 텍스트도 가운데 정렬 *!*/
+    /* 자동 줄바꿈 관련 스타일 */
+    word-wrap: break-word;
+    word-break: keep-all; /* 단어 단위로 줄바꿈 */
+}
+
+.kseta-slide__title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.kseta-slide__subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+@media (max-width: 576px) {
+    .kseta-slide {
+        height: 300px;
+    }
+
+    .kseta-slide__content {
+        left: 40%;
+        bottom: 35px;
+        width: auto; /* 필요하면 조정 */
+        max-width: 250px; /* 너무 넓어지지 않도록 */
+        padding: 20px;
+    }
+
+    .kseta-slide__title {
+        width: 250px;
+    }
+}

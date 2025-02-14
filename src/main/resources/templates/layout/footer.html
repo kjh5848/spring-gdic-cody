@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<body>
+<footer>
+    <div class="kseta-logo-section">
+        <div class="kseta_intro-title">
+            <h2 class="kseta_intro-title__main">파트너 및 기관</h2>
+        </div>
+        <div class="kseta-logo-container">
+            <div class="kseta-logo-slider">
+                <div class="kseta-logo-track">
+                    <div class="kseta-logo-item"><img src="/assets/img/logo/KCCI.png"></div>
+                    <div class="kseta-logo-item"><img src="/assets/img/logo/KIU.png"></div>
+                    <div class="kseta-logo-item"><img src="/assets/img/logo/MOEL.png"></div>
+                    <div class="kseta-logo-item"><img src="/assets/img/logo/PNU.png"></div>
+                    <div class="kseta-logo-item"><img src="/assets/img/logo/showtech.png"></div>
+
+                    <div class="kseta-logo-item"><img src="/assets/img/logo/KCCI.png"></div>
+                    <div class="kseta-logo-item"><img src="/assets/img/logo/KIU.png"></div>
+                    <div class="kseta-logo-item"><img src="/assets/img/logo/MOEL.png"></div>
+                    <div class="kseta-logo-item"><img src="/assets/img/logo/PNU.png"></div>
+                    <div class="kseta-logo-item"><img src="/assets/img/logo/showtech.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="kseta-footer">
+        <div class="footer">
+            <div class="footer__container">
+                <div class="footer__grid">
+                    <div>
+                        <h3 class="footer__title">(사)한국융합인재교육협회</h3>
+                        <p>
+                            부산광역시 사상구 주례로 27번길 34<br>
+                            TEL : 070-7701-7735<br>
+                            E-mail : kseta@kseta.or.kr
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="footer__title">협회소개</h3>
+                        <ul class="footer__links">
+                            <li><a class="footer__link" href="#">인사말</a></li>
+                            <li><a class="footer__link" href="#">연혁</a></li>
+                            <li><a class="footer__link" href="#">조직도</a></li>
+                            <li><a class="footer__link" href="#">오시는 길</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="footer__title">정보마당</h3>
+                        <ul class="footer__links">
+                            <li><a class="footer__link" href="#">공지사항</a></li>
+                            <li><a class="footer__link" href="#">보도자료</a></li>
+                            <li><a class="footer__link" href="#">정책정보</a></li>
+                            <li><a class="footer__link" href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="footer__title">관련사이트</h3>
+                        <ul class="footer__links">
+                            <li><a class="footer__link" href="#">관련부처</a></li>
+                            <li><a class="footer__link" href="#">유관기관</a></li>
+                            <li><a class="footer__link" href="#">자격증 확인</a></li>
+                            <li><a class="footer__link" href="#">교육이력 확인</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 하단 바 -->
+                <div class="kseta-footer__bottom">
+                    <p>&copy; 2024 KSETA. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+<script src="/assets/js/kseta_header.js"></script>
+<script>
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('kseta-expect__section--visible');
+            } else {
+                entry.target.classList.remove('kseta-expect__section--visible');
+            }
+        });
+    }, observerOptions);
+
+    const sections = document.querySelectorAll('.kseta-expect__section');
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
+<script>
+    $(function () {
+        $('#kseta_header').html(kseta_header);
+        $('#kseta_footer').html(kseta_footer);
+        footer_slide_on();
+        $('.main_popup').addClass('show');
+
+        $('#main_slide').slick({
+            slide: 'div', //슬라이드 되어야 할 태그 ex) div, li
+            infinite: true,  //무한 반복 옵션
+            slidesToShow: 1, // 한 화면에 보여질 컨텐츠 개수
+            speed: 350,  // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+            arrows: true,  // 옆으로 이동하는 화살표 표시 여부
+            dots: false,  // 스크롤바 아래 점으로 페이지네이션 여부
+            autoplay: true, // 자동 스크롤 사용 여부
+            autoplaySpeed: 5000,  // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+            pauseOnHover: false, // 슬라이드 이동 시 마우스 호버하면 슬라이더 멈추게 설정
+            draggable: true,  //드래그 가능 여부
+        })
+    })
+</script>
+<script>
+    (function ($) {
+        $.fn.ksetaSlide = function (options) {
+            // 기본 옵션
+            const defaults = {
+                autoplay: true,
+                interval: 3000,
+                duration: 500
+            };
+
+            // 사용자 옵션과 기본 옵션 병합
+            const settings = $.extend({}, defaults, options);
+
+            return this.each(function () {
+                const $slider = $(this);
+                const $container = $slider.find('.kseta-slide__container');
+                const $items = $slider.find('.kseta-slide__item');
+                const $prevBtn = $slider.find('.kseta-slide__button--prev');
+                const $nextBtn = $slider.find('.kseta-slide__button--next');
+                const $indicators = $slider.find('.kseta-slide__indicators');
+                const $autoplayBtn = $slider.find('.kseta-slide__autoplay');
+
+                let currentSlide = 0;
+                let isAutoPlaying = settings.autoplay;
+                let autoPlayInterval;
+
+                // 초기 설정
+                function init() {
+                    // 인디케이터 생성
+                    $items.each((index) => {
+                        $indicators.append(
+                            $('<span>')
+                                .addClass('kseta-slide__indicator')
+                                .toggleClass('kseta-slide__indicator--active', index === 0)
+                        );
+                    });
+
+                    if (isAutoPlaying) startAutoPlay();
+                    bindEvents();
+                }
+
+                // 이벤트 바인딩
+                function bindEvents() {
+                    $prevBtn.on('click', prevSlide);
+                    $nextBtn.on('click', nextSlide);
+
+                    $slider.find('.kseta-slide__indicator').on('click', function () {
+                        goToSlide($(this).index());
+                    });
+
+                    $autoplayBtn.on('click', toggleAutoPlay);
+                }
+
+                // 슬라이드 이동
+                function moveSlide(index) {
+                    currentSlide = index;
+                    $container.css('transform', `translateX(-${currentSlide * 100}%)`);
+                    updateIndicators();
+                }
+
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % $items.length;
+                    moveSlide(currentSlide);
+                    resetAutoPlay();
+                }
+
+                function prevSlide() {
+                    currentSlide = (currentSlide - 1 + $items.length) % $items.length;
+                    moveSlide(currentSlide);
+                    resetAutoPlay();
+                }
+
+                function goToSlide(index) {
+                    moveSlide(index);
+                    resetAutoPlay();
+                }
+
+                // 인디케이터 업데이트
+                function updateIndicators() {
+                    $slider.find('.kseta-slide__indicator').each((index, indicator) => {
+                        $(indicator).toggleClass('kseta-slide__indicator--active', index === currentSlide);
+                    });
+                }
+
+                // 자동재생 관련 함수
+                function startAutoPlay() {
+                    autoPlayInterval = setInterval(nextSlide, settings.interval);
+                    $autoplayBtn.text('자동재생 중지');
+                }
+
+                function stopAutoPlay() {
+                    clearInterval(autoPlayInterval);
+                    $autoplayBtn.text('자동재생 시작');
+                }
+
+                function resetAutoPlay() {
+                    if (isAutoPlaying) {
+                        stopAutoPlay();
+                        startAutoPlay();
+                    }
+                }
+
+                function toggleAutoPlay() {
+                    isAutoPlaying = !isAutoPlaying;
+                    if (isAutoPlaying) {
+                        startAutoPlay();
+                        $autoplayBtn.addClass('kseta-slide__autoplay--playing');
+                    } else {
+                        stopAutoPlay();
+                        $autoplayBtn.removeClass('kseta-slide__autoplay--playing');
+                    }
+                }
+
+                // 초기화
+                init();
+            });
+        };
+    })(jQuery);
+
+    // 사용 예시
+    $(document).ready(function () {
+        $('.kseta-slide').ksetaSlide({
+            autoplay: true,
+            interval: 3000,
+            duration: 500
+        });
+    });
+</script>
+</body>
+</html>
+

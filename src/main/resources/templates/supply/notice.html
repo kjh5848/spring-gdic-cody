@@ -1,128 +1,136 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta property="og:image" content="http://gdicland.com/assets/img/m1_1_planning_img1.jpg">
-	<title>김해대동첨단산업단지㈜</title>
-	<link rel="stylesheet" th:href="@{/assets/css/gdic_style_v1.1.css}">
-	<script th:src="@{/assets/js/jquery.min.js}"></script>
-	<script th:src="@{/assets/js/slick.min.js}"></script>
-	<script th:src="@{/assets/js/gdic_v1.1.js}"></script>
-	<script>
-		$(function(){
-			$('#gdic_header').html(gdic_header);
-			$('#gdic_footer').html(gdic_footer);
-			footer_slide_on();
-			$('.main_popup').addClass('show');
-		})
-	</script>
-	</head>	
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="http://gdicland.com/assets/img/m1_1_planning_img1.jpg" property="og:image">
+    <title>김해대동첨단산업단지㈜</title>
+    <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+    <script th:src="@{/assets/js/jquery.min.js}"></script>
+    <script th:src="@{/assets/js/slick.min.js}"></script>
+    <script th:src="@{/assets/js/gdic_v1.1.js}"></script>
+    <script>
+        $(function () {
+            $('#gdic_header').html(gdic_header);
+            $('#gdic_footer').html(gdic_footer);
+            footer_slide_on();
+            $('.main_popup').addClass('show');
+        })
+    </script>
+</head>
 
-	<body id="gdic_main">
-		<header id="gdic_header">
-			
-		</header>
-		
-		<section id="gdic_body">
-			<div class="sub_top">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							
-						</div>
-					</div>
-				</div>
-			</div>
+<body id="gdic_main">
+<header id="gdic_header">
 
-			<div class="m_p1">
-				<div class="container">
-					<div class="row mb_50">
-						<div class="col">
-							<ul class="sub_nav_list f_s0">
-								<li>홈</li>
-								<li>사업안내</li>
-								<li>공급공고</li>
-							</ul>
-						</div>
-					</div>
+</header>
 
-					<div class="row mb_50">
-						<div class="col">
-							<div class="sub_pagetitle">
-								<h2 class="ft_s5">공급공고</h2>
-								<p class="f_c_g2">김해대동첨단산업단지㈜ 공급공고를 보실 수 있습니다.</p>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row border_list_area">
-						<div class="col">
-							<div class="mb_30">
-								<table class="board_style1 w-100 f_s1">
-									<colgroup>
-										<col width="5%">
-										<col width="88%">
-										<col width="7%">
-									</colgroup>
-									<thead>
-										<tr class="text-center">
-											<th>NO</th>
-											<th>TITLE</th>
-											<th>DATE</th>
-										</tr>
-									</thead>
-									<tbody class="f_c_g2 fw_pl">
-									<tr th:each="supply : ${supplyPage.getContent()}">
-										<td th:text="${supply.id}"></td>
-										<td><a th:href="@{notice/{id}(id=${supply.id},page=${supplyPage.getPageable().getPageNumber()})}" class="f_c_g2" th:text="${supply.title}" ></a></td>
-										<td th:text="${#temporals.format(supply.createdDate, 'MM-dd')}"></td>
-									</tr>
-									</tbody>
-								</table>
-							</div>
+<section id="gdic_body">
+    <div class="sub_top">
+        <div class="container">
+            <div class="row">
+                <div class="col">
 
-							<div>
-								<ul class="board_con1 f_s0 fw_pl">
+                </div>
+            </div>
+        </div>
+    </div>
 
-									<a th:if ="${!supplyPage.isFirst()}" th:href="@{/supply/notice(page=0,size=${supplyPage.getPageable().getPageSize()})}">
-										<li><<</li>
-									</a>
+    <div class="m_p1">
+        <div class="container">
+            <div class="row mb_50">
+                <div class="col">
+                    <ul class="sub_nav_list f_s0">
+                        <li>홈</li>
+                        <li>사업안내</li>
+                        <li>공급공고</li>
+                    </ul>
+                </div>
+            </div>
 
-									<a th:if ="${prev}" th:href="@{/supply/notice(page=${((supplyPage.getPageable().getPageNumber() / basePage) - 1) * basePage},size=${supplyPage.getPageable().getPageSize()})}">
-										<li><</li>
-									</a>
+            <div class="row mb_50">
+                <div class="col">
+                    <div class="sub_pagetitle">
+                        <h2 class="ft_s5">공급공고</h2>
+                        <p class="f_c_g2">김해대동첨단산업단지㈜ 공급공고를 보실 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
 
-									<a th:each="pageNum : ${#numbers.sequence(startPage, endPage)}"  th:href="@{/supply/notice(page=${pageNum}-1,size=${supplyPage.getPageable().getPageSize()})}">
-										<li  th:class="${pageNum} == ${supplyPage.getPageable().getPageNumber() + 1} ? 'active' : ''" th:text="${pageNum}" />
-									</a>
+            <div class="row border_list_area">
+                <div class="col">
+                    <div class="mb_30">
+                        <table class="board_style1 w-100 f_s1">
+                            <colgroup>
+                                <col width="5%">
+                                <col width="88%">
+                                <col width="7%">
+                            </colgroup>
+                            <thead>
+                            <tr class="text-center">
+                                <th>NO</th>
+                                <th>TITLE</th>
+                                <th>DATE</th>
+                            </tr>
+                            </thead>
+                            <tbody class="f_c_g2 fw_pl">
+                            <tr th:each="supply : ${supplyPage.getContent()}">
+                                <td th:text="${supply.id}"></td>
+                                <td>
+                                    <a class="f_c_g2"
+                                       th:href="@{notice/{id}(id=${supply.id},page=${supplyPage.getPageable().getPageNumber()})}" th:text="${supply.title}"></a></td>
+                                <td th:text="${#temporals.format(supply.createdDate, 'MM-dd')}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-									<a th:if ="${next}" th:href="@{/supply/notice(page=${((supplyPage.getPageable().getPageNumber() / basePage) + 1) * basePage},size=${supplyPage.getPageable().getPageSize()})}">
-										<li>></li>
-									</a>
+                    <div>
+                        <ul class="board_con1 f_s0 fw_pl">
 
-									<a th:if ="${!supplyPage.isLast()}" th:href="@{/supply/notice(page=${supplyPage.getTotalPages() -1},size=${supplyPage.getPageable().getPageSize()})}">
-										<li>>></li>
-									</a>
-								</ul>
-							</div>
-						</div>
-					</div>
+                            <a th:href="@{/supply/notice(page=0,size=${supplyPage.getPageable().getPageSize()})}"
+                               th:if="${!supplyPage.isFirst()}">
+                                <li><<</li>
+                            </a>
 
-					<div class="row border_more_area">
-						<div class="col">
-							<div class="border_more_box">
-								
-							</div>
-						</div>
-					</div>					
-				</div>
-			</div>
-		</section>
+                            <a th:href="@{/supply/notice(page=${((supplyPage.getPageable().getPageNumber() / basePage) - 1) * basePage},size=${supplyPage.getPageable().getPageSize()})}"
+                               th:if="${prev}">
+                                <li><</li>
+                            </a>
 
-		<footer id="gdic_footer">
-			
-		</footer>
-	</body>
+                            <a th:each="pageNum : ${#numbers.sequence(startPage, endPage)}"
+                               th:href="@{/supply/notice(page=${pageNum}-1,size=${supplyPage.getPageable().getPageSize()})}">
+                                <li th:class="${pageNum} == ${supplyPage.getPageable().getPageNumber() + 1} ? 'active' : ''"
+                                    th:text="${pageNum}"/>
+                            </a>
+
+                            <a th:href="@{/supply/notice(page=${((supplyPage.getPageable().getPageNumber() / basePage) + 1) * basePage},size=${supplyPage.getPageable().getPageSize()})}"
+                               th:if="${next}">
+                                <li>></li>
+                            </a>
+
+                            <a th:href="@{/supply/notice(page=${supplyPage.getTotalPages() -1},size=${supplyPage.getPageable().getPageSize()})}"
+                               th:if="${!supplyPage.isLast()}">
+                                <li>>></li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row border_more_area">
+                <div class="col">
+                    <div class="border_more_box">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="gdic_footer">
+
+</footer>
+</body>
 </html>
