@@ -110,10 +110,11 @@
 .kseta-header__toggler {
     display: none;
     padding: 0.5rem;
-    background: none;
+    background: #084298;
     border: 1px solid #ddd;
     border-radius: 4px;
     cursor: pointer;
+
 }
 
 .kseta-header__toggler--active {

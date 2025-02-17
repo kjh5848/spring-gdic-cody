@@ -1,17 +1,22 @@
 @charset "utf-8";
+@import url(root.css);
 @import url(reset.css);
 @import url(kseta_card_02.css);
 @import url(kseta_Introduction.css);
 @import url(kseta_expect.css);
-@import url(kseta_loca_sec.css);
-@import url(kseta_logo_sec.css);
+@import url(kseta_location.css);
+@import url(kseta_logo.css);
 @import url(kseta_footer.css);
 @import url(footer.css);
-@import url(kseta_org_sec.css);
+@import url(kseta_org.css);
 @import url(kseta_breadcrumb.css);
 @import url(kseta_header.css);
 @import url(kseta_slide.css);
 @import url(kseta_certificate.css);
+@import url(kseta_video.css);
+@import url(kseta_greet.css);
+@import url(kseta_goals.css);
+@import url(kseta_project.css);
 
 @font-face {
     font-family: 'Pretendard';
@@ -53,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-    margin-bottom: 15px;
+    /*margin-bottom: 15px;*/
 }
 
 /* 링크 스타일 */

@@ -5,28 +5,41 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/gdic")
+@RequestMapping("")
 public class GdicViewController {
 
     // 인사말 페이지
-    @GetMapping("greeting")
+    @GetMapping("/gdic/greeting")
     public String greeting() {
         return "gdic/greeting";
     }
 
+    @GetMapping("/kseta/greeting")
+    public String greeting2() {
+        return "kseta/greeting";
+    }
+
     // 회사소개 페이지
-    @GetMapping("/introduction")
-    public String introduction() {
-        return "gdic/introduction";
+    @GetMapping("/kseta/org")
+    public String organization() {
+        return "kseta/org";
     }
 
     // 협력기관 페이지
-    @GetMapping("/organization")
-    public String organization() {
-        return "gdic/organization";
+    @GetMapping("/kseta/location")
+    public String location() {
+        return "kseta/location";
     }
 
+    @GetMapping("/kseta/business-goal")
+    public String businessGoal() {
+        return "kseta/business-goal";
+    }
 
+    @GetMapping("/kseta/project")
+    public String project() {
+        return "kseta/project";
+    }
 
 
 }

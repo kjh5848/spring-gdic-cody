@@ -48,29 +48,4 @@ $(function () {
             $('.kseta-header__submenu').removeAttr('style');
         }
     });
-
-    $(document).ready(function () {
-        let lastScrollTop = 0;
-        let isScrolling;
-
-        $(window).on("scroll", function () {
-            clearTimeout(isScrolling);
-
-            let scrollTop = $(this).scrollTop();
-
-            if (scrollTop > lastScrollTop) {
-                $(".kseta-header").addClass("kseta-header--hidden"); // 아래로 스크롤 시 숨김
-            } else {
-                $(".kseta-header").removeClass("kseta-header--hidden"); // 위로 스크롤 시 다시 보이게
-            }
-
-            lastScrollTop = scrollTop;
-
-            // 스크롤이 멈춘 후 헤더 다시 보이게 설정 (0.3초 후)
-            isScrolling = setTimeout(function () {
-                $(".kseta-header").removeClass("kseta-header--hidden");
-            }, 300);
-        });
-    });
-
 });

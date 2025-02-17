@@ -36,22 +36,22 @@
 }
 
 /* Card Block */
-.kseta_intro-card {
-    background: white;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease; /* 부드러운 전환 효과 추가 */
-}
+/*.kseta_intro-card {*/
+/*    background: white;*/
+/*    border-radius: 0.5rem;*/
+/*    overflow: hidden;*/
+/*    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+/*    transition: all 0.3s ease; !* 부드러운 전환 효과 추가 *!*/
+/*}*/
 
-.kseta_intro-card:hover {
-    transform: translateY(-5px); /* 위로 5px 이동 */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* 그림자 더 강조 */
-}
+/*.kseta_intro-card:hover {*/
+/*    transform: translateY(-5px); !* 위로 5px 이동 *!*/
+/*    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); !* 그림자 더 강조 *!*/
+/*}*/
 
 .kseta_intro-card__header {
-    background-color: #1a365d;
-    color: white;
+    /*background-color: #1a365d;*/
+    color: #1a365d;
     padding: 1rem 1.5rem;
 }
 
@@ -65,6 +65,7 @@
     padding: 1.5rem;
     word-wrap: break-word;
     word-break: keep-all; /* 단어 단위로 줄바꿈 */
+    background: gainsboro;
 }
 
 /* Objectives Block */

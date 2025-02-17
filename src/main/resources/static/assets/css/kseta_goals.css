@@ -1,0 +1,121 @@
+
+.kseta-goals {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background-color: #ffffff;
+}
+
+.kseta-goals__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a365d;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.kseta-goals__subtitle {
+    font-size: 1.2rem;
+    color: #4a5568;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.kseta-goals__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.kseta-goals__step {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.kseta-goals__step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.kseta-goals__image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.kseta-goals__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.kseta-goals__step:hover .kseta-goals__image {
+    transform: scale(1.05);
+}
+
+.kseta-goals__content-container {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.kseta-goals__number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.kseta-goals__text {
+    text-align: left;
+}
+
+.kseta-goals__text h3 {
+    font-size: 1.3rem;
+    color: #1a365d;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.kseta-goals__text p {
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.kseta-goals__footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #1a365d, #2d4a77);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .kseta-goals__content {
+        grid-template-columns: 1fr;
+    }
+
+    .kseta-goals__title {
+        font-size: 2rem;
+    }
+
+    .kseta-goals__subtitle {
+        font-size: 1.1rem;
+    }
+}

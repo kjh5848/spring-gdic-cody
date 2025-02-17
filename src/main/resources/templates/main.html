@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layout/header :: head"></head>
-
+<style>
+</style>
 <body>
 <div th:replace="layout/header :: body"></div>
+
+<section class="kseta-video">
+    <div class="kseta-video__container">
+        <video autoplay class="kseta-video__media" loop muted playsinline>
+            <source src="/assets/img/video_banner.mp4" type="video/mp4">
+            귀하의 브라우저는 비디오 태그를 지원하지 않습니다.
+        </video>
+    </div>
+    <div class="kseta-video__overlay">
+        <div class="kseta-video__content">
+            <h1 class="kseta-video__title">(사)한국융합인재교육협회</h1>
+            <p class="kseta-video__description">IT융합 교육을 통한 인재 육성과 4차 산업혁명 시대의 경쟁력 강화를 지원하며 창의력 있는 융합인재가 필요한 시대!
+                소프트웨어 중심
+                융합교육으로 미래 인재 육성, 한국융합인재교육협회가 함께합니다.</p>
+            <p class="kseta-video__description"></p>
+            <!--            <a class="kseta-video__button" href="#">자세히 보기</a>-->
+        </div>
+    </div>
+</section>
 <main class="kseta-container">
 
-    <!--슬라이드 배너 시작-->
-    <section class="kseta-slide">
-        <div class="kseta-slide__container">
-            <!-- 슬라이드 1 -->
-            <div class="kseta-slide__item">
-                <img alt="슬라이드 1" src="/assets/img/main_banner1.png">
-                <div class="kseta-slide__content">
-                    <h2 class="kseta-slide__title">한국융합인재교육협회</h2>
-                    <p class="kseta-slide__subtitle">IT융합 교육을 통한 인재 육성과 4차 산업혁명 시대의 경쟁력 강화를 지원합니다.</p>
-                </div>
-            </div>
+    <!--    슬라이드 배너 시작-->
+    <div>
+        <!--    <section class="kseta-slide">-->
+        <!--        <div class="kseta-slide__container">-->
+        <!--            &lt;!&ndash; 슬라이드 1 &ndash;&gt;-->
+        <!--            <div class="kseta-slide__item">-->
+        <!--                <img alt="슬라이드 1" src="/assets/img/main_banner1.png">-->
+        <!--                <div class="kseta-slide__content">-->
+        <!--                    <h2 class="kseta-slide__title">한국융합인재교육협회</h2>-->
+        <!--                    <p class="kseta-slide__subtitle">IT융합 교육을 통한 인재 육성과 4차 산업혁명 시대의 경쟁력 강화를 지원합니다.</p>-->
+        <!--                </div>-->
+        <!--            </div>-->
 
-            <!-- 슬라이드 2 -->
-            <div class="kseta-slide__item">
-                <img alt="슬라이드 2" src="/assets/img/main_banner2.png">
-                <div class="kseta-slide__content">
-                    <h2 class="kseta-slide__title">IT융합 인재 양성</h2>
-                    <p class="kseta-slide__subtitle">산업체, 교육기관, IT전문가가 함께하는 4차 산업혁명 시대의 인재 양성</p>
-                </div>
-            </div>
+        <!--            &lt;!&ndash; 슬라이드 2 &ndash;&gt;-->
+        <!--            <div class="kseta-slide__item">-->
+        <!--                <img alt="슬라이드 2" src="/assets/img/main_banner2.png">-->
+        <!--                <div class="kseta-slide__content">-->
+        <!--                    <h2 class="kseta-slide__title">IT융합 인재 양성</h2>-->
+        <!--                    <p class="kseta-slide__subtitle">산업체, 교육기관, IT전문가가 함께하는 4차 산업혁명 시대의 인재 양성</p>-->
+        <!--                </div>-->
+        <!--            </div>-->
 
-            <!-- 슬라이드 3 -->
-            <div class="kseta-slide__item">
-                <img alt="슬라이드 3" src="/assets/img/main_banner3.png">
-                <div class="kseta-slide__content">
-                    <h2 class="kseta-slide__title">창의력 있는 융합인재가 필요한 시대!</h2>
-                    <p class="kseta-slide__subtitle">소프트웨어 중심 융합교육으로 미래 인재 육성, 한국융합인재교육협회가 함께합니다.</p>
-                </div>
-            </div>
-        </div>
-
-
-        <!--        <div class="kseta-slide__controls">-->
-        <!--            <button class="kseta-slide__button kseta-slide__button&#45;&#45;prev">←</button>-->
-        <!--            <button class="kseta-slide__button kseta-slide__button&#45;&#45;next">→</button>-->
+        <!--            &lt;!&ndash; 슬라이드 3 &ndash;&gt;-->
+        <!--            <div class="kseta-slide__item">-->
+        <!--                <img alt="슬라이드 3" src="/assets/img/main_banner3.png">-->
+        <!--                <div class="kseta-slide__content">-->
+        <!--                    <h2 class="kseta-slide__title">창의력 있는 융합인재가 필요한 시대!</h2>-->
+        <!--                    <p class="kseta-slide__subtitle">소프트웨어 중심 융합교육으로 미래 인재 육성, 한국융합인재교육협회가 함께합니다.</p>-->
+        <!--                </div>-->
+        <!--            </div>-->
         <!--        </div>-->
 
-        <div class="kseta-slide__indicators"></div>
-        <!--        <button class="kseta-slide__autoplay">자동재생 중지</button>-->
-    </section>
 
+        <!--        &lt;!&ndash;        <div class="kseta-slide__controls">&ndash;&gt;-->
+        <!--        &lt;!&ndash;            <button class="kseta-slide__button kseta-slide__button&#45;&#45;prev">←</button>&ndash;&gt;-->
+        <!--        &lt;!&ndash;            <button class="kseta-slide__button kseta-slide__button&#45;&#45;next">→</button>&ndash;&gt;-->
+        <!--        &lt;!&ndash;        </div>&ndash;&gt;-->
+
+        <!--        <div class="kseta-slide__indicators"></div>-->
+        <!--        &lt;!&ndash;        <button class="kseta-slide__autoplay">자동재생 중지</button>&ndash;&gt;-->
+        <!--    </section>-->
+    </div>
+    <!--    슬라이드 배너 종료-->
+
+    <!--    자격증 시작-->
     <section class="kseta-certificate">
         <div class="kseta_intro-title">
             <h2 class="kseta_intro-title__main">자격증</h2>
@@ -62,6 +86,7 @@
             </a>
         </div>
     </section>
+    <!--    자격증 종료-->
 
     <!---협회소개 시작-->
     <div class="kseta_intro-container">
@@ -127,19 +152,19 @@
             <div class="kseta-card">
                 <div class="kseta-card__gradient"></div>
                 <div class="kseta-card__content">
+                    <!--                    <img alt="IT 솔루션 개발" class="kseta-card__image" src="/assets/img/main_banner1.png">-->
                     <div class="kseta-card__icon">
                         <svg class="kseta-card__icon-image" fill="none" stroke="currentColor"
                              stroke-width="2" viewBox="0 0 24 24">
                             <path d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"/>
                         </svg>
                     </div>
-                    <h3 class="kseta-card__title">IT 장비 및 자원프로그램</h3>
-                    <p class="kseta-card__subtitle">솔루션기술 개발</p>
+                    <h3 class="kseta-card__title">IT 솔루션 개발</h3>
+                    <p class="kseta-card__subtitle">시스템 및 인프라 구축</p>
                     <ul class="kseta-card__list">
-                        <li class="kseta-card__list-item">IT 솔루션 및 소프트웨어 관리/개발/서비스</li>
-                        <li class="kseta-card__list-item">시스템 및 업무솔루션 개발과 유지/관리</li>
-                        <li class="kseta-card__list-item">디지털 인프라 기반 구축관리 및 운영지원</li>
-                        <li class="kseta-card__list-item">시스템 및 업무 소프트웨어 관리/시스템지원</li>
+                        <li class="kseta-card__list-item">솔루션 개발 및 시스템 통합</li>
+                        <li class="kseta-card__list-item">업무 소프트웨어 개발/관리</li>
+                        <li class="kseta-card__list-item">디지털 인프라 구축 및 운영</li>
                     </ul>
                 </div>
             </div>
@@ -154,13 +179,12 @@
                             <path d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/>
                         </svg>
                     </div>
-                    <h3 class="kseta-card__title">IT 솔루션과 업무</h3>
-                    <p class="kseta-card__subtitle">컨설팅 서비스</p>
+                    <h3 class="kseta-card__title">IT 컨설팅</h3>
+                    <p class="kseta-card__subtitle">맞춤형 솔루션</p>
                     <ul class="kseta-card__list">
-                        <li class="kseta-card__list-item">현장수요맞춤형 컨설팅/분석 서비스</li>
-                        <li class="kseta-card__list-item">구체화 컨설팅과 계획과 관리개선</li>
-                        <li class="kseta-card__list-item">IT솔루션 현장 실무적응과 서비스</li>
-                        <li class="kseta-card__list-item">디지털서비스제품 솔루션/시스템지원/기타</li>
+                        <li class="kseta-card__list-item">현장 맞춤형 분석 및 컨설팅</li>
+                        <li class="kseta-card__list-item">IT 솔루션 도입 및 관리</li>
+                        <li class="kseta-card__list-item">디지털 서비스 시스템 지원</li>
                     </ul>
                 </div>
             </div>
@@ -175,13 +199,12 @@
                             <path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
                         </svg>
                     </div>
-                    <h3 class="kseta-card__title">IT 정책 현황</h3>
-                    <p class="kseta-card__subtitle">취약점 진단</p>
+                    <h3 class="kseta-card__title">IT 정책 진단</h3>
+                    <p class="kseta-card__subtitle">시스템 분석</p>
                     <ul class="kseta-card__list">
-                        <li class="kseta-card__list-item">정책, 법규, 지도에비 따른 관리운영과 분석</li>
-                        <li class="kseta-card__list-item">솔루션과 관리시스템 검진/취약지점</li>
-                        <li class="kseta-card__list-item">절차와, 정책진단과, 시스템의 운영과정별 시책분석/취약지원</li>
-                        <li class="kseta-card__list-item">솔루션과 분석시스템 및 운영 시책진행,개선과 기타</li>
+                        <li class="kseta-card__list-item">정책 및 법규 준수 현황 분석</li>
+                        <li class="kseta-card__list-item">시스템 취약점 진단 및 개선</li>
+                        <li class="kseta-card__list-item">운영 프로세스 분석 및 최적화</li>
                     </ul>
 
                 </div>
@@ -197,13 +220,12 @@
                             <path d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/>
                         </svg>
                     </div>
-                    <h3 class="kseta-card__title">신뢰관련 네트워크</h3>
-                    <p class="kseta-card__subtitle">시스템 현황</p>
+                    <h3 class="kseta-card__title">네트워크 신뢰성</h3>
+                    <p class="kseta-card__subtitle">시스템 진단</p>
                     <ul class="kseta-card__list">
-                        <li class="kseta-card__list-item">기본/현재 등장/주요 이슈현황과 과제</li>
-                        <li class="kseta-card__list-item">관련시스템과 현황검증/주요진단/관리</li>
-                        <li class="kseta-card__list-item">취약문제/개선지원/운영체제와 관련 현황 구성</li>
-                        <li class="kseta-card__list-item">시책지원과 현재 인프라시스템과 결과의 환류</li>
+                        <li class="kseta-card__list-item">현황 분석 및 주요 이슈 도출</li>
+                        <li class="kseta-card__list-item">시스템 검증 및 진단</li>
+                        <li class="kseta-card__list-item">인프라 취약점 개선 및 관리</li>
                     </ul>
                 </div>
             </div>
@@ -259,15 +281,15 @@
 
 
     <!--오시는 길 시작-->
-    <section class="kseta-loca-sec">
+    <section class="kseta-location">
         <div class="kseta_intro-title">
             <h1 class="kseta_intro-title__main">오시는 길</h1>
         </div>
-        <div class="kseta-loca-sec__container">
-            <div class="kseta-loca-sec__map">
+        <div class="kseta-location__container">
+            <div class="kseta-location__map">
                 <iframe
                         allowfullscreen=""
-                        class="kseta-loca-sec__map-iframe"
+                        class="kseta-location__map-iframe"
                         height="450"
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
@@ -276,31 +298,30 @@
                         width="600"
                 ></iframe>
             </div>
-            <div class="kseta-loca-sec__info">
-                <div class="kseta-loca-sec__info-item">
-                    <h3 class="kseta-loca-sec__info-title">주소</h3>
-                    <p class="kseta-loca-sec__info-detail">
+            <div class="kseta-location__info">
+                <div class="kseta-location__info-item">
+                    <h3 class="kseta-location__info-title">주소</h3>
+                    <p class="kseta-location__info-detail">
                         부산광역시 사상구 주례로 27번길 34 K-테크밸리
                     </p>
                 </div>
-                <div class="kseta-loca-sec__info-item">
-                    <h3 class="kseta-loca-sec__info-title">대중교통</h3>
-                    <p class="kseta-loca-sec__info-detail">
+                <div class="kseta-location__info-item">
+                    <h3 class="kseta-location__info-title">대중교통</h3>
+                    <p class="kseta-location__info-detail">
                         ✅ 지하철: 부산 지하철 2호선 주례역 7번 출구로 나와 약 10분 정도 도보로 이동하시면 됩니다.
                     </p>
-                    <br>
-                    <p class="kseta-loca-sec__info-detail" style="margin-bottom: 10px;">
+                    <p class="kseta-location__info-detail" style="margin-bottom: 10px;">
                         ✅ 버스: 주례역 또는 인근 버스 정류장에서 하차하신 후 도보로 이동
                     </p>
-                    <div class="kseta-loca-sec__info-item">
-                        <h3 class="kseta-loca-sec__info-title">연락처</h3>
-                        <div class="kseta-loca-sec__contact">
-                            <span class="kseta-loca-sec__contact-icon">📞</span>
-                            <span class="kseta-loca-sec__info-detail">070-7701-7735</span>
+                    <div class="kseta-location__info-item">
+                        <h3 class="kseta-location__info-title">연락처</h3>
+                        <div class="kseta-location__contact">
+                            <span class="kseta-location__contact-icon">📞</span>
+                            <span class="kseta-location__info-detail">070-7701-7735</span>
                         </div>
-                        <div class="kseta-loca-sec__contact">
-                            <span class="kseta-loca-sec__contact-icon">✉️</span>
-                            <span class="kseta-loca-sec__info-detail">kseta@kseta.or.kr</span>
+                        <div class="kseta-location__contact">
+                            <span class="kseta-location__contact-icon">✉️</span>
+                            <span class="kseta-location__info-detail">kseta@kseta.or.kr</span>
                         </div>
                     </div>
                 </div>

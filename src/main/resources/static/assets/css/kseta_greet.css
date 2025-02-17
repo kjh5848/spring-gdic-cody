@@ -1,0 +1,106 @@
+/* Base Block */
+.kseta-greet {
+    color: white;
+    line-height: 1.6;
+    position: relative;
+    background-image: url('/assets/img/greet_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Background Overlay */
+.kseta-greet::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Container Block */
+.kseta-greet-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    z-index: 2;
+}
+
+/* Title Block */
+.kseta-greet-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.kseta-greet-title__main {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a365d;
+    padding: 1rem 3rem;
+    border-bottom: 2px solid #1a365d;
+    display: inline-block;
+}
+
+/* Content Block */
+.kseta-greet-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Card Block */
+.kseta-greet-card__header {
+    background: rgba(253, 253, 253, 0.541);
+    color: #1a365d;
+    padding: 1rem 1.5rem;
+}
+
+.kseta-greet-card__title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.kseta-greet-card__subtitle {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    color: #000000;
+}
+
+.kseta-greet-card__body {
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .kseta-greet-container {
+        padding: 1rem;
+    }
+
+    .kseta-greet-title__main {
+        font-size: 1.5rem;
+        padding: 0.75rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .kseta-greet-title__main {
+        font-size: 1.25rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .kseta-greet-card__header {
+        padding: 0.75rem 1rem;
+    }
+
+    .kseta-greet-card__body {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,63 @@
+/* Logo Section */
+.kseta-logo-section {
+    width: 100%;
+    text-align: center;
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-bottom: var(--input-border-width) solid var(--gray-300);
+}
+
+/* Section Title */
+.kseta-logo-section h2 {
+    font-size: var(--font-xl);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Logo Container */
+.kseta-logo-container {
+    overflow: hidden;
+    padding: var(--spacing-sm);
+    white-space: nowrap;
+}
+
+/* Slider Track (Infinite Loop) */
+.kseta-logo-slider {
+    display: flex;
+    align-items: center;
+    gap: var(--grid-gap-sm);
+}
+
+.kseta-logo-track {
+    display: flex;
+    animation: scroll var(--logo-scroll-duration, 15s) linear infinite;
+    width: 200%; /* Duplicate list for infinite loop */
+}
+
+/* Scroll Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Individual Logo */
+.kseta-logo-item {
+    flex: 0 0 auto;
+    padding: var(--spacing-sm);
+    transition: transform var(--transition-normal);
+}
+
+.kseta-logo-item img {
+    height: var(--logo-height, 6.25rem); /* 100px */
+    max-width: var(--logo-max-width, 18.75rem); /* 300px */
+    object-fit: contain;
+}
+
+/* Mouse Hover Effect */
+.kseta-logo-item:hover {
+    transform: scale(var(--logo-hover-scale, 1.1));
+}
