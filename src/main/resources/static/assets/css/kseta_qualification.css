@@ -1,0 +1,345 @@
+.kseta-qualification {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* 사이드바 */
+.kseta-qualification__sidebar {
+    width: 280px;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.kseta-qualification__sidebar-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.kseta-qualification__nav {
+    list-style: none;
+}
+
+.kseta-qualification__nav-item a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #495057;
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.kseta-qualification__nav-item a:hover {
+    background-color: #f1f3f5;
+    color: #0066cc;
+}
+
+.kseta-qualification__nav-item a--active {
+    background-color: #e7f1ff;
+    color: #0066cc;
+    font-weight: 500;
+}
+
+/* 메인 콘텐츠 */
+.kseta-qualification__main {
+    flex: 1;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.kseta-qualification__title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #0066cc;
+}
+
+.kseta-qualification__content-box {
+    /*background: #e8ebed;*/
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.kseta-qualification__content-box h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #0066cc;
+}
+
+.kseta-qualification__description {
+    line-height: 1.7;
+    color: #495057;
+    margin-bottom: 1.5rem;
+}
+
+.kseta-qualification__highlight {
+    font-weight: 500;
+    color: #0066cc;
+}
+
+/* 등급 정보 */
+.kseta-qualification__grades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.kseta-qualification__grade-card {
+    padding: 1.5rem;
+}
+
+.kseta-qualification__grade-card-title {
+    font-size: 1.1rem;
+    color: #0066cc;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.kseta-qualification__grade-card-text {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* 등급 세부 정보 */
+.kseta-qualification__grade-detail {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.kseta-qualification__grade-title {
+    color: #0066cc;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.kseta-qualification__role,
+.kseta-qualification__capability {
+    margin-bottom: 1.5rem;
+}
+
+.kseta-qualification__role-title,
+.kseta-qualification__capability-title {
+    color: #495057;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.kseta-qualification__list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.kseta-qualification__list-item {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    color: #495057;
+}
+
+.kseta-qualification__list-item::before {
+    content: "•";
+    color: #0066cc;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* 시험 관련 스타일 */
+.kseta-qualification__exam-box h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #0066cc;
+}
+
+.kseta-qualification__exam-intro {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.kseta-qualification__exam-section-title {
+    font-size: 1.25rem;
+    color: #0066cc;
+    margin-bottom: 1.5rem;
+}
+
+.kseta-qualification__exam-grades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.kseta-qualification__exam-grade-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.kseta-qualification__grade-header {
+    background: #e7f1ff;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.kseta-qualification__grade-badge {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0066cc;
+}
+
+.kseta-qualification__exam-subjects {
+    list-style: none;
+    padding: 1.5rem;
+    margin: 0;
+}
+
+.kseta-qualification__exam-subjects-item {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #495057;
+    line-height: 1.5;
+}
+
+.kseta-qualification__exam-subjects-item::before {
+    content: "•";
+    color: #0066cc;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .kseta-qualification {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .kseta-qualification__sidebar {
+        width: 100%;
+        position: relative;
+        padding: 1rem;
+        top: 0;
+    }
+
+    .kseta-qualification__nav {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .kseta-qualification__nav-item {
+        flex: 1;
+    }
+
+    .kseta-qualification__nav-item a {
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .kseta-qualification__main {
+        padding: 1.5rem;
+    }
+
+    .kseta-qualification__title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .kseta-qualification__content-box {
+        padding: 1rem;
+    }
+
+    .kseta-qualification__content-box h2 {
+        font-size: 1.2rem;
+    }
+
+    .kseta-qualification__grades {
+        grid-template-columns: 1fr;
+    }
+
+    .kseta-qualification__exam-grades {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .kseta-qualification {
+        padding: 0.5rem;
+    }
+
+    .kseta-qualification__nav {
+        flex-direction: column;
+    }
+
+    .kseta-qualification__nav-item a {
+        width: 100%;
+        text-align: left;
+    }
+
+    .kseta-qualification__main {
+        padding: 1rem;
+    }
+
+    .kseta-qualification__content-box {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .kseta-qualification__title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    /* 주소 검색 버튼 영역 */
+    div[style*="display: flex; gap: 0.5rem;"] {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    div[style*="display: flex; gap: 0.5rem;"] input[name="zipCode"] {
+        width: 100%;
+    }
+
+    div[style*="display: flex; gap: 0.5rem;"] button {
+        width: 100%;
+    }
+}
+
+/*!* 반응형 디자인 *!*/
+/*@media (max-width: 768px) {*/
+/*    .kseta-qualification__exam-grades {*/
+/*        grid-template-columns: 1fr;*/
+/*    }*/
+/*}*/

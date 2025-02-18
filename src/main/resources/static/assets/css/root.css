@@ -24,6 +24,12 @@
     --gray-800: #343a40;
     --gray-900: #212529;
 
+    /*margin*/
+    --margin-bottom-sm: 10px;
+    --margin-bottom-md: 20px;
+    --margin-bottom-lg: 30px;
+    --margin-bottom-xl: 40px;
+
     /* Spacing - Base */
     --spacing-sm: 0.5rem; /* 8px */
     --spacing-md: 1rem; /* 16px */

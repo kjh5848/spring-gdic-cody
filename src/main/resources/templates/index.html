@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head th:replace="layout/header :: head"></head>
+
+<style>
+    /* Block: kseta-video */
+    .kseta-video {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Element: kseta-video__media */
+    .kseta-video__media {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .kseta-video__media video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Element: kseta-video__overlay */
+    .kseta-video__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+    }
+
+    /* Block: kseta-header */
+    .kseta-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        color: white;
+    }
+
+    /* Modifier: kseta-header--white */
+    .kseta-header--white {
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: black;
+    }
+
+    /* Modifier: kseta-header--hidden */
+    .kseta-header--hidden {
+        transform: translateY(-100%);
+    }
+
+    /* Element: kseta-header__container */
+    .kseta-header__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Element: kseta-header__logo */
+    .kseta-header__logo {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    /* Element: kseta-header__nav */
+    .kseta-header__nav {
+        display: flex;
+        list-style: none;
+        gap: 24px;
+    }
+
+    /* Block: kseta-content */
+    .kseta-content {
+        position: relative;
+        z-index: 1;
+        color: white;
+        padding-top: 100vh;
+    }
+
+    /* Element: kseta-content__title */
+    .kseta-content__title {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        font-size: 3rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Modifier: kseta-content__title--hidden */
+    .kseta-content__title--hidden {
+        opacity: 0;
+    }
+
+    /* Element: kseta-content__scroll */
+    .kseta-content__scroll {
+        background: white;
+        color: black;
+        padding: 40px;
+        min-height: 100vh;
+    }
+
+    /* Element: kseta-content__item */
+    .kseta-content__item {
+        height: 160px;
+        background-color: #f3f4f6;
+        margin: 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+<header class="kseta-header">
+    <div class="kseta-header__container">
+        <div class="kseta-header__logo">Logo</div>
+        <ul class="kseta-header__nav">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+        </ul>
+    </div>
+</header>
+
+<div class="kseta-video">
+    <div class="kseta-video__media">
+        <video autoplay loop muted playsinline>
+            <source src="/assets/img/video_banner.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="kseta-video__overlay"></div>
+</div>
+
+<div class="kseta-content">
+    <h1 class="kseta-content__title">Welcome to Our Site</h1>
+    <div class="kseta-content__scroll">
+        <div class="kseta-content__item">Scroll Content 1</div>
+        <!-- 추가 아이템들... -->
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // 더미 콘텐츠 생성
+        const $scrollContent = $('.kseta-content__scroll');
+        for (let i = 0; i < 20; i++) {
+            $('<div>', {
+                class: 'kseta-content__item',
+                text: `Scroll Content ${i + 1}`
+            }).appendTo($scrollContent);
+        }
+
+        // 헤더 동작 제어
+        let lastScrollY = 0;
+        let isScrolling = false;
+        let scrollTimer = null;
+        const $header = $('.kseta-header');
+        const $title = $('.kseta-content__title');
+
+        $(window).on('scroll', function () {
+            const currentScrollY = $(window).scrollTop();
+
+            // 스크롤 20px 이상시 배경색 변경
+            if (currentScrollY > 20) {
+                $header.addClass('kseta-header--white');
+            } else {
+                $header.removeClass('kseta-header--white');
+            }
+
+            // 메인 타이틀 페이드 아웃
+            if (currentScrollY > $(window).height() * 0.3) {
+                $title.addClass('kseta-content__title--hidden');
+            } else {
+                $title.removeClass('kseta-content__title--hidden');
+            }
+
+            // 스크롤 방향 감지 및 헤더 숨김/표시
+            if (currentScrollY > lastScrollY && currentScrollY > 64) {
+                if (!isScrolling) {
+                    $header.addClass('kseta-header--hidden');
+                }
+            } else {
+                $header.removeClass('kseta-header--hidden');
+            }
+
+            lastScrollY = currentScrollY;
+            isScrolling = true;
+
+            // 스크롤 멈춤 감지
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(function () {
+                isScrolling = false;
+                $header.removeClass('kseta-header--hidden');
+            }, 150);
+        });
+    });</script>
+</body>
+
+</html>

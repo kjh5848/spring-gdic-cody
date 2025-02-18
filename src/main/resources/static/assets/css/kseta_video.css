@@ -4,42 +4,37 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-}
-
-/* Element: kseta-video__container */
-.kseta-video__container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    z-index: 1;
 }
 
 /* Element: kseta-video__media */
 .kseta-video__media {
-    /*min-width: 100%;*/
-    /*min-height: 100%;*/
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.kseta-video__media video {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 /* Element: kseta-video__overlay */
 .kseta-video__overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    padding: 0 8%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
 }
+
 
 /* Element: kseta-video__content */
 .kseta-video__content {

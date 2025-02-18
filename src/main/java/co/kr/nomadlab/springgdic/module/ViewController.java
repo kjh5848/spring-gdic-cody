@@ -24,7 +24,7 @@ public class ViewController {
         List<PopupFile> popupList = popupService.getPopup();
         PopupFile popupFile = popupList.get(0);
         model.addAttribute("popupFile", popupFile);
-        return "main.html";
+        return "index.html";
     }
 
     @GetMapping("/login")
