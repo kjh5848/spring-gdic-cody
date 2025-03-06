@@ -337,9 +337,11 @@
 }
 
 .kseta-header__auth-button--signup {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #382f83;
     border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--background-light);
 }
+
 
 .kseta-header--white .kseta-header__auth-button--signup {
     background-color: #382f83;
@@ -347,8 +349,10 @@
     border: none;
 }
 
-.kseta-header--white .kseta-header__auth-button--signup:hover {
-    background-color: #2b265c;
+.kseta-header__auth-button--signup:hover {
+    background-color: rgb(26, 54, 93);
+    color: white;
+    /* 필요한 경우 텍스트 색상 등 다른 속성도 여기서 지정할 수 있습니다. */
 }
 
 .kseta-header__welcome {
