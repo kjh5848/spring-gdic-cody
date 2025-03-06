@@ -19,6 +19,19 @@
 @import url(kseta_project.css);
 @import url(kseta_qualification.css);
 
+.kseta-main {
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    padding-top: 80px;
+}
+
+footer {
+    position: relative;
+    z-index: 2; /* 비디오 섹션보다 높은 z-index */
+}
+
+
 @font-face {
     font-family: 'Pretendard';
     src: url('../fonts/Pretendard-Regular.woff') format('woff');

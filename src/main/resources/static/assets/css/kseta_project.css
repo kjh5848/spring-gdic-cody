@@ -1,11 +1,43 @@
 /* 프로젝트 섹션 스타일 */
 .kseta-project {
-    /*max-width: 1200px;*/
     margin: 0 auto;
-    padding: 50px 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('/assets/img/project.jpg') center/cover no-repeat fixed;
+    padding: 50px 20px 100px; /* 아래쪽 패딩 증가 */
+    position: relative;
     color: white;
+    z-index: 1;
+}
+
+/* 배경 이미지 및 그라데이션 */
+.kseta-project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/assets/img/project.jpg') center/cover no-repeat fixed;
+    opacity: 0.9;
+    z-index: -2;
+}
+
+/* 어두운 오버레이 + 하단 그라데이션 */
+.kseta-project::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.6) 40%,
+            rgba(0, 0, 0, 0.3) 70%,
+            rgba(255, 255, 255, 0.7) 85%,
+            rgba(255, 255, 255, 0.85) 92%,
+            rgba(255, 255, 255, 1) 100%
+    );
+    z-index: -1;
 }
 
 /* 메인 타이틀 */
