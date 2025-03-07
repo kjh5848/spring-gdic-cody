@@ -1,0 +1,196 @@
+/* Casa Tulancingo 스타일 헤더 */
+.kseta-casa {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    color: white;
+    font-family: 'Helvetica', Arial, sans-serif;
+}
+
+/* 배경 이미지 */
+.kseta-casa__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('/assets/img/kseta_casa.jpg'); /* 적절한 이미지로 변경 */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+}
+
+/* 오버레이 */
+.kseta-casa__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: -1;
+}
+
+/* 상단 네비게이션 */
+.kseta-casa__nav {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    display: flex;
+    gap: 30px;
+}
+
+.kseta-casa__nav-item {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.kseta-casa__nav-item:hover,
+.kseta-casa__nav-item--active {
+    color: white;
+}
+
+.kseta-casa__nav-item--active {
+    position: relative;
+}
+
+.kseta-casa__nav-item--active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+/* 컨텐츠 영역 */
+.kseta-casa__content {
+    position: absolute;
+    bottom: 180px;
+    left: 60px;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.kseta-casa__title {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+}
+
+/* 상세 정보 */
+.kseta-casa__details {
+    display: flex;
+    gap: 60px;
+    font-size: 0.9rem;
+    margin-top: 60px;
+}
+
+.kseta-casa__detail-block {
+    max-width: 200px;
+}
+
+.kseta-casa__detail-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.kseta-casa__detail-content {
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* 페이지 인디케이터 */
+.kseta-casa__pagination {
+    position: absolute;
+    right: 60px;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.kseta-casa__page-number {
+    font-size: 1.5rem;
+    font-weight: 500;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.kseta-casa__page-number--active {
+    opacity: 1;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+    .kseta-casa__content {
+        bottom: 120px;
+        left: 40px;
+    }
+
+    .kseta-casa__title {
+        font-size: 4rem;
+    }
+
+    .kseta-casa__nav {
+        top: 30px;
+        right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .kseta-casa__content {
+        bottom: 100px;
+        left: 30px;
+        max-width: 80%;
+    }
+
+    .kseta-casa__title {
+        font-size: 3rem;
+    }
+
+    .kseta-casa__details {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .kseta-casa__pagination {
+        right: 30px;
+        bottom: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .kseta-casa__title {
+        font-size: 2.5rem;
+    }
+
+    .kseta-casa__nav {
+        top: 20px;
+        right: 20px;
+        gap: 15px;
+    }
+
+    .kseta-casa__nav-item {
+        font-size: 10px;
+    }
+
+    .kseta-casa__content {
+        left: 20px;
+        max-width: 90%;
+    }
+}

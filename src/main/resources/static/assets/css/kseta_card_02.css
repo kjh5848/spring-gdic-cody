@@ -1,144 +1,133 @@
-/* 기본 스타일 (모바일 우선) */
-.kseta-cards {
-    padding: calc(var(--spacing-xl) * 2) 0;
-}
-
-.kseta_intro-title {
-    text-align: center;
-    margin-bottom: calc(var(--spacing-xl) * 1.5);
-}
-
-.kseta_intro-title__main {
-    font-size: var(--font-lg);
-    color: var(--text-primary);
-    font-family: 'Pretendard_b', sans-serif;
-}
-
-.kseta-cards__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 기본 2열 */
-    gap: var(--spacing-md);
+/* 프로젝트 갤러리 섹션 스타일 */
+.kseta-projects {
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.kseta-card {
     position: relative;
-    height: 100%;
-    min-height: 300px;
-    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.kseta-card__gradient {
+.kseta-projects__grid {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.kseta-projects__item {
+    position: relative;
+    flex: 1;
+    height: 500px;
+    overflow: hidden;
+    transition: flex 0.5s ease;
+}
+
+.kseta-projects__item:hover {
+    flex: 1.5;
+}
+
+.kseta-projects__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.kseta-projects__item:hover .kseta-projects__image {
+    transform: scale(1.05);
+}
+
+.kseta-projects__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    border-radius: var(--radius-md);
-    transform: rotate(1deg);
-    transition: transform 0.3s ease;
-}
-
-.kseta-card:hover .kseta-card__gradient {
-    transform: rotate(5deg);
-}
-
-.kseta-card__content {
-    position: relative;
-    background: var(--white);
-    border-radius: var(--radius-md);
-    padding: var(--spacing-md);
-    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%);
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    color: white;
+    z-index: 1;
 }
 
-.kseta-card__icon {
-    width: 50px;
-    height: 50px;
-    margin: 0 auto var(--spacing-lg);
+.kseta-projects__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    max-width: 70%;
+    line-height: 1.3;
+}
+
+.kseta-projects__location {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin: 0.3rem 0 0 0;
+}
+
+.kseta-projects__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.kseta-projects__button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.kseta-projects__button:hover {
+    opacity: 0.8;
+}
+
+.kseta-projects__button-icon {
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--background-light);
-    border-radius: var(--radius-sm);
-    transition: transform 0.3s ease;
 }
 
-.kseta-card:hover .kseta-card__icon {
-    transform: scale(1.1);
+.kseta-projects__buttons {
+    display: flex;
+    gap: 1rem;
 }
 
-.kseta-card__icon-image {
-    width: 25px;
-    height: 25px;
-}
-
-.kseta-card__title {
-    color: var(--text-primary);
-    font-family: 'Pretendard_b', sans-serif;
-    margin-bottom: var(--spacing-sm);
-    font-size: var(--font-md);
-}
-
-.kseta-card__subtitle {
-    color: var(--primary-color);
-    font-family: 'Pretendard_m', sans-serif;
-    margin-bottom: var(--spacing-md);
-    font-size: var(--font-sm);
-}
-
-.kseta-card__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-grow: 1;
-}
-
-.kseta-card__list-item {
-    position: relative;
-    padding-left: var(--spacing-md);
-    margin-bottom: var(--spacing-sm);
-    color: var(--text-secondary);
-    font-family: 'Pretendard_r', sans-serif;
-    font-size: var(--font-xs);
-    line-height: 1.5;
-}
-
-.kseta-card__list-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.6em;
-    width: 4px;
-    height: 4px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-}
-
-/* 반응형 스타일 (모바일 우선) */
-/*@media screen and (max-width: 1200px) {*/
-/*    .kseta-cards__grid {*/
-/*        grid-template-columns: repeat(4, 1fr) !important;*/
-/*    }*/
-/*}*/
-
-@media screen and (max-width: 768px) {
-    .kseta-cards__grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: var(--spacing-lg) !important;
-        display: grid !important;
+/* 반응형 스타일 */
+@media (max-width: 992px) {
+    .kseta-projects__grid {
+        flex-wrap: wrap;
     }
 
+    .kseta-projects__item {
+        flex: 1 1 50%;
+        height: 400px;
+    }
 
+    .kseta-projects__item:hover {
+        flex: 1 1 50%;
+    }
 }
 
-@media screen and (max-width: 576px) {
-    .kseta-cards__grid {
-        grid-template-columns: 1fr !important;
-        gap: var(--spacing-md) !important;
-        display: grid !important;
+@media (max-width: 768px) {
+    .kseta-projects__item {
+        flex: 1 1 100%;
+        height: 350px;
+    }
+
+    .kseta-projects__item:hover {
+        flex: 1 1 100%;
+    }
+
+    .kseta-projects__title {
+        font-size: 1rem;
     }
 }

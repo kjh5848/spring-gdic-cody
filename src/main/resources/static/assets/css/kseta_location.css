@@ -1,31 +1,26 @@
 /* KSETA locationtion Section - BEM Methodology */
 .kseta-location {
-    max-width: 1200px;
-    margin: 0 auto;
+
     padding: 80px 20px;
-    background-color: #f9fafb;
+    /*background-color: #f9fafb;*/
 }
 
 .kseta-location__title {
     text-align: center;
     margin-bottom: 50px;
-    font-size: 2.5rem;
-    color: #2c3e50;
-    position: relative;
 }
 
-.kseta-location__title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background-color: #3498db;
+
+.kseta-location__title-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--title-main);
+    margin: 0;
 }
 
 .kseta-location__container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 40px;

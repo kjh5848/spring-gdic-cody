@@ -1,167 +1,198 @@
-/* Base Block */
-.kseta_intro {
-    font-family: 'Pretendard', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+.kseta-intro {
+    background-color: #fff;
+    padding: 40px 20px;
 }
 
-
-/* Container Block */
+/* 모노리트 스타일의 협회소개 섹션 디자인 */
 .kseta_intro-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
-}
-
-/* Title Block */
-.kseta_intro-title {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.kseta_intro-title__main {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #1a365d;
-    padding: 1rem 3rem;
-    border-bottom: 2px solid #1a365d;
-    display: inline-block;
-}
-
-/* Content Block */
-.kseta_intro-content {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
-/* Card Block */
-/*.kseta_intro-card {*/
-/*    background: white;*/
-/*    border-radius: 0.5rem;*/
-/*    overflow: hidden;*/
-/*    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
-/*    transition: all 0.3s ease; !* 부드러운 전환 효과 추가 *!*/
-/*}*/
-
-/*.kseta_intro-card:hover {*/
-/*    transform: translateY(-5px); !* 위로 5px 이동 *!*/
-/*    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); !* 그림자 더 강조 *!*/
-/*}*/
-
-.kseta_intro-card__header {
-    /*background-color: #1a365d;*/
-    color: #1a365d;
-    /*padding: 1rem 1.5rem;*/
-    margin-bottom: var(--margin-bottom-sm);
+/* 좌측 이미지 섹션 */
+.kseta_intro-image {
+    width: 40%;
+    position: relative;
 }
 
-.kseta_intro-card__title {
-    font-size: 1.25rem;
-    font-weight: bold;
+.kseta_intro-image img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 우측 콘텐츠 섹션 */
+.kseta_intro-content {
+    width: 55%;
+    margin-left: 5%;
+    padding-top: 20px;
+}
+
+/* 환영 메시지 스타일 */
+.kseta_intro-welcome {
+    margin-bottom: 40px;
+}
+
+.kseta_intro-subtitle {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.kseta_intro-headline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.kseta_intro-headline span {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #999;
+    margin-right: 10px;
+}
+
+.kseta_intro-headline h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
     margin: 0;
 }
 
-.kseta_intro-card__body {
-    padding: 1.5rem;
-    word-wrap: break-word;
-    word-break: keep-all; /* 단어 단위로 줄바꿈 */
-    background: gainsboro;
-}
-
-/* Objectives Block */
-.kseta_intro-objectives {
-    list-style: none;
-}
-
-.kseta_intro-objectives__item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.kseta_intro-objectives__item:last-child {
-    margin-bottom: 0;
-}
-
-.kseta_intro-objectives__number {
-    background-color: #06b6d4;
-    color: white;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    flex-shrink: 0;
-}
-
-.kseta_intro-objectives__content {
-    flex: 1;
-}
-
-.kseta_intro-objectives__text {
-    margin-bottom: 0.5rem;
-    color: #4a5568;
+.kseta_intro-description {
     font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
 }
 
-.kseta_intro-objectives__text:last-child {
-    margin-bottom: 0;
+/* 버튼 스타일 */
+.kseta_intro-button {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .kseta_intro-container {
-        padding: 1rem;
+.kseta_intro-button:hover {
+    background-color: #555;
+}
+
+/* 프로세스 섹션 */
+.kseta_intro-process {
+    margin-top: 60px;
+    border-top: 1px solid #eee;
+    padding-top: 40px;
+    width: 100%;
+}
+
+.kseta_intro-process-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* 프로세스 그리드 */
+.kseta_intro-process-grid {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+/* 프로세스 단계 항목 */
+.kseta_intro-process-item {
+    width: 22%;
+    position: relative;
+}
+
+.kseta_intro-process-number {
+    font-size: 7rem;
+    font-weight: 300;
+    color: #f0f0f0;
+    line-height: 1;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    z-index: -1;
+}
+
+.kseta_intro-process-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.kseta_intro-process-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.kseta_intro-process-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.kseta_intro-process-link:hover {
+    color: #666;
+    border-color: #666;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 992px) {
+    .kseta_intro-image,
+    .kseta_intro-content {
+        width: 100%;
+        margin-left: 0;
     }
 
-    .kseta_intro-title__main {
+    .kseta_intro-content {
+        margin-top: 40px;
+    }
+
+    .kseta_intro-process-item {
+        width: 48%;
+        margin-bottom: 40px;
+    }
+
+    .kseta_intro-process-grid {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .kseta_intro-process-item {
+        width: 100%;
+    }
+
+    .kseta_intro-headline h1 {
         font-size: 1.5rem;
-        padding: 0.75rem 2rem;
     }
 
-    .kseta_intro-objectives__item {
-        gap: 1rem;
-    }
-
-    .kseta_intro-objectives__number {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.25rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .kseta_intro-title {
-        font-size: 2.5rem;
-    }
-
-    .kseta_intro-title__main {
-        font-size: 1.25rem;
-        padding: 0.5rem 1.5rem;
-    }
-
-    .kseta_intro-objectives__text {
-        font-size: 1.1rem;
-    }
-
-    .kseta_intro-card__header {
-        padding: 0.75rem 1rem;
-    }
-
-    .kseta_intro-card__body {
-        padding: 1rem;
-        font-size: 1.2rem;
-
-    }
-
-    .kseta_intro-objectives__item {
-        flex-direction: column;
-        gap: 0.5rem;
+    .kseta_intro-process-number {
+        font-size: 5rem;
     }
 }

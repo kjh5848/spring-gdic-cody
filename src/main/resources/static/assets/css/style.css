@@ -18,12 +18,13 @@
 @import url(kseta_goals.css);
 @import url(kseta_project.css);
 @import url(kseta_qualification.css);
+@import url(kseta-effect.css);
+@import url(kseta-casa.css);
 
 .kseta-main {
     position: relative;
     z-index: 2;
-    background-color: #fff;
-    padding-top: 80px;
+    background-color: var(--background-main);
 }
 
 footer {

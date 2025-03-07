@@ -9,240 +9,337 @@
 <body class="home-page">
 <div th:replace="layout/header :: body"></div>
 
-<!-- 메인 비디오 배너 -->
-<div class="kseta-video">
-    <div class="kseta-video__media">
-        <video autoplay loop muted playsinline>
-            <source src="/assets/img/video_banner.mp4" type="video/mp4">
-            귀하의 브라우저는 비디오 태그를 지원하지 않습니다.
-        </video>
-    </div>
-    <div class="kseta-video__overlay">
-        <div class="kseta-container">
-            <div class="kseta-video__content">
-                <h1 class="kseta-video__title">(사)한국융합인재교육협회</h1>
-                <p class="kseta-video__description">IT융합 교육을 통한 인재 육성과 4차 산업혁명 시대의 경쟁력 강화를 지원하며 창의력 있는 융합인재가 필요한 시대!
-                    소프트웨어 중심 융합교육으로 미래 인재 육성, 한국융합인재교육협회가 함께합니다.</p>
-                <a class="kseta-video__button" href="/intro/greeting">자세히 보기</a>
+<div class="kseta-casa">
+    <!-- 배경 이미지 -->
+    <div class="kseta-casa__background"></div>
+    <div class="kseta-casa__overlay"></div>
+
+    <!-- 컨텐츠 영역 -->
+    <div class="kseta-casa__content">
+        <h1 class="kseta-casa__title">한국융합인재<br>교육협회</h1>
+
+        <!-- 상세 정보 섹션 -->
+        <div class="kseta-casa__details">
+            <div class="kseta-casa__detail-block">
+                <h2 class="kseta-casa__detail-title">주요 사업 영역</h2>
+                <p class="kseta-casa__detail-content">IT융합 교육 연구개발, 전문교육, 취업연계 및 경력개발 지원</p>
+            </div>
+            <div class="kseta-casa__detail-block">
+                <h2 class="kseta-casa__detail-title">주요 특징</h2>
+                <p class="kseta-casa__detail-content">산업현장 맞춤형 커리큘럼, NCS 기반 STEAM 소프트웨어 교육 기반</p>
             </div>
         </div>
     </div>
+
 </div>
+<!-- 메인 비디오 배너 -->
+<!--<div class="kseta-video">-->
+<!--    <div class="kseta-video__media">-->
+<!--        <video autoplay loop muted playsinline>-->
+<!--            <source src="/assets/img/video_banner.mp4" type="video/mp4">-->
+<!--            귀하의 브라우저는 비디오 태그를 지원하지 않습니다.-->
+<!--        </video>-->
+<!--    </div>-->
+<!--    <div class="kseta-video__overlay">-->
+<!--        <div class="kseta-container">-->
+<!--            <div class="kseta-video__content">-->
+<!--                <h1 class="kseta-video__title">(사)한국융합인재교육협회</h1>-->
+<!--                <p class="kseta-video__description">IT융합 교육을 통한 인재 육성과 4차 산업혁명 시대의 경쟁력 강화를 지원하며 창의력 있는 융합인재가 필요한 시대!-->
+<!--                    소프트웨어 중심 융합교육으로 미래 인재 육성, 한국융합인재교육협회가 함께합니다.</p>-->
+<!--                <a class="kseta-video__button" href="/intro/greeting">자세히 보기</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <!-- 메인 콘텐츠 영역 -->
 <main class="kseta-main">
+    <!---협회소개 시작-->
+    <section class="kseta-intro">
+        <div class="kseta_intro-container">
+            <!-- 좌측 이미지 영역 -->
+            <div class="kseta_intro-image">
+                <img alt="KSETA 협회 건물" src="/assets/img/kseta_building.jpg">
+            </div>
+
+            <!-- 우측 콘텐츠 영역 -->
+            <div class="kseta_intro-content">
+                <!-- 환영 메시지 섹션 -->
+                <div class="kseta_intro-welcome">
+                    <p class="kseta_intro-subtitle">WELCOME WE ARE</p>
+                    <div class="kseta_intro-headline">
+                        <h1>한국융합인재교육협회</h1>
+                    </div>
+
+                    <p class="kseta_intro-description">
+                        본 협회는 국가 경제 발전과 사회적 책임을 수행하기 위해 설립되었으며, 주요 목표는 지속 가능한 성장을 도모하고, 연구 및 기술 혁신을 촉진하며, 관련 산업 발전을 지원하는
+                        것입니다. 또한, 공공의 이익을 위해 전문적인 서비스를 제공하고, 협력을 강화하여 글로벌 경쟁력을 확보하는 데 중점을 둡니다.
+                    </p>
+
+                    <p class="kseta_intro-description">
+                        산업현장의 수요에 기반한 IT융합인재(STEAM) 양성을 위한 교육 프로그램을 연구·개발하고 보급하며, 디지털 전환 시대에 필요한 인재를 양성하는데 주력하고 있습니다.
+                    </p>
+
+                    <!--                <a class="kseta_intro-button" href="/introduction">자세히 보기</a>-->
+                </div>
+
+                <!-- 프로세스 섹션 -->
+                <div class="kseta_intro-process">
+                    <h2 class="kseta_intro-process-title">Our process</h2>
+
+                    <div class="kseta_intro-process-grid">
+                        <!-- 프로세스 1 -->
+                        <div class="kseta_intro-process-item">
+                            <div class="kseta_intro-process-number">01</div>
+                            <p class="kseta_intro-process-label">SERVICE & GOALS</p>
+                            <h3 class="kseta_intro-process-title">교육 연구개발</h3>
+                            <!--                        <a class="kseta_intro-process-link" href="#">View the process</a>-->
+                        </div>
+
+                        <!-- 프로세스 2 -->
+                        <div class="kseta_intro-process-item">
+                            <div class="kseta_intro-process-number">02</div>
+                            <p class="kseta_intro-process-label">DESIGN & BUILD</p>
+                            <h3 class="kseta_intro-process-title">전문교육 실시</h3>
+                            <!--                        <a class="kseta_intro-process-link" href="#">View the process</a>-->
+                        </div>
+
+                        <!-- 프로세스 3 -->
+                        <div class="kseta_intro-process-item">
+                            <div class="kseta_intro-process-number">03</div>
+                            <p class="kseta_intro-process-label">SUPPORT & VERIFY</p>
+                            <h3 class="kseta_intro-process-title">취업 지원</h3>
+                            <!--                        <a class="kseta_intro-process-link" href="#">View the process</a>-->
+                        </div>
+
+                        <!-- 프로세스 4 -->
+                        <div class="kseta_intro-process-item">
+                            <div class="kseta_intro-process-number">04</div>
+                            <p class="kseta_intro-process-label">MANAGE & EXPAND</p>
+                            <h3 class="kseta_intro-process-title">경력 개발</h3>
+                            <!--                        <a class="kseta_intro-process-link" href="#">View the process</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--협회소개 종료-->
+
 
     <!-- 사업 목표 소개 섹션 -->
     <section class="kseta-expect">
-        <div class="kseta-expect__title">IT융합인재 교육 핵심 영역</div>
         <div class="kseta-expect__container">
-            <div class="kseta-expect__section" style="--delay: 1">
-                <div class="kseta-expect__number">01</div>
-                <h3 class="kseta-expect__title-text">IT융합인재 전문 교육프로그램 연구개발 / 보급</h3>
-                <p class="kseta-expect__description">산업현장별 맞춤형 커리큘럼을 통해 실무 역량을 강화하는 교육 프로그램을 개발하고 보급합니다.</p>
+            <div class="kseta-expect__title">OUR SERVICES</div>
+            <!-- 첫 번째 섹션 -->
+            <div class="kseta-expect__section">
+                <!-- 이미지 영역 -->
+                <div class="kseta-expect__image-container">
+                    <img alt="IT융합인재 전문 교육프로그램" class="kseta-expect__image" src="/assets/img/education/program_dev.jpg">
+                </div>
+
+                <!-- 콘텐츠 영역 -->
+                <div class="kseta-expect__content">
+                    <div class="kseta-expect__number">01</div>
+                    <h3 class="kseta-expect__title-text">IT융합인재 전문 교육프로그램 연구개발 / 보급</h3>
+                    <p class="kseta-expect__description">산업현장별 맞춤형 커리큘럼을 통해 실무 역량을 강화하는 교육 프로그램을 개발하고 보급합니다. 각 산업 분야의
+                        요구사항을 반영한 특화된 IT융합 교육과정으로 현장 적응력을 높입니다.</p>
+                    <!--                    <a class="kseta-expect__link" href="#">READ MORE →</a>-->
+                </div>
             </div>
-            <div class="kseta-expect__section" style="--delay: 2">
-                <div class="kseta-expect__number">02</div>
-                <h3 class="kseta-expect__title-text">IT융합인재 양성 전문교육</h3>
-                <p class="kseta-expect__description">현장수요 맞춤형 위탁교육을 통해 디지털 전환 시대에 필요한 실무 인재를 양성합니다.</p>
+
+            <!-- 두 번째 섹션 -->
+            <div class="kseta-expect__section">
+                <!-- 이미지 영역 -->
+                <div class="kseta-expect__image-container">
+                    <img alt="IT융합인재 양성 전문교육" class="kseta-expect__image"
+                         src="/assets/img/education/professional_training.jpg">
+                </div>
+
+                <!-- 콘텐츠 영역 -->
+                <div class="kseta-expect__content">
+                    <div class="kseta-expect__number">02</div>
+                    <h3 class="kseta-expect__title-text">IT융합인재 양성 전문교육</h3>
+                    <p class="kseta-expect__description">현장수요 맞춤형 위탁교육을 통해 디지털 전환 시대에 필요한 실무 인재를 양성합니다. 이론과 실습을 균형 있게
+                        배분한 교육과정으로 현장에서 즉시 활용 가능한 역량을 키웁니다.</p>
+                    <!--                    <a class="kseta-expect__link" href="#">READ MORE →</a>-->
+                </div>
             </div>
-            <div class="kseta-expect__section" style="--delay: 3">
-                <div class="kseta-expect__number">03</div>
-                <h3 class="kseta-expect__title-text">IT융합인재 취업지원 및 평생경력개발</h3>
-                <p class="kseta-expect__description">취업 연계 및 현장 전문가로의 성장, 교육 강사 및 과정 개발자로의 평생 경력 개발을 지원합니다.</p>
+
+            <!-- 세 번째 섹션 -->
+            <div class="kseta-expect__section">
+                <!-- 이미지 영역 -->
+                <div class="kseta-expect__image-container">
+                    <img alt="IT융합인재 취업지원 및 평생경력개발" class="kseta-expect__image"
+                         src="/assets/img/education/career_development.jpg">
+                </div>
+
+                <!-- 콘텐츠 영역 -->
+                <div class="kseta-expect__content">
+                    <div class="kseta-expect__number">03</div>
+                    <h3 class="kseta-expect__title-text">IT융합인재 취업지원 및 평생경력개발</h3>
+                    <p class="kseta-expect__description">취업 연계 및 현장 전문가로의 성장, 교육 강사 및 과정 개발자로의 평생 경력 개발을 지원합니다. 지속적인 역량
+                        향상 프로그램을 통해 IT 융합 분야의 전문성을 강화할 수 있습니다.</p>
+                    <!--                    <a class="kseta-expect__link" href="#">READ MORE →</a>-->
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- 자격증 소개 섹션 -->
-    <section class="kseta-certificate">
-        <h2 class="kseta-certificate__title">자격증 신청</h2>
-        <div class="kseta-certificate__container">
-            <a class="kseta-certificate__button" href="/qualification/bigdata">
-                <span class="kseta-certificate__icon">📊</span>
-                빅데이터 전문가 자격증
-            </a>
-            <a class="kseta-certificate__button" href="/qualification/ai">
-                <span class="kseta-certificate__icon">🤖</span>
-                인공지능 데이터 마스터 자격증
-            </a>
-        </div>
-    </section>
-
-    <!---협회소개 시작-->
-    <div class="kseta_intro-container">
-        <div class="kseta_intro-title">
-            <h2 class="kseta_intro-title__main">협회소개</h2>
-        </div>
-
-        <div class="kseta_intro-content">
-            <!-- 설립목적 -->
-            <section class="kseta_intro-card">
-                <div class="kseta_intro-card__header">
-                    <h2 class="kseta_intro-card__title">설립목적</h2>
-                </div>
-                <div class="kseta_intro-card__body">
-                    <p>해당 기관은 국가 경제 발전과 사회적 책임을 수행하기 위해 설립되었으며, 주요 목표는 지속 가능한 성장을 도모하고, 연구 및 기술 혁신을 촉진하며, 관련 산업 발전을 지원하는
-                        것입니다. 또한, 공공의 이익을 위해 전문적인 서비스를 제공하고, 협력을 강화하여 글로벌 경쟁력을 확보하는 데 중점을 둡니다.</p>
-                </div>
-            </section>
-
-            <!-- 사업목적 -->
-            <section class="kseta_intro-card">
-                <div class="kseta_intro-card__header">
-                    <h2 class="kseta_intro-card__title">사업목적</h2>
-                </div>
-                <div class="kseta_intro-card__body">
-                    <ul class="kseta_intro-objectives">
-                        <li class="kseta_intro-objectives__item">
-                            <div class="kseta_intro-objectives__number">01</div>
-                            <div class="kseta_intro-objectives__content">
-                                <p class="kseta_intro-objectives__text">급격한 기술변화 및 교육 인프라 디지털 전환에 대응</p>
-                                <p class="kseta_intro-objectives__text">산업현장 수요 맞춤형 IT융합 인재육성을 추구</p>
-                            </div>
-                        </li>
-                        <li class="kseta_intro-objectives__item">
-                            <div class="kseta_intro-objectives__number">02</div>
-                            <div class="kseta_intro-objectives__content">
-                                <p class="kseta_intro-objectives__text">IoT, AI, Big Data 등의 신기술 융합인재(STEAM) 양성</p>
-                                <p class="kseta_intro-objectives__text">NCS 기반 산학협력 교육 프로그램/교재 연구개발</p>
-                            </div>
-                        </li>
-                        <li class="kseta_intro-objectives__item">
-                            <div class="kseta_intro-objectives__number">03</div>
-                            <div class="kseta_intro-objectives__content">
-                                <p class="kseta_intro-objectives__text">온/오프라인 융합학습 환경에 보급/전파</p>
-                                <p class="kseta_intro-objectives__text">소프트웨어 산업의 발전과 신기술 전파 목적</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-    </div>
-    <!--협회소개 종료-->
-
     <!--주요사업 시작-->
-    <section class="kseta-cards">
-        <div class="kseta_intro-title">
-            <h2 class="kseta_intro-title__main">주요 사업</h2>
-        </div>
-        <div class="kseta-cards__grid">
-
-            <!-- 카드 1 -->
-            <div class="kseta-card">
-                <div class="kseta-card__gradient"></div>
-                <div class="kseta-card__content">
-                    <!--                    <img alt="IT 솔루션 개발" class="kseta-card__image" src="/assets/img/main_banner1.png">-->
-                    <div class="kseta-card__icon">
-                        <svg class="kseta-card__icon-image" fill="none" stroke="currentColor"
-                             stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"/>
-                        </svg>
+    <section class="kseta-projects">
+        <div class="kseta-projects__grid">
+            <!-- 프로젝트 1 -->
+            <div class="kseta-projects__item">
+                <img alt="주거 복지 프로젝트" class="kseta-projects__image" src="/assets/img/projects/it_solutions.jpg">
+                <div class="kseta-projects__overlay">
+                    <div>
+                        <h2 class="kseta-projects__title">IT 솔루션 개발</h2>
+                        <p class="kseta-projects__location">시스템 및 인프라 구축</p>
                     </div>
-                    <h3 class="kseta-card__title">IT 솔루션 개발</h3>
-                    <p class="kseta-card__subtitle">시스템 및 인프라 구축</p>
-                    <ul class="kseta-card__list">
-                        <li class="kseta-card__list-item">솔루션 개발 및 시스템 통합</li>
-                        <li class="kseta-card__list-item">업무 소프트웨어 개발/관리</li>
-                        <li class="kseta-card__list-item">디지털 인프라 구축 및 운영</li>
-                    </ul>
+                    <div>
+                        <ul class="kseta-projects__list">
+                            <li class="kseta-projects__list-item">솔루션 개발 및 시스템 통합</li>
+                            <li class="kseta-projects__list-item">업무 소프트웨어 개발/관리</li>
+                            <li class="kseta-projects__list-item">디지털 인프라 구축 및 운영</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!-- 카드 2 -->
-            <div class="kseta-card">
-                <div class="kseta-card__gradient"></div>
-                <div class="kseta-card__content">
-                    <div class="kseta-card__icon">
-                        <svg class="kseta-card__icon-image" fill="none" stroke="currentColor"
-                             stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/>
-                        </svg>
+            <!-- 프로젝트 2 -->
+            <div class="kseta-projects__item">
+                <img class="kseta-projects__image" src="/assets/img/projects/it_consulting.jpg">
+                <div class="kseta-projects__overlay">
+                    <div>
+                        <h2 class="kseta-projects__title">IT 컨설팅</h2>
+                        <p class="kseta-projects__location">맞춤형 솔루션</p>
                     </div>
-                    <h3 class="kseta-card__title">IT 컨설팅</h3>
-                    <p class="kseta-card__subtitle">맞춤형 솔루션</p>
-                    <ul class="kseta-card__list">
-                        <li class="kseta-card__list-item">현장 맞춤형 분석 및 컨설팅</li>
-                        <li class="kseta-card__list-item">IT 솔루션 도입 및 관리</li>
-                        <li class="kseta-card__list-item">디지털 서비스 시스템 지원</li>
-                    </ul>
-                </div>
-            </div>
 
-            <!-- 카드 3 -->
-            <div class="kseta-card">
-                <div class="kseta-card__gradient"></div>
-                <div class="kseta-card__content">
-                    <div class="kseta-card__icon">
-                        <svg class="kseta-card__icon-image" fill="none" stroke="currentColor"
-                             stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
-                        </svg>
+                    <div>
+                        <ul class="kseta-projects__list">
+                            <li class="kseta-projects__list-item">현장 맞춤형 분석 및 컨설팅</li>
+                            <li class="kseta-projects__list-item">IT 솔루션 도입 및 관리</li>
+                            <li class="kseta-projects__list-item">디지털 서비스 시스템 지원</li>
+                        </ul>
                     </div>
-                    <h3 class="kseta-card__title">IT 정책 진단</h3>
-                    <p class="kseta-card__subtitle">시스템 분석</p>
-                    <ul class="kseta-card__list">
-                        <li class="kseta-card__list-item">정책 및 법규 준수 현황 분석</li>
-                        <li class="kseta-card__list-item">시스템 취약점 진단 및 개선</li>
-                        <li class="kseta-card__list-item">운영 프로세스 분석 및 최적화</li>
-                    </ul>
 
                 </div>
             </div>
 
-            <!-- 카드 4 -->
-            <div class="kseta-card">
-                <div class="kseta-card__gradient"></div>
-                <div class="kseta-card__content">
-                    <div class="kseta-card__icon">
-                        <svg class="kseta-card__icon-image" fill="none" stroke="currentColor"
-                             stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/>
-                        </svg>
+            <!-- 프로젝트 3 -->
+            <div class="kseta-projects__item">
+                <img class="kseta-projects__image" src="/assets/img/projects/it_policy_dagnostics.jpg">
+                <div class="kseta-projects__overlay">
+                    <div>
+                        <h2 class="kseta-projects__title">IT 정책 진단</h2>
+                        <p class="kseta-projects__location">시스템 분석</p>
                     </div>
-                    <h3 class="kseta-card__title">네트워크 신뢰성</h3>
-                    <p class="kseta-card__subtitle">시스템 진단</p>
-                    <ul class="kseta-card__list">
-                        <li class="kseta-card__list-item">현황 분석 및 주요 이슈 도출</li>
-                        <li class="kseta-card__list-item">시스템 검증 및 진단</li>
-                        <li class="kseta-card__list-item">인프라 취약점 개선 및 관리</li>
-                    </ul>
+                    <div>
+                        <ul class="kseta-projects__list">
+                            <li class="kseta-projects__list-item">정책 및 법규 준수 현황 분석</li>
+                            <li class="kseta-projects__list-item">시스템 취약점 진단 및 개선</li>
+                            <li class="kseta-projects__list-item">운영 프로세스 분석 및 최적화</li>
+                        </ul>
+
+
+                    </div>
+
                 </div>
             </div>
 
+            <!-- 프로젝트 4 -->
+            <div class="kseta-projects__item">
+                <img class="kseta-projects__image" src="/assets/img/projects/network_reliability.jpg">
+                <div class="kseta-projects__overlay">
+                    <div>
+                        <h2 class="kseta-projects__title">네트워크 신뢰성</h2>
+                        <p class="kseta-projects__location">시스템 진단</p>
+                    </div>
+                    <div>
+                        <ul class="kseta-projects__list">
+                            <li class="kseta-projects__list-item">현황 분석 및 주요 이슈 도출</li>
+                            <li class="kseta-projects__list-item">시스템 검증 및 진단</li>
+                            <li class="kseta-projects__list-item">인프라 취약점 개선 및 관리</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!--주요사업 종료-->
 
-    <!--KSETA 기대효과 시작-->
-    <section class="kseta-expect">
-        <div class="kseta_intro-title">
-            <h2 class="kseta_intro-title__main">KSETA 기대효과</h2>
+    <!-- 자격증 소개 섹션 -->
+    <section class="kseta-certificate">
+        <h2 class="kseta-certificate__title">자격증 안내</h2>
+        <p>인재 역량 강화를 위한 IT 분야 자격증</p>
+
+        <div class="kseta-certificate__container">
+            <!-- 빅데이터 자격증 -->
+            <a class="kseta-certificate__item" href="/kseta/qualification-bigdata">
+                <div class="kseta-certificate__image-container">
+                    <img alt="빅데이터 전문가 자격증" class="kseta-certificate__image" src="/assets/img/bigdata_certificate.jpg">
+                    <div class="kseta-certificate__overlay"></div>
+                </div>
+                <div class="kseta-certificate__content">
+                    <h3 class="kseta-certificate__name">빅데이터 자격증</h3>
+                    <p class="kseta-certificate__description">산업현장에서 대용량 데이터를 효과적으로 수집, 저장, 처리 및 분석할 수 있는 전문가 역량을 검증하는
+                        자격증입니다. 빅데이터 시스템 구축 및 운영 능력과 데이터 기반 의사결정 지원 역량을 평가합니다. 1급, 2급, 3급으로 나누어 개인의 역량에 맞는 자격 취득이 가능하며,
+                        현업 실무자와 예비 빅데이터 전문가에게 필수적인 자격증입니다.</p>
+                    <span class="kseta-certificate__more">더보기</span>
+                </div>
+            </a>
+
+            <!-- 인공지능 자격증 -->
+            <a class="kseta-certificate__item" href="/kseta/qualification-ai">
+                <div class="kseta-certificate__image-container">
+                    <img alt="인공지능 데이터 마스터 자격증" class="kseta-certificate__image" src="/assets/img/ai_certificate.jpg">
+                    <div class="kseta-certificate__overlay"></div>
+                </div>
+                <div class="kseta-certificate__content">
+                    <h3 class="kseta-certificate__name">인공지능 자격증</h3>
+                    <p class="kseta-certificate__description">인공지능 기술을 활용하여 데이터를 분석하고 비즈니스 가치를 창출할 수 있는 전문가를 양성하기 위한
+                        자격증입니다. 머신러닝, 딥러닝 등 최신 AI 기술에 대한 이해와 실무 역량을 검증합니다. 1급과 2급으로 구분되며, 인공지능 모델 개발부터 데이터 전처리, 알고리즘 설계,
+                        결과 해석까지 AI 전문가로서의 종합적 능력을 평가합니다.</p>
+                    <span class="kseta-certificate__more">더보기</span>
+                </div>
+            </a>
         </div>
-        <!--    <h2 class="kseta-expect__title"></h2>-->
-        <div class="kseta-expect__container">
-            <article class="kseta-expect__section" style="--delay:1">
-                <div class="kseta-expect__number">01</div>
-                <h3 class="kseta-expect__title-text">변화하는 신기술에 대한 교육프로그램 개발기술</h3>
-                <p class="kseta-expect__description">
-                    산업현장의 수요에 맞는 산업역량[IT융합] 인재양성을 위한 혁신적인 접근
+    </section>
+
+
+    <!--KSETA 기대효과 시작-->
+    <section class="kseta-effect">
+        <div class="kseta-effect__title">
+            <h2 class="kseta-effect__title-text">KSETA 기대효과</h2>
+        </div>
+
+        <div class="kseta-effect__container">
+            <!-- 첫 번째 스텝 -->
+            <article class="kseta-effect__step">
+                <span class="kseta-effect__step-number">01</span>
+                <h3 class="kseta-effect__step-title">변화하는 신기술에 대한 교육프로그램 개발기술</h3>
+                <p class="kseta-effect__step-description">
+                    산업현장의 수요에 맞는 산업역량[IT융합] 인재양성을 위한 혁신적인 접근방식을 통해 차별화된 교육 프로그램을 개발합니다.
                 </p>
+
             </article>
 
-            <article class="kseta-expect__section" style="--delay:2">
-                <div class="kseta-expect__number">02</div>
-                <h3 class="kseta-expect__title-text">NCS 기반 STEAM 소프트웨어 교육 커스터마이징</h3>
-                <p class="kseta-expect__description">
-                    맞춤형 교육 프로그램/교재 개발을 통한 초중고 대학・직업훈련 기관 보급
+            <!-- 두 번째 스텝 -->
+            <article class="kseta-effect__step">
+                <span class="kseta-effect__step-number">02</span>
+                <h3 class="kseta-effect__step-title">NCS 기반 STEAM 소프트웨어 교육 커스터마이징</h3>
+                <p class="kseta-effect__step-description">
+                    맞춤형 교육 프로그램/교재 개발을 통한 초중고 대학・직업훈련 기관 보급으로 교육 효과를 극대화합니다.
                 </p>
+
             </article>
 
-            <article class="kseta-expect__section" style="--delay:3">
-                <div class="kseta-expect__number">03</div>
-                <h3 class="kseta-expect__title-text">산업현장 맞춤형 교육 프로그램 보급</h3>
-                <p class="kseta-expect__description">
-                    교육 프로그램의 전략적 보급을 통한 [IT융합] 인재 재제작 도모
+            <!-- 세 번째 스텝 -->
+            <article class="kseta-effect__step">
+                <span class="kseta-effect__step-number">03</span>
+                <h3 class="kseta-effect__step-title">산업현장 맞춤형 교육 프로그램 보급</h3>
+                <p class="kseta-effect__step-description">
+                    교육 프로그램의 전략적 보급을 통한 [IT융합] 인재 재제작 도모로 산업 발전에 기여합니다.
                 </p>
             </article>
         </div>
@@ -250,8 +347,8 @@
     <!--KSETA 기대효과 종료-->
 
     <section class="kseta-org-sec">
-        <div class="kseta_intro-title">
-            <h1 class="kseta_intro-title__main">조직도</h1>
+        <div class="kseta-org-sec__title">
+            <h1 class="kseta-org-sec__title-text">조직도</h1>
         </div>
         <div class="kseta-org-sec__container">
             <!-- 조직도 SVG -->
@@ -263,8 +360,8 @@
 
     <!--오시는 길 시작-->
     <section class="kseta-location">
-        <div class="kseta_intro-title">
-            <h1 class="kseta_intro-title__main">오시는 길</h1>
+        <div class="kseta-location__title">
+            <h1 class='kseta-location__title-text'>오시는 길</h1>
         </div>
         <div class="kseta-location__container">
             <div class="kseta-location__map">
@@ -281,7 +378,9 @@
             </div>
             <div class="kseta-location__info">
                 <div class="kseta-location__info-item">
-                    <h3 class="kseta-location__info-title">주소</h3>
+                    <div class="">
+                        <h2 class="kseta-location__info-title">주소</h2>
+                    </div>
                     <p class="kseta-location__info-detail">
                         부산광역시 사상구 주례로 27번길 34 K-테크밸리
                     </p>
