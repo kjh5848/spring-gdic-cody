@@ -1,104 +1,90 @@
-/* 조직도 섹션 */
+/* 조직도 섹션 메인 스타일 */
 .kseta-org-sec {
-    padding: 80px 20px;
-    /*background-color: #f9fafb;*/
-    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    overflow: hidden;
+    padding: 60px 0;
 }
 
-
-.kseta-org-sec__title {
-    text-align: center;
-    margin-bottom: 50px;
+/* 배경 이미지 */
+.kseta-org-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/img/modern-architecture.jpg'); /* 첫 번째 이미지 경로 */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
 }
 
-
-.kseta-org-sec__title-text {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--title-main);
-    margin: 0;
+/* 사선 오버레이 */
+.kseta-org-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.8) 25%,
+    rgba(13, 71, 121, 0.8) 25%,
+    rgba(13, 71, 121, 0.8) 75%,
+    rgba(230, 243, 255, 0.8) 75%,
+    rgba(230, 243, 255, 0.8) 100%);
+    z-index: 2;
 }
 
-/* 조직도 및 카드 컨테이너 */
+/* 조직도 컨테이너 */
 .kseta-org-sec__container {
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    align-items: center;
+    padding: 40px 20px;
+    z-index: 3;
 }
 
-/* 조직도 SVG */
-.kseta-org-sec__chart img {
+/* 조직도 차트 */
+.kseta-org-sec__chart {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* 조직 카드 섹션 */
-.kseta-org-sec__cards {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* 개별 카드 */
-.kseta-org-sec__card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease-in-out;
 }
 
-.kseta-org-sec__card:hover {
-    transform: scale(1.05);
+/* 조직도 제목 */
+.kseta-org-sec__title-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--title-main);
+    margin-bottom: 60px;
 }
 
-/* 카드 제목 */
-.kseta-org-sec__card-title {
-    font-size: 1.2rem;
-    color: #2c3e50;
-    margin-bottom: 5px;
+/* 조직도 이미지 */
+.kseta-org-sec__chart img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
 }
 
-/* 카드 이름 */
-.kseta-org-sec__card-name {
-    font-size: 1rem;
-    color: #34495e;
-}
-
-/* 반응형 (태블릿 이하에서 컬럼 배치 변경) */
-@media (max-width: 992px) {
-    .kseta-org-sec__container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .kseta-org-sec__chart img {
-        max-width: 100%;
-    }
-
-    .kseta-org-sec__cards {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .kseta-org-sec__card {
-        width: 45%;
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .kseta-org-sec__title-text {
+        font-size: 2rem;
+        margin-bottom: 40px;
     }
 }
 
-@media (max-width: 600px) {
-    .kseta-org-sec__cards {
-        flex-direction: column;
+@media (max-width: 576px) {
+    .kseta-org-sec__title-text {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
     }
 
-    .kseta-org-sec__card {
-        width: 100%;
+    .kseta-org-sec {
+        min-height: 600px;
     }
 }

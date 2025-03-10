@@ -15,23 +15,29 @@
 @import url(kseta_certificate.css);
 @import url(kseta_video.css);
 @import url(kseta_greet.css);
-@import url(kseta_goals.css);
+@import url(kseta_business.css);
 @import url(kseta_project.css);
 @import url(kseta_qualification.css);
 @import url(kseta-effect.css);
 @import url(kseta-casa.css);
+@import url(kseta_sidebanner.css);
+@import url(kseta_history.css);
+
+section[id] {
+    scroll-margin-top: 70px; /* 헤더와의 간격 조정 */
+}
 
 .kseta-main {
     position: relative;
     z-index: 2;
     background-color: var(--background-main);
+    padding-top: 80px;
 }
 
 footer {
     position: relative;
     z-index: 2; /* 비디오 섹션보다 높은 z-index */
 }
-
 
 @font-face {
     font-family: 'Pretendard';
@@ -59,6 +65,7 @@ html, body {
 !important;
     line-height: 1.6;
 }
+
 
 /* 박스 크기 설정 */
 *, *::before, *::after {
@@ -128,3 +135,4 @@ img {
     margin: 0 auto;
     padding: 20px;
 }
+

@@ -161,7 +161,7 @@
 
 /* 스크롤 내릴 때 남색으로 변경 */
 .kseta-header--white .kseta-header__toggler span {
-    background-color: #382f83; /* 기존 디자인의 남색 */
+    background-color: var(--background-main); /* 기존 디자인의 남색 */
 }
 
 
@@ -254,7 +254,7 @@
 
 
 .kseta-header--white .kseta-header__auth-button--signup {
-    background-color: #382f83;
+    background-color: var(--background-main);
     color: white;
     border: none;
 }

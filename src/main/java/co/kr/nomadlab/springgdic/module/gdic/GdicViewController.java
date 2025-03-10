@@ -13,26 +13,19 @@ public class GdicViewController {
         return "gdic/greeting";
     }
 
-    @GetMapping("/kseta/greeting")
+    @GetMapping("/kseta/about")
     public String greeting2() {
-        return "kseta/greeting";
+        return "kseta/about";
     }
 
-    // 회사소개 페이지
-    @GetMapping("/kseta/org")
-    public String organization() {
-        return "kseta/org";
-    }
-
-    // 협력기관 페이지
-    @GetMapping("/kseta/location")
-    public String location() {
-        return "kseta/location";
+    @GetMapping("/kseta/edu")
+    public String edu() {
+        return "kseta/edu";
     }
 
     @GetMapping("/kseta/business-goal")
     public String businessGoal() {
-        return "kseta/business-goal";
+        return "edu";
     }
 
     @GetMapping("/kseta/project")

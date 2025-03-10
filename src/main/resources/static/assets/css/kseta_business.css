@@ -1,0 +1,145 @@
+/* 공통 섹션 스타일 */
+.kseta-business {
+    display: flex;
+    height: 80vh;
+    position: relative;
+}
+
+/* 콘텐츠 영역 공통 스타일 */
+.kseta-business__content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    color: #fff;
+    background-color: #23262d;
+}
+
+/* 이미지 영역 공통 스타일 */
+.kseta-business__image {
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.kseta-business__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 비대칭 이미지 스타일 (첫 번째와 세 번째 섹션) */
+.kseta-business__image--asymmetric img {
+    position: absolute;
+    width: 60vw; /* 높이와 같은 값으로 설정하여 1:1 비율 만들기 */
+    height: 60vh;
+    bottom: 50px;
+    right: 0;
+    object-fit: cover; /* 이미지 비율 유지하면서 영역 채우기 */
+    aspect-ratio: 1 / 1; /* 명시적으로 1:1 비율 지정 */
+}
+
+/* 오른쪽 콘텐츠 (두 번째와 네 번째 섹션) */
+.kseta-business__content--right {
+    width: 40%;
+    order: 2;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* 왼쪽 이미지 (두 번째와 네 번째 섹션) */
+.kseta-business__image--left {
+    order: 1;
+}
+
+/* 텍스트 스타일 */
+.kseta-business__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.kseta-business__description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+/* 번호 스타일 */
+.kseta-business__number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: #0891b2;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.kseta-business--right .kseta-business__number {
+    color: #333;
+    background-color: #e2e8f0;
+}
+
+/* 버튼 스타일 */
+.kseta-business__button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #464a53;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    width: 200px;
+}
+
+.kseta-business__button:hover {
+    background-color: #5a5f6b;
+}
+
+.kseta-business--right .kseta-business__button {
+    background-color: #6c757d;
+}
+
+.kseta-business--right .kseta-business__button:hover {
+    background-color: #5a6268;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .kseta-business {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .kseta-business__content,
+    .kseta-business__image {
+        width: 100%;
+    }
+
+    .kseta-business__content {
+        padding: 2rem;
+    }
+
+    .kseta-business__image {
+        height: 300px;
+    }
+
+    .kseta-business__content--right,
+    .kseta-business__image--left {
+        order: 0;
+    }
+
+    .kseta-business__image--asymmetric img {
+        position: static;
+        width: 100%;
+        height: 100%;
+    }
+}

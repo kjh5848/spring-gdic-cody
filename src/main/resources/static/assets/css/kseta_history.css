@@ -1,0 +1,176 @@
+/* 연혁 타임라인 스타일 */
+.kseta-history {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.kseta-history__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.kseta-history__header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.kseta-history__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 10px;
+}
+
+.kseta-history__subtitle {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+.kseta-history__timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.kseta-history__timeline::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #3498db;
+    z-index: 1;
+}
+
+.kseta-history__item {
+    position: relative;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.kseta-history__item:last-child {
+    margin-bottom: 0;
+}
+
+.kseta-history__year {
+    position: relative;
+    min-width: 80px;
+    padding-right: 20px;
+    text-align: center;
+    z-index: 2;
+}
+
+.kseta-history__year span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: #3498db;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+}
+
+.kseta-history__content {
+    flex: 1;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.kseta-history__month {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3498db;
+    margin: 0 0 15px;
+}
+
+.kseta-history__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.kseta-history__list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: #34495e;
+}
+
+.kseta-history__list li:last-child {
+    margin-bottom: 0;
+}
+
+.kseta-history__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: #3498db;
+    border-radius: 50%;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .kseta-history {
+        padding: 60px 0;
+    }
+
+    .kseta-history__title {
+        font-size: 2rem;
+    }
+
+    .kseta-history__subtitle {
+        font-size: 1.1rem;
+    }
+
+    .kseta-history__year span {
+        width: 70px;
+        height: 70px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .kseta-history {
+        padding: 40px 0;
+    }
+
+    .kseta-history__title {
+        font-size: 1.7rem;
+    }
+
+    .kseta-history__timeline::before {
+        left: 30px;
+    }
+
+    .kseta-history__year {
+        min-width: 60px;
+    }
+
+    .kseta-history__year span {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+
+    .kseta-history__content {
+        padding: 20px;
+    }
+
+    .kseta-history__list li {
+        font-size: 0.95rem;
+    }
+}

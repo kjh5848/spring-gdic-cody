@@ -47,13 +47,13 @@
 /* Individual Logo */
 .kseta-logo-item {
     flex: 0 0 auto;
-    padding: var(--spacing-sm);
+    padding: var(--spacing-lg);
     transition: transform var(--transition-normal);
 }
 
 .kseta-logo-item img {
-    height: var(--logo-height, 6.25rem); /* 100px */
-    max-width: var(--logo-max-width, 18.75rem); /* 300px */
+    height: 100px;
+    max-width: 200px;
     object-fit: contain;
 }
 

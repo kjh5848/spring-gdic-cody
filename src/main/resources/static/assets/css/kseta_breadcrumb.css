@@ -1,9 +1,10 @@
 .kseta-breadcrumb-container {
-    width: 100%;
+    margin: 0 auto;
+    width: 1200px;
     background-color: white;
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .kseta-breadcrumb-list {

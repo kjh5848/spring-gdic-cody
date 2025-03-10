@@ -28,15 +28,16 @@
 
 
 .kseta-footer__title {
+    padding: 20px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 
 .kseta-footer__title-text {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--title-main);
+    color: var(--background-main);
     margin: 0;
 }
 

@@ -1,134 +1,345 @@
-/* 자격증 안내 섹션 스타일 */
-.kseta-certificate {
+/* 자격증 통합 페이지 스타일 */
+.kseta-certificates {
     max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* 모던 스타일 탭 네비게이션 디자인 */
+.kseta-certificates__tabs {
+    display: flex;
+    gap: 4px;
+    background-color: #f5f7fa;
+    border-radius: 12px;
+    padding: 8px;
+    margin-top: 50px;
+    /*position: sticky;*/
+    /*top: 80px;*/
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.kseta-certificates__tab {
+    flex: 1;
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #0d6cf9;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
     text-align: center;
+}
+
+.kseta-certificates__tab:hover {
+    color: #1e293b;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.kseta-certificates__tab.active {
+    color: #fff;
+    background-color: #0d6cf9;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(56, 47, 131, 0.3);
+}
+
+/* 탭 컨텐츠 전환 애니메이션 */
+.kseta-certificates__tab-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.kseta-certificates__tab-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .kseta-certificates__tabs {
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px;
+    }
+
+    .kseta-certificates__tab {
+        width: 100%;
+        padding: 14px;
+        border-radius: 6px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 서브페이지 스타일 */
+.sub-page .kseta-main {
+    padding-top: 30px;
+    background-color: #f8f9fa;
+}
+
+
+/* 추가된 kseta-certificate 스타일 */
+
+.kseta-certificate {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* 사이드바 */
+.kseta-certificate__sidebar {
+    width: 280px;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.kseta-certificate__sidebar-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.kseta-certificate__nav {
+    list-style: none;
+}
+
+.kseta-certificate__nav-item a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #495057;
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.kseta-certificate__nav-item a:hover {
+    background-color: #f1f3f5;
+    color: #0066cc;
+}
+
+.kseta-certificate__nav-item a--active {
+    background-color: #e7f1ff;
+    color: #0066cc;
+    font-weight: 500;
+}
+
+/* 메인 콘텐츠 */
+.kseta-certificate__main {
+    flex: 1;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .kseta-certificate__title {
     font-size: 2rem;
-    font-weight: 700;
-    color: var(--title-main);
-    margin-bottom: 10px;
-    position: relative;
-}
-
-.kseta-certificate p {
-    color: #666;
-    margin-bottom: 40px;
-    font-size: 1rem;
-}
-
-.kseta-certificate__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.kseta-certificate__item {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    background: #fff;
-    border-radius: 0;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.kseta-certificate__item:hover {
-    transform: translateY(-5px);
-}
-
-.kseta-certificate__image-container {
-    position: relative;
-    width: 100%;
-    height: 240px;
-    overflow: hidden;
-}
-
-.kseta-certificate__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.kseta-certificate__item:hover .kseta-certificate__image {
-    transform: scale(1.1);
-}
-
-.kseta-certificate__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease;
-}
-
-.kseta-certificate__item:hover .kseta-certificate__overlay {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.kseta-certificate__content {
-    padding: 20px;
-    text-align: left;
-    background: #fff;
-}
-
-.kseta-certificate__name {
-    font-size: 1.4rem;
-    font-weight: 600;
     color: #333;
-    margin: 0 0 10px 0;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #0066cc;
+}
+
+.kseta-certificate__content-box {
+    background: #f8f9fa;
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .kseta-certificate__description {
-    color: #666;
-    margin: 0 0 20px 0;
-    font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.7;
+    color: #495057;
+    margin-bottom: 1.5rem;
 }
 
-.kseta-certificate__more {
-    display: inline-block;
-    color: #3f377e;
+/* 폼 스타일 */
+.kseta-certificate__form-group {
+    margin-bottom: 1.5rem;
+}
+
+.kseta-certificate__form-label {
+    display: block;
+    margin-bottom: 0.5rem;
     font-weight: 500;
-    position: relative;
-    transition: color 0.3s ease;
+    color: #495057;
 }
 
-.kseta-certificate__more::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #3f377e;
-    transition: width 0.3s ease;
-}
-
-.kseta-certificate__item:hover .kseta-certificate__more::after {
+.kseta-certificate__form-control {
     width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
 }
 
-/* 반응형 스타일 */
-@media (max-width: 768px) {
-    .kseta-certificate__container {
-        grid-template-columns: 1fr;
+.kseta-certificate__form-control:focus {
+    outline: none;
+    border-color: #0066cc;
+}
+
+.kseta-certificate__form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+/* 이미지 업로드 영역 */
+.kseta-certificate__image-upload {
+    border: 2px dashed #dee2e6;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.kseta-certificate__image-upload--dragover {
+    border-color: #0066cc;
+    background-color: #e7f1ff;
+}
+
+.kseta-certificate__image-preview {
+    max-width: 300px;
+    margin: 1rem auto;
+    position: relative;
+}
+
+.kseta-certificate__image-preview-img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.kseta-certificate__remove-image {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 버튼 스타일 */
+.kseta-certificate__btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.kseta-certificate__btn--primary {
+    background-color: #0066cc;
+    color: white;
+}
+
+.kseta-certificate__btn--primary:hover {
+    background-color: #0056b3;
+}
+
+.kseta-certificate__btn--secondary {
+    background-color: #f8f9fa;
+    color: #495057;
+}
+
+.kseta-certificate__btn--secondary:hover {
+    background-color: #e9ecef;
+}
+
+.kseta-certificate__error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.kseta-certificate__upload-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.kseta-certificate__upload-btn:hover {
+    background-color: #e9ecef;
+}
+
+@media screen and (max-width: 768px) {
+    .kseta-certificate {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .kseta-certificate__sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+        padding: 1rem;
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .kseta-certificate__nav {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .kseta-certificate__nav-item {
+        flex: 1;
+    }
+
+    .kseta-certificate__nav-item a {
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .kseta-certificate__main {
+        padding: 1rem;
     }
 }
 
-@media (max-width: 480px) {
-    .kseta-certificate__title {
-        font-size: 1.8rem;
+@media screen and (max-width: 480px) {
+    .kseta-certificate__nav {
+        flex-direction: column;
     }
 
-    .kseta-certificate__name {
-        font-size: 1.2rem;
+    .kseta-certificate__nav-item a {
+        width: 100%;
+        text-align: left;
     }
 }

@@ -11,12 +11,20 @@
 }
 
 
-.kseta-location__title-text {
+.home-page .kseta-location__title-text {
     font-size: 2rem;
     font-weight: 700;
     color: var(--title-main);
     margin: 0;
 }
+
+.sub-page .kseta-location__title-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--background-main);
+    margin: 0;
+}
+
 
 .kseta-location__container {
     max-width: 1200px;
