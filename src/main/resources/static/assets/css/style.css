@@ -21,11 +21,13 @@
 @import url(kseta-effect.css);
 @import url(kseta-casa.css);
 @import url(kseta_sidebanner.css);
+@import url(kseta-edu.css);
 @import url(kseta_history.css);
 
 section[id] {
     scroll-margin-top: 70px; /* 헤더와의 간격 조정 */
 }
+
 
 .kseta-main {
     position: relative;

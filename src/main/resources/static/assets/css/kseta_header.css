@@ -213,7 +213,7 @@
     }
 
     .kseta-header__logo-img {
-        height: 40px;
+        height: 60px;
     }
 
     .kseta-header__menu {
@@ -278,12 +278,81 @@
     }
 }
 
+/*@media (max-width: 991px) {*/
+/*    .kseta-header__auth-buttons {*/
+/*        display: none; !* 모바일에서는 메뉴 안으로 들어가게 처리 *!*/
+/*    }*/
+
+/*    !* 모바일 메뉴 내 로그인/회원가입 버튼 *!*/
+/*    .kseta-header__menu--active .kseta-header__auth-buttons {*/
+/*        display: flex;*/
+/*        position: static;*/
+/*        transform: none;*/
+/*        flex-direction: column;*/
+/*        width: 100%;*/
+/*        padding: 1rem;*/
+/*        gap: 0.5rem;*/
+/*        border-top: 1px solid #eee;*/
+/*    }*/
+
+/*    .kseta-header__menu--active .kseta-header__auth-button {*/
+/*        width: 100%;*/
+/*        text-align: center;*/
+/*        padding: 0.75rem;*/
+/*    }*/
+/*}*/
+
+/* 모바일 메뉴 스타일 추가 */
 @media (max-width: 991px) {
-    .kseta-header__auth-buttons {
-        display: none; /* 모바일에서는 메뉴 안으로 들어가게 처리 */
+    /* 모바일 메뉴의 메인 항목 스타일 */
+    .kseta-header__menu-link {
+        font-weight: 700;
+        color: #333;
+        padding: 12px 15px;
+        display: block;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
     }
 
-    /* 모바일 메뉴 내 로그인/회원가입 버튼 */
+    /* 서브메뉴 스타일 조정 */
+    .kseta-header__submenu {
+        display: block !important;
+        position: static !important;
+        box-shadow: none !important;
+        background-color: #f9f9f9 !important;
+        padding-left: 2rem !important;
+        border-radius: 0 !important;
+        margin-bottom: 8px;
+    }
+
+    /* 서브메뉴 링크 스타일 */
+    .kseta-header__submenu-link {
+        color: #666 !important;
+        padding: 8px 15px !important;
+        font-size: 0.95rem !important;
+        border-left: 2px solid #ddd;
+        transition: all 0.2s ease;
+    }
+
+    .kseta-header__submenu-link:hover {
+        color: #0d6efd !important;
+        border-left: 2px solid #0d6efd;
+        background-color: #f0f4f8 !important;
+    }
+
+    /* 메인 메뉴 구분선 */
+    .kseta-header__menu-item {
+        border-bottom: 0;
+        margin-bottom: 5px;
+    }
+
+    /* 모바일 메뉴 전체 스타일 */
+    .kseta-header__menu--active {
+        max-height: 80vh;
+        overflow-y: auto;
+        padding: 10px 0 !important;
+    }
+
     .kseta-header__menu--active .kseta-header__auth-buttons {
         display: flex;
         position: static;

@@ -1,9 +1,9 @@
+/* 기본 레이아웃 */
 .kseta-qualification {
     display: flex;
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem;
     gap: 2rem;
 }
 
@@ -61,6 +61,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+/* 제목 및 콘텐츠 박스 */
 .kseta-qualification__title {
     font-size: 2rem;
     color: #333;
@@ -70,7 +71,6 @@
 }
 
 .kseta-qualification__content-box {
-    /*background: #e8ebed;*/
     padding: 2rem;
     margin-bottom: 2rem;
 }
@@ -147,6 +147,7 @@
     font-weight: 600;
 }
 
+/* 목록 스타일 */
 .kseta-qualification__list {
     list-style-type: none;
     padding-left: 0;
@@ -169,14 +170,6 @@
 }
 
 /* 시험 관련 스타일 */
-.kseta-qualification__exam-box h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #0066cc;
-}
-
 .kseta-qualification__exam-intro {
     font-size: 1.1rem;
     color: #495057;
@@ -254,12 +247,13 @@
 
     .kseta-qualification__nav {
         display: flex;
+        flex-wrap: wrap;
         gap: 0.5rem;
-        padding: 0;
     }
 
     .kseta-qualification__nav-item {
         flex: 1;
+        min-width: 120px;
     }
 
     .kseta-qualification__nav-item a {
@@ -275,6 +269,7 @@
     .kseta-qualification__title {
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
+        padding: 10px;
     }
 
     .kseta-qualification__content-box {
@@ -285,10 +280,7 @@
         font-size: 1.2rem;
     }
 
-    .kseta-qualification__grades {
-        grid-template-columns: 1fr;
-    }
-
+    .kseta-qualification__grades,
     .kseta-qualification__exam-grades {
         grid-template-columns: 1fr;
     }
@@ -328,18 +320,8 @@
         gap: 0.5rem;
     }
 
-    div[style*="display: flex; gap: 0.5rem;"] input[name="zipCode"] {
-        width: 100%;
-    }
-
+    div[style*="display: flex; gap: 0.5rem;"] input[name="zipCode"],
     div[style*="display: flex; gap: 0.5rem;"] button {
         width: 100%;
     }
 }
-
-/*!* 반응형 디자인 *!*/
-/*@media (max-width: 768px) {*/
-/*    .kseta-qualification__exam-grades {*/
-/*        grid-template-columns: 1fr;*/
-/*    }*/
-/*}*/

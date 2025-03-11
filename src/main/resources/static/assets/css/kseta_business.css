@@ -1,8 +1,10 @@
 /* 공통 섹션 스타일 */
 .kseta-business {
+    max-width: 1200px;
     display: flex;
     height: 80vh;
     position: relative;
+    margin: 0 auto;
 }
 
 /* 콘텐츠 영역 공통 스타일 */
@@ -14,12 +16,12 @@
     justify-content: center;
     padding: 3rem;
     color: #fff;
-    background-color: #23262d;
+    /*background-color: #23262d;*/
 }
 
 /* 이미지 영역 공통 스타일 */
 .kseta-business__image {
-    width: 60%;
+    width: 50%;
     height: 100%;
     overflow: hidden;
 }
@@ -33,7 +35,7 @@
 /* 비대칭 이미지 스타일 (첫 번째와 세 번째 섹션) */
 .kseta-business__image--asymmetric img {
     position: absolute;
-    width: 60vw; /* 높이와 같은 값으로 설정하여 1:1 비율 만들기 */
+    width: 30vw; /* 높이와 같은 값으로 설정하여 1:1 비율 만들기 */
     height: 60vh;
     bottom: 50px;
     right: 0;
@@ -45,8 +47,8 @@
 .kseta-business__content--right {
     width: 40%;
     order: 2;
-    background-color: #ffffff;
-    color: #333;
+    /*background-color: #ffffff;*/
+    color: #fff;
 }
 
 /* 왼쪽 이미지 (두 번째와 네 번째 섹션) */

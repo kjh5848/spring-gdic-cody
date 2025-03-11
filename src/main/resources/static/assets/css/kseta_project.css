@@ -28,17 +28,15 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.7) 0%,
-            rgba(0, 0, 0, 0.6) 40%,
-            rgba(0, 0, 0, 0.3) 70%,
-            rgba(255, 255, 255, 0.7) 85%,
-            rgba(255, 255, 255, 0.85) 92%,
-            rgba(255, 255, 255, 1) 100%
-    );
+
+    /* 기본 어두운 오버레이 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%),
+        /* 위쪽 흰색 그라디언트 */ linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 15%),
+        /* 아래쪽 흰색 그라디언트 */ linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 15%);
+
     z-index: -1;
 }
+
 
 /* 메인 타이틀 */
 .kseta-project__main-title {
@@ -67,7 +65,7 @@
 .kseta-project__title {
     text-align: center;
     margin-bottom: 60px;
-    font-size: 1.8rem;
+    font-size: 1rem;
     color: white;
     font-weight: 700;
     position: relative;
@@ -89,7 +87,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 

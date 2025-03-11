@@ -13,10 +13,13 @@
     border-radius: 12px;
     padding: 8px;
     margin-top: 50px;
-    /*position: sticky;*/
-    /*top: 80px;*/
     z-index: 100;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+}
+
+.kseta-certificates__content {
+    margin-top: 20px;
 }
 
 .kseta-certificates__tab {
@@ -97,7 +100,7 @@
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem;
+    padding-top: 1rem;
     gap: 2rem;
 }
 
@@ -341,5 +344,171 @@
     .kseta-certificate__nav-item a {
         width: 100%;
         text-align: left;
+    }
+}
+
+
+/* 자격증 소개 스타일 - 기존 business 스타일 기반 */
+.kseta-cert {
+    display: flex;
+    height: 80vh;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+
+/* 콘텐츠 영역 공통 스타일 */
+.kseta-cert__content {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    color: #fff;
+    background-color: #23262d;
+}
+
+/* 이미지 영역 공통 스타일 */
+.kseta-cert__image {
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.kseta-cert__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.kseta-cert:hover .kseta-cert__image img {
+    transform: scale(1.05);
+}
+
+/* 비대칭 이미지 스타일 (첫 번째와 세 번째 섹션) */
+.kseta-cert__image--asymmetric img {
+    position: absolute;
+    width: 60vw;
+    height: 60vh;
+    bottom: 50px;
+    right: 0;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+/* 오른쪽 콘텐츠 (두 번째와 네 번째 섹션) */
+.kseta-cert__content--right {
+    width: 40%;
+    order: 2;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* 왼쪽 이미지 (두 번째와 네 번째 섹션) */
+.kseta-cert__image--left {
+    order: 1;
+}
+
+/* 텍스트 스타일 */
+.kseta-cert__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.kseta-cert__description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* 번호 스타일 */
+.kseta-cert__number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #382f83, #4a4475);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.kseta-cert--right .kseta-cert__number {
+    color: #fff;
+    background: linear-gradient(135deg, #0891b2, #5eead4);
+}
+
+/* 버튼 스타일 */
+.kseta-cert__button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #464a53;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.kseta-cert__button:hover {
+    background-color: #5a5f6b;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.kseta-cert--right .kseta-cert__button {
+    background-color: #0891b2;
+}
+
+.kseta-cert--right .kseta-cert__button:hover {
+    background-color: #0e7490;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 992px) {
+    .kseta-cert {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .kseta-cert {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 3rem;
+    }
+
+    .kseta-cert__content,
+    .kseta-cert__image {
+        width: 100%;
+    }
+
+    .kseta-cert__content {
+        padding: 2rem;
+    }
+
+    .kseta-cert__image {
+        height: 300px;
+    }
+
+    .kseta-cert__content--right,
+    .kseta-cert__image--left {
+        order: 0;
+    }
+
+    .kseta-cert__image--asymmetric img {
+        position: static;
+        width: 100%;
+        height: 100%;
     }
 }

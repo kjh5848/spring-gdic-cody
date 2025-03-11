@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class GdicViewController {
 
     // 인사말 페이지
-    @GetMapping("/gdic/greeting")
-    public String greeting() {
-        return "gdic/greeting";
-    }
+
 
     @GetMapping("/kseta/about")
     public String greeting2() {
@@ -23,25 +20,6 @@ public class GdicViewController {
         return "kseta/edu";
     }
 
-    @GetMapping("/kseta/business-goal")
-    public String businessGoal() {
-        return "edu";
-    }
-
-    @GetMapping("/kseta/project")
-    public String project() {
-        return "kseta/project";
-    }
-
-    @GetMapping("/kseta/qualification-bigdata")
-    public String qualificationBigdata() {
-        return "kseta/qualification-bigdata";
-    }
-
-    @GetMapping("/kseta/qualification-ai")
-    public String qualificationAi() {
-        return "kseta/qualification-ai";
-    }
 
     @GetMapping("/kseta/certificate")
     public String certificate() {
